@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 화면 예시</title>
+</head>
+<body>
+    <form action="#">
+        <h1>로그인</h1>
+        <fieldset>
+            <legend>Wavve 계정으로 로그인</legend>
+            <div>
+                <label for="user-id"></label>
+                <input type="text" placeholder="이메일 주소 또는 아이디" id="user-id" required>
+            </div>
+            <div>
+                <label for="user-pw"></label>
+                <input type="password" placeholder="비밀번호" id="user-pw" required>
+            </div>
+            <div>
+                <input type="checkbox" id="id-save">
+                <label for="id-save">아이디 저장</label>
+                <input type="checkbox" id="auto-login">
+                <label for="auto-login">자동 로그인</label>
+            </div>
+            <button type="submit">로그인</button>
+            <div>
+                <ul style="list-style: none; display: flex; margin: 0; padding: 0;">
+                    <li><a href="#">아이디 찾기</a></li>
+                    <li><a href="#">비밀번호 재설정</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>또는 다른 서비스 계정으로 로그인</legend>
+            <div>
+                <ul style="list-style: none; display: flex;">
+                    <li><a href="#" target="_blank"><img src="./img/ico-common-kakao.png" alt="KAKAO로 로그인"></a></li>
+                    <li><a href="#" target="_blank"><img src="./img/ico-common-tworld.png" alt="TWorld로 로그인"></a></li>
+                    <li><a href="#" target="_blank"><img src="./img/ico-common-naver.png" alt="NAVER로 로그인"></a></li>
+                    <li><a href="#" target="_blank"><img src="./img/ico-common-facebook.png" alt="FACEBOOK으로 로그인"></a></li>
+                    <li><a href="#" target="_blank"><img src="./img/ico-common-apple.png" alt="APPLE로 로그인"></a></li>
+                </ul>
+            </div>
+            <p>
+                &#42;&nbsp;SNS계정으로 간편하게 가입하여 서비스를 이용하실 수 있습니다.<br>
+                &nbsp;&nbsp;기존 POOQ 계정 또는 Wavve 계정과는 연동되지 않으니 이용에 참고하세요.
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
