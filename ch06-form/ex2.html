@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam 회원가입 예제</title>
+</head>
+<body>
+    <div>
+        <h1>CREATE YOUR ACCOUNT</h1>
+        <form action="#">
+            <div>
+                <label for="user-email">Email Address</label><br>
+                <input type="text" id="user-email" required>
+            </div>
+            <div>
+                <label for="email-confirm">Confirm your Address</label><br>
+                <input type="text" id="email-confirm" required>
+            </div>
+            <div>
+                <label for="country-residence">Country of Residence</label><br>
+                <select name="country" id="country-residence">
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Korea, Republic of" selected>Korea, Republic of</option>
+                </select>
+            </div>
+            <div id="captcha">
+            </div>
+            <div>
+                <input type="checkbox" id="agreement">
+                <label for="agreement">
+                    I am 13 years of age or older and agree to the terms of the <a href="#" target="_blank"><strong>Steam Subscriber Agreement</strong></a> and the <a href="#" target="_blank"><strong>Valve Privacy Policy</strong></a>.
+                </label>
+            </div>
+            <button type="submit">Continue</button>
+            <!-- <input type="submit" value="Continue"> 위의 button 대신 이런 방법도 존재 -->
+        </form>
+    </div>
+</body>
+</html>
