@@ -1,0 +1,33 @@
+h2{
+    color: orange;
+    background-color: green;
+    font-size: 20px;
+}
+h2{
+    color: blue;
+    color: coral;
+}
+h2#a{
+    color: blueviolet;
+    background-color: aliceblue;
+    font-size: 30px;
+}
+li#a{
+    color: aquamarine;
+}
+.b{
+    font-size: 20px;
+}
+p.c{
+    font-size: 40px;
+    color: black;
+}
+h2.c{
+    color: lime;
+}
+p.a.b{
+    color: chocolate;
+}
+.box h2{
+    background-color: gray;
+}
