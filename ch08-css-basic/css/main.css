@@ -5,7 +5,7 @@ h2{
 }
 h2{
     color: blue;
-    color: coral;
+    color: white;
 }
 h2#a{
     color: blueviolet;
@@ -17,17 +17,22 @@ li#a{
 }
 .b{
     font-size: 20px;
+    background-color: palevioletred;
 }
 p.c{
     font-size: 40px;
     color: black;
 }
 h2.c{
-    color: lime;
+    color: yellow;
 }
 p.a.b{
-    color: chocolate;
+    color: wheat;
 }
 .box h2{
     background-color: gray;
+}
+div.box>h2{
+    background-color: blanchedalmond;
+    color: olive;
 }

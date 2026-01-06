@@ -1,0 +1,31 @@
+/* h1{color: lime !important;} */
+body div h1#b{
+    color: blueviolet;
+    background-color: #f9e4ff;
+    font-size: 47px;
+}
+div h1#b{
+    color: orange;
+}
+h1#b{
+    color: blue;
+}
+#b{
+    color: red;
+}
+div h1.a{
+    color: orange;
+}
+h1.a{
+    color: blue;
+}
+.a{
+    color: red;
+}
+h1{
+    color: red;
+}
+h1{
+    color: blue;
+    color: orange;
+}
