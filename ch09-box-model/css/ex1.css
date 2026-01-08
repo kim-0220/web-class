@@ -43,3 +43,71 @@
 }
 /* g가로사이즈+g세로사이즈+h세로사이즈+h1컨텐트박스너비의 합은? 1110*/
 /* 260+240+350+260 */
+
+.j{
+    width: 300px;
+    padding: 10px 30px 40px 20px;
+    border: 10px solid black;
+}
+.k{
+    border: 10px solid blue;
+    padding: 10px 20px;
+}
+.k h1{
+    border: 10px solid red;
+    width: 100px;
+    height: 100px;
+}
+.k h2{
+    border: 10px solid green;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+/* j가로사이즈+k세로사이즈의 합은? 670 */
+/* 370+(120+120+20+40) */
+
+.l{
+    border: 10px solid red;
+    padding: 10px 20px;
+    border-right: 1px solid blue;
+    width: 300px;
+}
+.m{
+    width: 500px;
+    border: 20px solid black;
+}
+.m h1{
+    margin: 0px 20px;
+    border: 10PX solid red;
+}
+/* l가로사이즈+h1컨텐트박스너비의 합은? 791 */
+/* 351+440 */
+
+.n{
+    border: 10px solid red;
+    padding: 10px 20px;
+    width: 500px;
+    box-sizing: border-box;
+}
+.n h1{
+    border: 10px solid blue;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+}
+.n ul{
+    border: 10px solid orange;
+}
+.n ul li{
+    border-bottom: 1px solid green;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 30px;
+}
+.n ul li:nth-of-type(2){
+    height: 60px;
+    border-bottom: 5px solid green;
+}
+/* n가로사이즈+n세로사이즈의 합은? 817 */
+/* 500+(20+20+90+10+20+41+75+41) */
