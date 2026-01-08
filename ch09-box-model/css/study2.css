@@ -1,0 +1,20 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#daum-container{
+    border: 1px solid red;
+    width: 1180px;
+    height: 500px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin: 0 auto;
+    /* 0px의 경우 단위(px)를 생략할 수 있다. */
+    /* 값이 상하가 같고, 좌우가 다르면 무조건 4개로 써야함 */
+}
+#youtube-container{
+    border: 1px solid green;
+    width: auto;
+    height: 500px;
+    margin: 0 40px;
+}

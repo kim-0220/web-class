@@ -1,0 +1,31 @@
+html{
+    font-size: 30px;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: inherit;
+}
+.box{
+    font-size: 50px;
+}
+/* px은 절대값. 정확한 수치 */
+.box h1{
+    font-size: 2em;
+}
+/* em은 부모태그에 적용된 글씨 크기의 n배 */
+.box h2{
+    font-size: 2rem;
+}
+/* rem은 html태그에 적용된 글씨 크기의 n배 */
+/* rem에서 r은 root를 의미 */
+
+.ex1{
+    font-weight: normal;
+}
+/* normal은 400, bold는 700 */
+
+.ex2{
+    line-height: 300px;
+}
+/* line-height는 행간. 글씨 박스의 높이. */
+/* 1.2라는 뜻은 글씨크기의 1.2배를 의미. */
+/* if, 300px로 설정하면 300px로 고정된다. */
