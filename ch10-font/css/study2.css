@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "산토끼";
+    src: url(../font/HSSantokki-Regular.ttf);
+    font-weight: 400;
+    /* 서체 등록 태그(문법) */
+    /* font-family에는 등록명을 자유롭게 정해서 써주되, 한글은 그냥 쓰면 안됨. ""로 묶어줘야하고, 영어는 있던 없던 상관없음 */
+    /* src: url()에는 상대경로를 적어줘야함 */
+    /* 서체를 먼저 컴퓨터에 다운로드 하고, 위의 과정을 통해서 서체를 등록 */
+}
+.rabbit{
+    /* font-family: "산토끼",sans-serif; */
+    font-family: "산토끼",serif;
+    /* serif(명조체), sans-serif(고딕체) */
+    /*  ,(콤마)를 찍고 serif, sans-serif 등을 적어서 브라우저에서 서체가 정상적으로 호환되지 않을 경우에 대해서 대비 -> 산토끼 서체가 호환되지 않아서 정상 적용이 되지 않으면 serif서체가 적용됨 */
+    /* 서체 등록이 완료되면, class명을 지정해준 후 서체를 입히면 끝 */
+}
+
+@font-face {
+    font-family: "평창평화";
+    src: url(../font/PyeongChangPeace-Light.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "평창평화";
+    src: url(../font/PyeongChangPeace-Bold.ttf);
+    font-weight: 700;
+}
+.peace{
+    font-family: "평창평화";
+    font-weight: 400;
+}
+.peace2{
+    font-family: "평창평화";
+    font-weight: 700;
+    /* 같은 디자인이지만 굵기만 다른 경우 구분해주기 위해 font-weight을 부여해서 구분해줌. 디자인마다 굵기가 하나인 경우 부여하지않아도 됨. font-weight를 id처럼 생각해주면 이해가 쉬움. */
+    /* 아니면 font-family명 자체를 다르게 해줄수도 있음 */
+}
+
+@font-face {
+    font-family: 'NostalgicYuriDakku';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-1@1.0/Griun_YuriDaggu-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+    /* 웹폰트방식. 눈누같은 무료폰트 다운로드 사이트에 들어가면 위의 코드를 복붙할 수 있음. 이는 직접적으로 폰트를 다운로드 할 필요는 없고, 코드만 입혀도 폰트가 적용됨. 그러나 사이트자체가 오류가 나거나 파괴됐을 경우, 폰트 적용이 안될 수 있기 때문에 리스크가 있음 */
+    /* 서체를 다운로드 받는 방식(로컬폰트)과 웹폰트 방식의 차이점은 경로의 차이임 */
+}
+.dakku{
+    font-family: 'NostalgicYuriDakku';
+}
+
+.imperial{
+    font-family: "Imperial Script", cursive;
+    /* html head태그에 코드 복붙 이후 똑같이 구글폰트에서 css코드도 복붙 */
+}
+.story{
+    font-family: "Story Script", sans-serif;
+    /* 구글폰트에서 2가지 이상의 폰트를 한번에 선택하고 get font를 한 후 코드를 복붙하면 head태그에 여러가지 폰트를 한번에 등록할 수 있음 */
+}

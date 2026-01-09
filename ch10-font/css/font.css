@@ -1,0 +1,26 @@
+/* 홈페이지에서 사용될 폰트들을 모두 정리해서 모아둔 파일 */
+/* 따로 파일을 만들어서 html에 연결하는 방식 -> 구글폰트의 방식 */
+/* 여러 프로젝트에 연결을 할 수 있어서 사용성이 좋음 */
+/* 다운로드 받은 폰트나 절대경로로 연결시킨 폰트 상관없이 모두 가능 */
+
+@font-face {
+    font-family: "산토끼";
+    src: url(../font/HSSantokki-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "평창평화";
+    src: url(../font/PyeongChangPeace-Light.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "평창평화";
+    src: url(../font/PyeongChangPeace-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'NostalgicYuriDakku';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-1@1.0/Griun_YuriDaggu-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
