@@ -1,0 +1,84 @@
+.a{
+    border: 1px solid red;
+    padding: 30px;
+    background-color: aquamarine;
+    background-image: url("../img/bird.jpg");
+    /* 배경img는 태그에 영향을 주지 않음 */
+    width: 800px;
+    height: 800px;
+
+    /* background-repeat: repeat; */
+    /* 기본값으로 repeat이 설정되어있음. 따라서 바둑판식으로 반복 됨 */
+    /* background-repeat: repeat-x; */
+    /* 가로방향으로만 반복. 배경색은 가장 아래 깔려있음(layer층 존재) */
+    /* background-repeat: repeat-y; */
+    /* 세로방향으로만 반복. 배경색은 가장 아래 깔려있음(layer층 존재) */
+    background-repeat: no-repeat;
+    /* img를 반복하지 않음. 가장 빈번하게 사용되는 속성 */
+
+    /* background-position: 0 0; */
+    /* 수치가 0일때는 단위px를 생략 할 수 있음. 가장 좌측상단은 (0,0)이다*/
+    /* background-position-x: 0px; background-position-y: 0px;의 축약형 표현 */
+    /* background-position: 100px 200px; */
+    /* 우측으로 100, 아래로 200 img가 움직임 */
+    /* background-position: -100px -200px; */
+    /* 좌측으로 100, 위로 200 img가 움직임. img는 css이기 때문에 사진이 움직이면 움직인 만큼 잘려서 안보일 수 있음 */
+    /* background-position: 50% 50%; */
+    /* 50%로 설정하면 중앙에 배치가 되며, width가 변경되더라도 비율에 맞게 위치가 이동됨 */
+    /* background-position: 100% 100%; */
+    /* 가장 우측, 가장 하단에 위치하게 됨 */
+    background-position: calc(100% - 100px) 100%;
+    /* clac() -> 계산식으로 값을 나타내는 함수 */
+    /* 수치값을 수식으로 설정할 수 있으며, calc() 함수는 다른 태그에도 적용가능 */
+    /* '-' 부호의 앞뒤로 띄어쓰기로 띄워줘야 계산이 되며, 단위도 꼭 필요 */
+
+    /* background-size: auto auto; */
+    /* auto로 설정하면 비율에 맞게 설정한다는 의미 */
+    /* background-size: auto 100%; */
+    /* 선택한 태그의 높이 값의 100%만큼 계산된다는 의미  */
+    background-size: calc(100%-100px) auto;
+    /* width가 800px이라고 가정했을 때, calc(100%-100px)=700px에 img가 채워짐 */
+    /* background-size: cover; */
+    /* 공간에 배경img를 무조건 가득 채우는 방식으로 배경 이미지의 크기를 조절 -> 배경img가 잘리는 영역이 생겨도 무시 */
+    /* 브라우저 홈페이지 자체를 줄이고 늘려도 가득 채워진 것은 변함없음 */
+    /* background-size: contain; */
+    /*  공간에 배경img를 가능한 가득 채우는(원본크기의 전체를 채우는) 방식으로 배경 이미지의 크기를 조절 -> 배경img가 절대 잘리지 않는 선에서 크기를 조절 */
+}
+
+.b{
+    border: 1px solid blue;
+    height: 800px;
+    background: aquamarine url(../img/bird.jpg) no-repeat 50% 50% / cover;
+    /* 축약형 표현(순서가 중요!) */
+    /* 순서 : <<backgruond: 배경색 img파일경로 반복여부 위치 / 사이즈>> */
+    background-attachment: fixed;
+    /* 배경을 fixed해서 붙인다는 의미 */
+    /* 스크롤을 해도 배경img의 위치가 변하지않고, 화면에 고정되어 스크롤링이 되지 않음 */
+}
+
+.c{
+    border: 1px solid violet;
+    height: 800px;
+    background: pink url(../img/bird.jpg) no-repeat 50% 50% / contain;
+    background-blend-mode: multiply;
+}
+
+.d{
+    border: 1px solid coral;
+    height: 800px;
+    background: 
+    url(../img/bird.jpg) no-repeat 0% 50% / auto auto, 
+    url(../img/bird.jpg) no-repeat 50% 50% / contain, 
+    url(../img/bird.jpg) no-repeat 100% 50% / auto 100px;
+    /* ,(콤마)를 사용하여 축약형 표현으로 여러 개 사용할 수 있음 */
+    /* 태그의 배경레이어는 가장 밑면에 배경색이 깔리고, 그 위에 배경img가 깔리는 공간이 있는데 이 공간에 배경img가 여러 개 깔릴 수 있고, 가장 위에 있는 애(먼저 적혀진 태그)가 가장 위쪽 레이어에 위치함 */
+}
+
+.e{
+    border: 1px solid orange;
+    height: 800px;
+    background: linear-gradient(30deg,red 20%,blue,green 80%);
+    /* gradient는 img로 봐야 함 */
+    /* linear-gradient에서 색상 옆에는 위치(범위)가 생략되어있는 상태로 필요시 원하는 % 만큼 수를 입력하면 됨 */
+    /* 방향을 바꾸고싶으면 색상 앞에 deg의 수를 설정하면됨 (-값도 설정가능) */
+}
