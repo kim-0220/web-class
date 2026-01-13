@@ -1,0 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+html{
+    font-family: 'Pretendard', sans-serif;
+}
+h2,h3,h4{
+    font-size: inherit;
+}
+
+.img{
+    background-image: url(../img/sub_vis01_02.jpg);
+    width: auto;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-attachment: fixed;
+}
+
+.content{
+    /* border: 5px solid purple; */
+    margin: 0 20%;
+}
+
+@font-face {
+    font-family: "풀무원", sans-serif;
+    src: url(../font/PulmuoneLOHASBold.woff);
+}
+
+.title1{
+    /* border: 1px solid green; */
+    font-size: 30px;
+    margin: 20px 0px 60px;
+}
+
+.title2{
+    /* border: 1px solid orchid; */
+    font-size: 52px;
+    font-family: "풀무원", sans-serif;
+    text-align: center;
+    padding: 0px 40px ;
+}
+
+.script{
+    /* border: 1px solid blue; */
+}
+.title3{
+    /* border: 1px solid orange; */
+    font-size: 35px;
+    font-family: "풀무원", sans-serif;
+    text-align: center;
+}
+p{
+    border: 1px solid lime;
+    text-align: center;
+    white-space: pre;
+    box-sizing: border-box;
+    padding: 20px 60px;
+}
+
+div.h2{
+    font-size: 400;
+    /* 상속스타일(간접스타일)이 있지만 h2태그에 기본적으로 사이즈가 적용되어있어서 bold함 */
+}
+
+/* span 아무스타일이 없는(적용되지않는) 인라인스타일태그. 글자만 묶을때 많이사용*/
+
+
+/* .content p:nth-of-type(1){} answercss파일참고*/

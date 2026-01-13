@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "풀무원";
+    src: url(../font/PulmuoneLOHASBold.woff);
+}
+
+html{
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.pul{
+    font-family: "풀무원";
+}
+
+.banner{
+    /* border: 1px solid red; */
+    width: auto;
+    height: 250px;
+    background: url(../img/sub_vis01_02.jpg) no-repeat 50% 50% / cover;
+    margin-bottom: 50px;
+}
+
+main{
+    /* border: 1px solid blue; */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+main h1{
+    /* border: 1px solid green; */
+    margin-bottom: 100px;
+    font-size: 30px;
+    font-weight: 400;
+    background: url(../img/sub_tit_line.gif) repeat-x 0 50%;
+}
+
+main h1 span{
+    /* border: 1px solid coral; */
+    background-color: white;
+    padding-right: 20px;
+}
+
+main h2 {
+    /* border: 1px solid pink; */
+    font-size: 52px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 70px;
+    margin-bottom: 50px;
+}
+
+main h2 em{
+    font-style: normal;
+    color: #7EAE4B;
+}
+
+.content{
+    /* border: 1px solid slateblue; */
+    width: 810px;
+    box-sizing: border-box;
+    padding: 40px 90px 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content h3{
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.content h3+p{
+    margin-bottom: 30px;
+}
