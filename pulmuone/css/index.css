@@ -13,9 +13,7 @@
 html{
     font-family: 'Pretendard', sans-serif;
 }
-h2,h3,h4{
-    font-size: inherit;
-}
+
 
 .img{
     background-image: url(../img/sub_vis01_02.jpg);
@@ -50,9 +48,6 @@ h2,h3,h4{
     padding: 0px 40px ;
 }
 
-.script{
-    /* border: 1px solid blue; */
-}
 .title3{
     /* border: 1px solid orange; */
     font-size: 35px;
