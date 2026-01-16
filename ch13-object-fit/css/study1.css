@@ -1,0 +1,44 @@
+.a{
+    border: 1px solid red;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    /* object-position: 50% 50%; -> 기본값 */
+    object-position: 0% 100%;
+}
+
+.b{
+    border: 1px solid blue;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    /* object-position: 100px 0%; -> px단위로도 사용 가능 */
+    object-position: 100px 100px;
+}
+
+.c{
+    border: 1px solid green;
+    width: 400px;
+    aspect-ratio: 2/1;
+    /* 너비 대 높이가 2대1 비율이기 때문에 높이는 200px로 설정됨 */
+    object-fit: cover;
+}
+
+figure{
+    border: 1px solid orange;
+    width: 600px;
+    aspect-ratio: 1/1;
+    /* height를 지정하지 않아도 비율이 정사각형 비율로 설정됨 */
+    line-height: 0%;
+}
+
+figure .d{
+    border: 1px solid purple;
+    width: 100%;
+    /* 부모만큼의 너비를 100%로 꽉채우겠다는 의미 */
+    /* height: 100%; */
+    /* 부모만큼의 높이를 100%로 꽉채우겠다는 의미 */
+    /* object-fit: cover; */
+    /* 위의 태그를 적용해도 사진이 전체적으로 채워지지 않음. img태그에는 line-height가 적용되기 때문에 (글자취급되는)img태그의 부모 태그에 line-height: 0;을 적용하거나 font-size: 0;을 적용시켜야 함 */
+    /* d클래스가 아닌 figure부모태그에 line-height(또는 font size)를 적용시키는 이유는 p태그를 생각해보면 됨 -> p태그 안에 적인 글씨(내용)들이 자식이지만 부모인 p태그에 line-height(또는 font size)를 적용시키는 원리와 동일 */
+}

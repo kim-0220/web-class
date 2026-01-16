@@ -1,0 +1,83 @@
+.a{
+    border: 10px solid red;
+    width: 300px;
+    height: 100px;
+    /* overflow: visible; */
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    /* overflow-x: scroll; */
+    /* overflow-y: scroll; */
+    overflow: auto;
+    /* auto로 설정해놓으면 자동으로 인식해서 scroll이 필요할때에만 자동으로 나옴 */
+}
+
+.b{
+    border: 10px solid blue;
+    overflow-x: scroll;
+    /* 컨텐츠가 밖으로 나오지 않는 상황이라면 설정해도 비활성화상태로 유지되어 스크롤바가 보이지 않음  */
+    white-space: nowrap;
+    /* 자동 줄바꿈을 설정하지 않는 방법 */
+}
+
+.c{
+    border: 10px solid black;
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 말줄임표시 */
+    border-radius: 10px;
+}
+
+.d{
+    /* 아래로 3번째 줄 내용은 외우지 말고 복사해서 사용할 것 */
+    display: -webkit-box;
+    /* 박스형태를 줄바꿈이 체크되는 형태로 바꾸겠다는 의미? 기준설정? */
+    -webkit-box-orient: vertical;
+    /* 줄바꿈이 세로방향으로 되겠다는 의미 */
+    -webkit-line-clamp: 3;
+    /* 3번째 줄에서 말줄임을 하겠다는 의미 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 10px solid coral;
+    width: 300px;
+}
+
+/* 외우지 말 것. */
+/* 하단 3개의 ::css를 설정하면 전체 스타일로 적용되고, 혹은 하나만 지정해서 설정을 원하면 ::앞에 태그를 붙여서 띄어쓰기 없이 설정하면 됨 (65행~83행 참고) */
+::-webkit-scrollbar{
+    width: 14px;
+    /* 세로형 스크롤바 굵기 조정 */
+    height: 14px;
+    /* 가로형 스크롤바 굵기 조정 */
+}
+
+::-webkit-scrollbar-thumb{
+    background: pink;
+    border-radius: 7px;
+    /* 반지름이 7px인 정원 호의 곡률을 적용. 세로 스크롤바의 가로너비가 14px인 상황이기 때문에 border-radius의 최대값은 7px임 */
+}
+
+::-webkit-scrollbar-track{
+    background: maroon;
+}
+
+.e{
+    border: 10px solid yellow;
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;    
+}
+.e::-webkit-scrollbar{
+    width: 14px;
+    height: 14px;
+}
+
+.e::-webkit-scrollbar-thumb{
+    background: lime;
+    border-radius: 7px;
+}
+
+.e::-webkit-scrollbar-track{
+    background: darkseagreen;
+}

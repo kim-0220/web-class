@@ -1,0 +1,49 @@
+.a{
+    border: 1px solid red;
+    max-width: 800px;
+    min-width: 300px;
+    /* 너비를 지정하지 않았기 때문에 현재 width: auto;가 유지되는 상황. 최대값과 최소값 구간만 지정한 상태 */
+    /* 너비가 유동적으로 바뀌면서도 최대 너비는 800px을 넘지 않는다는 의미 */
+    /* width가 변동값일때 최소 너비는 300px이 지켜진다는 의미. -> 브라우저를 너비 300px 미만으로 줄인 후 개발자 모드로 화면을 보면 body태그 바깥으로 자식태그의 너비가 지정되어 있음 -> 이는 최소 width가 지켜지기때문에 스크롤바가 생기고 더이상 너비가 줄어들지 않음 */
+}
+
+p span{
+    border: 5px solid blue;
+    display: inline-block;
+    /* span태그는 inline 태그이기 때문에 너비와 높이를 주려면 display속성을 inline-block으로 변경하는 설정이 필요함 */
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.b{
+    border: 5px solid green;
+    min-height: 100px;
+    max-height: 200px;
+    overflow: auto;
+    /* 단순히 height로만 적용(고정)하면 내용이 바깥으로 흘러넘치게 되기 때문에 min-height로 구간을 설정해줘야 하고, 또한 내용이 매우 간략하여 별로 없어도 최소한의 높이는 고정되어 줄어들지 않음*/
+}
+
+.c{
+    border: 5px solid orange;
+    width: 10vw;
+    height: 10vh;
+    /* viewport는 web site에서 보여지는 영역 */
+    /* vw : viewport width & vh: viewport height */
+    /* 현재 실행중인 화면 크기에 맞춰 상대적 크기를 반환하겠다는 뜻이고, 100vh, 100vw 가 전체 화면의 기준 */
+    /* % 는 창이 중심이 아닌, 해당 부모 요소의 길이에 맞게 반환 */
+    /* 모든 단위들은 결론적으로 px로 계산됨 */
+    overflow: hidden;
+}
+
+.d{
+    border: 5px solid pink;
+    width: 600px;
+    min-height: 600px;
+}
+
+.f{
+    border: 5px solid yellow;
+    width: 50%;
+    height: 50%;
+    /* height값이 계산이 되어 브라우저 화면에 표시가 되려면 부모태그에 height값을 '명시'해야함. 기본값인 height: auto;는 계산이 불가능 -> 따라서 height: 50%;는 적용 불가능 */
+}   
