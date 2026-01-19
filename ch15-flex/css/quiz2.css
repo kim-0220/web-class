@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 800px;
+    height: 100px;
+    display: flex;
+}
+
+.box div{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.box1{
+    background-color: lightgrey;
+}
+.box1 .a{
+    background-color: red;
+    order: 2;
+}
+.box1 .b{
+    background-color: green;
+    order: 4;
+}
+.box1 .c{
+    background-color: blue;
+    order: 1;
+}
+.box1 .d{
+    background-color: gold;
+    order: 5;
+}
+.box1 .e{
+    background-color: pink;
+    order: 3;
+}
+/* order의 기본값은 0이고, 수가 작은수부터 나열 -> item에 속성을 부여해야함 */

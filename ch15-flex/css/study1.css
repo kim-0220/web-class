@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    border: 10px solid red;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    /* section태그를 가로로 나란히 배치하기 위해서는 부모인 .box에게 display: flex;를 설정해야 함 -> 즉 부모태그를 flex-container로 만들겠다는 의미이고, 그러면 자동으로 자식태그는 flex-item이 됨 */
+    /* 메인축은 왼쪽에서 오른쪽방향으로, 이것의 90도 방향으로 교차축이 위에서 아래방향으로 형성되는 것이 기본값 */
+    /* item들은 무조건 메인축으로 따라서 나란히 배치가 됨 */
+    /* 메인축의 방향은 왼쪽에서 오른쪽이 기본값이지만, flex-direction태그를 이용하여 방향을 바꿀수있음 */
+    /* flex item의 특징은 포함하는 content만큼 영역을 가지게 되고, 메인축에 따라서 나란히 배치됨 */
+    /* flex-direction은 메인축의 방향을 바꾸는 속성이고, 교차축은 수동적으로 메인축에 따라 변화함 */
+    /* 기본적으로 교차축을 따라서 item이 스트레칭되는 성질을 가지고 있음 -> 교차축 길이만큼 길어지는 것이 기본값 -> 즉, align-items: stretch가 기본값으로 설정되어있음 */
+    /* 메인축이 시작하는 지점을 flex-start, 중간은 center, 마지막 지점을 flex-end라 함 */
+
+    flex-direction: row;
+    /* row가 기본값. 좌에서 우로 배치 */
+    /* flex-direction: row-reverse; */
+    /* reverse로하면 우에서 좌로 배치 */
+    /* flex-direction: column; */
+    /* colume으로 하면 위에서 아래로 배치*/
+    /* flex-direction: column-reverse; */
+    /* reverse로 하면 아래에서 위로 배치 */
+
+    justify-content: flex-start;
+    /* flex-start가 기본값. 메인축을 기준으로 item을 정렬해주는 속성 */
+    /* justify-content: center; */
+    /* justify-content: flex-end; */
+
+    /* justify-content: space-between; */
+    /* 무조건 양쪽 끝에 item을 설정하고 간격은 auto값으로 설정한다는 의미 -> 기존에 설정한 gap은 무시가 된다는 의미 */
+    /* justify-content: space-around; */
+    /* gap을 부여한 경우 여전히 존재는 하고, 양쪽 끄트머리부터 item들 사이사이 간격이 모두 동일하게 부여되는 것 */
+
+    align-items: stretch;
+    /* stretch가 기본값. 교차축을 따라서 item들을 정렬해줄때 사용. flex-start로 하면 메인축의 시작지점에 content만큼 영역을 가진 item들이 정렬이 되고, flex-end로 하면 메인축의 마지막지점에 content만큼 영역을 가진 item들이 정렬됨 -> stretch를 설정하지않으면 item의 영역 자체가 늘어나는 것을 포기한다고 생각하면 됨 */
+    /* 만약 height가 간격설정이 없어서 auto인 경우에는 stretch가 적용되어있지만 늘어나 보이지는 않음. 그러나 설정이 없어진것은 아님을 기억 */
+    /* align-items: flex-start; */
+    /* align-items: center; */
+    /* align-items: flex-end; */
+
+    gap: 20px;
+    /* item들 사이의 간격을 설정하는 태그 */
+
+}
+.box section{
+    border: 1px solid blue;
+}

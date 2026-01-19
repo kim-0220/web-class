@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 800px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box div{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.box2{
+    background-color: lightgrey;
+}
+.box2 .a{
+    background-color: red;
+}
+.box2 .b{
+    background-color: green;
+}
+.box2 .c{
+    background-color: blue;
+}
+.box2 .d{
+    background-color: gold;
+}
+.box2 .e{
+    background-color: pink;
+}
