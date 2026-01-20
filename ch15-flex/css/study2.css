@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    border: 10px solid red;
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+    flex-wrap: wrap-reverse;
+    /* 줄바꿈이 안되는 nowrap이 기본값. wrap을 하면 줄바꿈을 하는 속성이지만, 위의 경우 자리가 있음에도 밑으로 내려가면서 쌓이는데 그 이유는 400px 공간 안에서 202px의 박스가 나란히 있을 수 없기 때문. item에 box-sizing: border-box;로 하면 200px 박스이기 때문에 줄바꿈도 하고 나란히 배치도 가능함 */
+}
+.box section{
+    border: 1px solid blue;
+    width: 200px;
+    box-sizing: border-box;
+    /* width를 강제로 부여해도 .box 바깥으로 나가지 않고, section이 늘어난다고 해도 최대한 바깥으로 나가지 않으려고 사이즈가 작아지면서 점차 .box바깥으로 나가지만 절대 줄바꿈이 되지는 않음 -> flex-item은 줄바꿈이 되면 안된다는 설정값이 이미 기본값으로 적용되어있기 때문 -> 이 줄바꿈을 설정하는 속성은 flex-wrap이고, 역시나 부모태그에 설정을 부여해주어야 함 */
+}
+
+.box2{
+    border: 10px solid yellow;
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+}
+.box2 section{
+    flex-shrink: 1;
+    /* item들이 줄어들어야하는 환경(줄바꿈을 허용하지 않을 때)에서 1배율로 줄어듬
+    --> flex-wrap: no-wrap(기본값)일때 flex-shrink: 1;이 기본값으로 설정됨 */
+    /* flex-wrap: wrap;일때는 flex-shrink: 0;으로 기본값이 자동 설정됨 -> 줄바꿈이 되기 때문에 굳이 사이즈를 줄일 필요가 없어짐 */
+    border: 1px solid green;
+    width: 200px;
+    box-sizing: border-box;
+}
+.box2 section:nth-of-type(2){
+    flex-shrink: 2;
+    /* 2번째 section만 선택해서 전체 너비에서 2배율로 줄어들게 할수도 있음 */
+}
+
+.box3{
+    border: 10px solid pink;
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+.box3 section{
+    flex-basis: 100px;
+    /* item들이 글자를 포함하는 만큼만 크기가 잡히는 것은 flex-basis: auto;로 설정되어있다는 것이고, 이것이 기본값임 */
+    flex-grow: 1;
+    /* 남는 너비의 여백만큼 1배율로 먹고 자라게(?)하고 싶으면 item에게 flex-grow: 비율;을 설정해주면 됨. basis를 100px로 잡았지만 glow를 1로 설정했기 때문에 여백만큼 더 자란거고, 이 태그를 사용하는 순서는 상관없음. 그러나 basis를 auto로 하면 각각의 item들이 가지고 있는 너비에서 남은 여백을 1배율로 나눈 만큼 나눠가지는 것이기 때문에 item의 값이 애초에 다르다면 크기가 각기 다르게 보임  */
+    /* flex-grow의 기본값은 0 */
+}
+.a3{background-color: aqua;}
+.b3{background-color: antiquewhite;}
+.c3{background-color: lightseagreen;}
+.box3 .d3{
+    background-color: lavender;
+    flex-grow: 2;
+    /* .d3의 너비만 2배율로 키우겠다는 의미이고, 이때 유의할 점은 .d3으로만 선택하면 위의 .box3 section{}보다 우선순위 점수가 낮기 때문에 속성 적용이 안되므로 .box3 .d3{}으로 설정하여 우선순위 점수를 높여주어야 함 */
+}
+
+.box4{
+    border: 10px solid purple;
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+.box4 section{
+    flex: 1;
+    /* 아래의 속성을 포함하는 축약형 표현 */
+    /* flex-basis: 0; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* basis가 0이면 item에 잡히는 크기가 없다는 소리이고, 그럼 남는 여백=전체 여백이 되며, grow가 1이기 때문에 전체 여백을 item들이 1배율로 (같은 너비로)나눠가지고, 줄바꿈이 허용되지 않는 nowrap의 환경에서 item들이 1배율로 줄어든다는 의미를 축약한 표현임 */
+}
+.a4{background-color: aqua;}
+.b4{background-color: antiquewhite;}
+.c4{background-color: lightseagreen;}
+.d4{background-color: lavender;}
