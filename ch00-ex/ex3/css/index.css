@@ -1,0 +1,58 @@
+html{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.aboreto{
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.banner{
+    /* border: 1px solid red; */
+    height: 599px;
+    background: url(../img/banner.png) no-repeat 40% 74% / cover;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+}
+.banner h1{
+    /* border: 1px solid blue; */
+    width: 1440px;
+    font-size: 50px;
+    line-height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    padding-top: 270px;
+}
+
+.background{
+    /* border: 1px solid aqua; */
+    background: url(../img/BACKGROUND.png);
+    height: 613px;
+    margin-top: 122px;
+}
+
+.background .container{
+    border: 1px solid green;
+    width: 1600px;
+    margin: 122px auto 218px;
+}
+
+.title h2{
+    margin-top: 200px;
+}
+
+.title h2{
+    border: 1px solid green;
+    font-size: 150px;
+    line-height: 90%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/* ex3수정주우우우웅~~ */
