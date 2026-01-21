@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 800px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box13 div{
+    width: 200px;
+    height: 100px;
+}    
+
+.box14{
+    display: flex;
+    width: 200px;
+}
+.box14 div{
+    width: 100px;
+    height: 100px;
+}
+
+.e{
+    width: 200px;
+    height: 100%;
+}
+
+.box{
+    background-color: lightgrey;
+}
+.box13 .a{
+    background-color: red;
+}
+.box13 .b{
+    background-color: green;
+}
+.box14 .c{
+    background-color: blue;
+}
+.box14 .d{
+    background-color: gold;
+}
+.e{
+    background-color: pink;
+}

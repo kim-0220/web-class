@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 800px;
+    height: 300px;
+    display: flex;
+}
+
+.box8{
+    width: 500px;
+    display: flex;
+}
+.box8 div{
+    flex: 1;
+}
+
+.box9 div{
+    width: 300px;
+    height: 100px;
+}
+
+.box{
+    background-color: lightgrey;
+}
+section .a{
+    background-color: red;
+}
+section .b{
+    background-color: green;
+}
+section .c{
+    background-color: blue;
+}
+section .d{
+    background-color: gold;
+}
+section .e{
+    background-color: pink;
+}

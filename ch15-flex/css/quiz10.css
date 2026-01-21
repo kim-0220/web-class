@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 800px;
+    height: 300px;
+    display: flex;
+}
+
+.box10{
+    width: 250px;
+}
+
+.box11{
+    width: 300px;
+}
+
+.box11-1{
+    display: flex;
+}
+.box11-1 div{
+    width: 150px;
+    height: 200px;
+}
+
+.box12{
+    width: 250px;
+}
+
+.box{
+    background-color: lightgrey;
+}
+.a{
+    background-color: red;
+}
+.b{
+    background-color: green;
+}
+.box11 .c{
+    background-color: blue;
+    height: 100px;
+}
+.box11-1 .d{
+    background-color: gold;
+}
+.box11-1 .e{
+    background-color: pink;
+}
