@@ -4,55 +4,56 @@ html{
     font-weight: 400;
 }
 
-.aboreto{
+.abo{
   font-family: "Aboreto", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
+.wrap{
+  background: url(../img/background.png) repeat-x 0% 721px;
+}
+
 .banner{
-    /* border: 1px solid red; */
-    height: 599px;
-    background: url(../img/banner.png) no-repeat 40% 74% / cover;
-    border-bottom-left-radius: 150px;
-    border-bottom-right-radius: 150px;
+  height: 599px;
+  background: url(../img/banner_bg.png) no-repeat 50% 74% / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 150px 150px;
 }
+
 .banner h1{
-    /* border: 1px solid blue; */
-    width: 1440px;
-    font-size: 50px;
-    line-height: 100%;
-    text-transform: uppercase;
-    text-align: center;
-    color: white;
-    margin: 0 auto;
-    padding-top: 270px;
+  color: white;
+  font-size: 50px;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 200px;
 }
 
-.background{
-    /* border: 1px solid aqua; */
-    background: url(../img/BACKGROUND.png);
-    height: 613px;
-    margin-top: 122px;
+.main{
+  width: 1600px;
+  margin: 0 auto;
 }
 
-.background .container{
-    border: 1px solid green;
-    width: 1600px;
-    margin: 122px auto 218px;
+.deco{
+  font-size: 150px;
+  line-height: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  background: url(../img/deco.svg) no-repeat 50% 0%;
 }
 
-.title h2{
-    margin-top: 200px;
+.title p{
+  font-size: 20px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.title h2{
-    border: 1px solid green;
-    font-size: 150px;
-    line-height: 90%;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 40px;
+.title p em{
+  color: #770000;
 }
 
-/* ex3수정주우우우웅~~ */
+
+/* 수정중~~ */

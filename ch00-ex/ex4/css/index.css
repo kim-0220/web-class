@@ -1,0 +1,108 @@
+html{
+    font-family: 'Pretendard',sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.abore{
+  font-family: "Aboreto", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background: url(../img/bg.png) no-repeat 0% 0%;
+}
+
+.wrap{
+    width: 1600px;
+    margin: 120px 160px;
+}
+
+.banner{
+    height: 599px;
+    background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-bottom: 120px;
+}
+
+.banner h1{
+    color: white;
+    font-size: 50px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.container h2{
+    font-size: 150px;
+    line-height: 90%;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+
+.para{
+    font-size: 20px;
+    line-height: 140%;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+
+.first{
+    display: flex;
+    gap: 20px;
+}
+
+.first figure{
+    flex: 1;
+    aspect-ratio: 520/434;
+    line-height: 0%;
+}
+
+.first figure img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.middle{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.middle h3{
+    font-size: 40px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.middle p{
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.last{
+    display: flex;
+    gap: 20px;
+}
+
+.last figure{
+    flex: 1;
+    aspect-ratio: 790/434;
+    line-height: 0%;
+}
+
+.last figure img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}

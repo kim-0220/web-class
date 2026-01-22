@@ -16,3 +16,9 @@ address{
 ul,ol{
     list-style: none;
 }
+strong,b{
+    font-weight: inherit;
+}
+em,i{
+    font-style: inherit;
+}
