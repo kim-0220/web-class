@@ -1,26 +1,24 @@
 html{
-    font-family: 'Pretendard', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.abo{
-  font-family: "Aboreto", system-ui;
+  font-family: 'Pretendard';
+  font-size: 20px;
   font-weight: 400;
-  font-style: normal;
 }
 
-.wrap{
+.aboreto{
+  font-family: "아보레토";
+}
+
+body{
   background: url(../img/background.png) repeat-x 0% 721px;
 }
 
 .banner{
   height: 599px;
   background: url(../img/banner_bg.png) no-repeat 50% 74% / cover;
+  border-radius: 0 0 150px 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 150px 150px;
 }
 
 .banner h1{
@@ -28,7 +26,6 @@ html{
   font-size: 50px;
   line-height: 100%;
   text-transform: uppercase;
-  margin-bottom: 200px;
 }
 
 .main{
@@ -36,24 +33,65 @@ html{
   margin: 0 auto;
 }
 
-.deco{
+.main h2{
   font-size: 150px;
   line-height: 90%;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 40px;
+  padding-top: 200px;
   background: url(../img/deco.svg) no-repeat 50% 0%;
 }
 
-.title p{
-  font-size: 20px;
+.main .desc1{
   line-height: 140%;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 100px;
 }
 
-.title p em{
+.main .desc1 em{
   color: #770000;
 }
 
+.cafe-g{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+}
 
-/* 수정중~~ */
+.cafe-g figure{
+  flex: 1;
+  aspect-ratio: 790/434;
+  line-height: 0%;
+}
+
+.cafe-g figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.main h3{
+  font-size: 40px;
+  line-height: 140%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.main h3 em{
+  color: #770000;
+}
+
+.main .desc2{
+  line-height: 140%;
+}
+
+.main .desc2 strong{
+  font-weight: 700;
+}
+
+.main .desc2-1{
+  margin-bottom: 10px;
+}

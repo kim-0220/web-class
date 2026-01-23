@@ -22,3 +22,9 @@ strong,b{
 em,i{
     font-style: inherit;
 }
+img{
+    max-width: 100%;
+}
+table{
+    border-collapse: collapse;
+}
