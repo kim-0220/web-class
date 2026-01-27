@@ -1,0 +1,66 @@
+.box1{
+    background-color: gray;
+    width: 500px;
+    height: 500px;
+    /* position: static; 기본값 */
+    /* position은 독립적으로 움직여서 bottom:100px;등으로 아래있던 애가 위로 올라간다해서 위에 있는 태그를 위로 밀지 않음. 즉, 다른 태그의 위치에 영향을 주지 않음 */
+    position: relative;
+    /* 현재 위치를 기준으로 상,하,좌,우 이동 가능 */
+    /* 값을 -로 부여하면 변을 기준으로 바깥쪽 방향으로 이동 */
+    left: 100px;
+    /* 왼쪽 변을 기준으로 안쪽으로 100px 이동했기 때문에 실제 보여지는 것은 오른쪽으로 100px 움직인 것처럼 보임 */
+    top: 100px;
+    /* 위쪽 변을 기준으로 안쪽방향으로 100px 이동했기 때문에 결과적으로 아래로 100px 이동함 */
+    opacity: 0.5;
+    /* 투명도 1이 기본값. 100%는 완전 불투명하다는 의미. 값을 0으로 하면 0%로 완전 투명 */
+}
+
+.box2{
+    background-color: pink;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    /* absolute로 설정하면 플로팅되면서 공중에 떠있다고 생각하면 됨. ex)홈페이지 팝업 */
+    /* 그러나, 공중에 뜨면 부모태그에게 컨텐츠가 인식이 안됨 */
+    /* relative처럼 현재 위치를 기준으로 상,하,좌,우 이동 가능 */
+    left: -20px;
+    top: 0px;
+    opacity: 0.5;
+    z-index: 1;
+    /* body태그에는 기본 position이 적용되어있고, position:absolute;는 부모 태그에 설정되어있는 position을 기준으로 이동하는데, 부모 태그에 position이 없다면 그 상위 조부모 태그를 기준으로 이동됨. 즉, absolute를 쓸때는 기준영역이 필요하고 기준영역은 relative로 부모태그에 부여 */
+}
+
+.box3{
+    background-color: orange;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    position: relative;
+    /* 기준 영역을 설정하는데 많이 사용 */
+    /* 부모태그의 높이가 없을 때, 부모태그 입장에서 공중에 떠있으면 집나간 자식으로 취급하여 컨텐츠만큼 높이 계산이 자동으로 안되고 0이 되며, 높이가 없기 때문에 브라우저에서 보이지 않음 -> 따라서 반응형에서 취약 */
+}
+
+.a{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    /* .box2와 동일하게 position:absolute;이지만 더 나중에 만들어졌기 때문에 더 위로 올라옴 */
+    z-index: 0;
+    /* 기본값이 0, z-index는 position이 있을 때만 유효한 속성이고, 값이 커질수록 앞으로 나옴
+    따라서 나중에 만들어졌다고 해도 z-index로 순서를 조정할 수 있음 */
+}
+
+.box4{
+    background-color: skyblue;
+    position: fixed;
+    /* position:fixed는 absolute와 거의 유사하지만, 언제나 화면(viewport)을 기준영역을 잡는다는 부분에서 큰 차이점이 존재. 따라서 fixed하면 스크롤해도 화면에 고정되어서 따라옴 */
+    /* position을 지정할때는 위치(top,bottom,left,right)를 명시적으로 지정해주어야 함. 안하면 플로팅되어서 body태그에 속하지 않는 범위에서 위치하기 때문에 안보일수있음 */
+    right: 200px;
+    top: 200px;
+    /* position을 주면 자동으로 인라인블록형태로 바뀌면서 너비와 높이 지정 가능*/
+    width: 100px;
+    height: 100px;
+}
