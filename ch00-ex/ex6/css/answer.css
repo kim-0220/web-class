@@ -1,0 +1,57 @@
+html{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header{
+    border-bottom: 2px solid #BE0707;
+}
+
+.common-frame{
+    width: 1600px;
+    margin: 0 auto;
+    line-height: 0%;
+}
+header .common-frame{
+    display: flex;
+    justify-content: space-between;
+}
+/* 조금 더 구체화 및 분리시켜서 태그를 지정해주면 추후에 작업할 때 편리 */
+
+.gnb{
+    display: flex;
+    /* align-items: center; */
+}
+.gnb li{
+    /* padding: 0 1rem; */
+}
+/* 위에서 align-items와 padding을 부여하면 딱 글씨 크기만큼만 클릭이 되기 때문에 a태그를 넓게 잡아서 사용성을 높여야 함 */
+/* a태그는 인라인태그이기 때문에, 단순 height:100%;로는 설정이 적용되지 않아서 a태그에 display:flex;를 하면 글씨가 items이 되고, align items 설정이 가능해지면서 a태그를 선택할 수 있는 간격이 넓어짐 */
+
+.gnb li a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-weight: 600;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.banner{
+    height: 700px;
+    background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1{
+    color: white;
+    font-size: 7.5rem;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
