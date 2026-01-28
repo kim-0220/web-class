@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    background-color: lightgrey;
+    width: 800px;
+    height: 300px;
+    margin: 300px auto;
+}
+
+.a{
+    background-color: red;
+}
+.b{
+    background-color: green;
+}
+.c{
+    background-color: blue;
+}
+.d{
+    background-color: gold;
+}
+.e{
+    background-color: pink;
+}
+
+
+
+.ex1{
+    position: relative;
+}
+.ex1>div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.ex1 .a{
+    left: 0px;
+    top: 0px;
+}
+.ex1 .b{
+    left: 0px;
+    bottom: 0px;
+}
+.ex1 .c{
+    /* left: 350px; */
+    /* top: 100px; */
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    /* 언제나 완전한 중앙에 올 수 있음 */
+}   
+.ex1 .d{
+    right: 0px;
+    top: 0px;
+}
+.ex1 .e{
+    right: 0px;
+    bottom: 0px;
+}
+
+
+
+.ex2{
+    position: relative;
+}
+.ex2>div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.ex2 .a{
+    left: -100px;
+    top: -100px;
+}
+.ex2 .b{
+    left: -100px;
+    bottom: -100px;
+}
+.ex2 .c{
+    left: calc(50% - 50px);
+    top: 100%;
+}   
+.ex2 .d{
+    right: -100px;
+    top: -100px;
+}
+.ex2 .e{
+    right: -100px;
+    bottom: -100px;
+}
+
+
+
+.ex3{
+    position: relative;
+    margin: 600px auto;
+}
+.ex3>div{
+    /* width: 160px; */
+    /* height: 300px; */
+    width: 20%;
+    height: 100%;
+    position: absolute;
+}
+.ex3 .a{
+    /* left: 0px; */
+    left: 0%;
+    /* top: -300px; */
+    top: -100%;
+}
+.ex3 .b{
+    /* left: 160px; */
+    left: 20%;
+    /* bottom: -300px; */
+    bottom: -100%;
+}
+.ex3 .c{
+    /* left: 320px; */
+    left: 40%;
+    /* top: -300px; */
+    top: -100%;
+}   
+.ex3 .d{
+    /* left: 480px; */
+    left: 60%;
+    /* bottom: -300px; */
+    bottom: -100%;
+}
+.ex3 .e{
+    /* left: 640px; */
+    left: 80%;
+    /* top: -300px; */
+    top: -100%;
+}
+
+
+
+.ex4{
+    position: relative;
+}
+.ex4>div{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+.ex4>.a>div{
+    width: 100px;
+    height: 100px;
+}
+.ex4 .a{
+    left: 0;
+    top: -150px;
+}
+.ex4 .b{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.ex4 .c{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.d>div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.ex4 .d{
+    right: 0%;
+    top: 50%;
+}
+.ex4 .e{
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+}
