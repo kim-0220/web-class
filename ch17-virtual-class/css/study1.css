@@ -1,0 +1,71 @@
+.a{
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+    transition: 1s;
+    /* transition은 전환이라는 속성. 마우스가 올려지기 전 단계에서 설정해줘야함 */
+    /* 수치화 할 수있는 모든 것은 transition(부드럽게 전환)이 됨. 색상도 가능! */
+}
+.a:hover{
+    /* '마우스가 올려진(hover가 된) a클래스'를 의미 */
+    background-color: powderblue;
+    width: 200px;
+    font-size: 2rem;
+}
+
+.b{
+    width: 100px;
+    height: 100px;
+    background-color: mediumseagreen;
+    transition: 1s;
+}
+.b:active{
+    /* active는 마우스를 클릭한 상태(마우스를 떼지 않고 클릭하고 있는 상태) */
+    background-color: rebeccapurple;
+    color: whitesmoke;
+}
+
+.box{
+    background-color: salmon;
+    width: 300px;
+    height: 300px;
+}
+.c{
+    background-color: olivedrab;
+    width: 100px;
+    height: 100px;
+    transition: 1s;
+}
+.box .c:hover{
+    font-size: 2rem;
+    /* box클래스 안에 있는 c클래스에 마우스를 올리면 폰트 사이즈 변경됨 */
+}
+.box:hover .c{
+    background-color: palegoldenrod;
+    /* 마우스가 올려진 box클래스 안에 있는 c클래스를 선택. 즉, box클래스에 마우스를 올리면 c클래스의 배경색이 바뀜 */
+}
+
+.d:before{
+    content: "추가된 내용1";
+    /* html에서 작성된 실제 문단 내용의 앞에 다른 내용을 추가할 수 있음 */
+    /* html 수정 없이 css에서 소량의 content들을 추가할 수 있으며, 항상 선택된 태그의 첫번째 자식으로 만들어짐 */
+    /* display:inline이기 때문에 컨텐트만큼 크기를 가지고 있으며 너비와 높이 설정이 불가능 */
+    border: 1px solid sienna;
+    width: 200px;
+    height: 200px;
+    display: inline-flex;
+    /* inline-flex는 flex-container이지만 글자처럼 baseline을 기준으로 나란히 배치된다는 뜻 */
+    justify-content: center;
+    align-items: center;
+}
+.d:after{
+    content: "추가된 내용2";
+    /* after라는 가상의 태그가 d클래스에 생성되어 실제 문단 내용의 뒤에 다른 내용을 추가 할 수 있음 (항상 선택된 태그의 마지막 자식으로 생성됨) */
+    /* 수정할 사항이 있을 때, html을 일일히 수정하기에는 너무 비효율적. 따라서 css에서 태그를 선택하여 추가할 사항을 content로 추가해주면 html에서는 가상의 태그(before 또는 after)가 생성되는 것이며 내용이 추가됨*/
+    /* 즉, before와 after는 css에서 만드는 가상의 태그이며, 이는 스타일이기 때문에 스크린리더기가 읽어줄 수 없어서 핵심적인 내용을 넣으면 안되고 부가적인 요소들만 해야함 */
+    border: 1px solid navy;
+    display: block;
+    /* 블록태그 */
+    width: 100px;
+    height: 100px;
+}

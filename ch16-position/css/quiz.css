@@ -177,3 +177,76 @@
     left: calc(50% - 50px);
     top: calc(50% - 50px);
 }
+
+
+
+.ex5{
+    position: relative;
+}
+.ex5>div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.ex5 .a{
+    left: -100px;
+    top: -100px;
+    z-index: 1;
+}
+.ex5 .b{
+    left: -50px;
+    top: -50px;
+}
+.ex5 .c{
+    left:0;
+    top: 0;
+    z-index: 1;
+}   
+.ex5 .d{
+    left: 50px;
+    top: 50px;
+}
+.ex5 .e{
+    left: 100px;
+    top: 100px;
+    z-index: 1;
+}
+
+
+
+.ex6{
+    display: flex;
+}
+.ex6>div{
+    flex: 1;
+}
+.ex6 .a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ex6 .c{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ex6 .b{
+    position: relative;
+}
+.ex6 .d{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.ex6 .e{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
