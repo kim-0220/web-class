@@ -1,0 +1,89 @@
+.a{
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    border: 10px solid tomato;
+    transition: 1s;
+    /* 마우스를 올리면 hover스타일이 적용되는데 걸리는 시간이 1초라는 의미. 위의 표현은 축약형 표현 */
+    /* 축약형은 (property/duration/timing-function/delay) 순서로 띄어쓰기로 구분해서 사용 */
+    /* 수치로 표현된 것들은 transition(전환)속성으로 모두 애니메이션을 만들 수 있음 */
+}
+.a:hover{
+    width: 300px;
+    height: 300px;
+    /* display 기본값은 block, 이를 flex로 바꾸면 중간값을 수치화할 수 없어서 transition(부드럽게 전환)이 적용되지 않음. 즉, flex-start/center/flex-end 등을 계산할 수 없음 */
+}
+
+.b{
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    border: 10px solid navy;
+    transition-property: all;
+    /* 변하는 스타일 모두를 선택한다는 의미 (:hover에서 설정한 속성 중 하나만 선택도 가능) */
+    /* 예를들어, transition-property: width;로 하면 너비 속성만 부드럽게 전환시킬 수 있음 */
+    transition-duration: 4s;
+    /* 마우스를 올렸을때 전환 애니메이션을 총 몇 초 동안 보여줄 것인지 설정 */
+    transition-timing-function: linear;
+    /* 마우스를 올렸을때 스타일이 바뀌는데 n초동안(duration동안) 바뀔 때 표현되는 속도감을 의미 linear는 속도가 일정한것으로, 일정시간에 같은 속도로 크기가 커지는 것을 의미 */
+    /* ease는 가속도가 표현되는 것으로, 처음 속도가 올라갔다가 끝 지점에서 속도가 완만해지는것 */
+    /* ease-in은 처음에 속도가 느리고 나중에 끝지점에서 빨라지는 것 */
+    transition-delay: 3s;
+    /* 0s가 기본값. 마우스를 올렸을때 애니메이션이 시작되는 시간을 의미하며, 만약 5s면 5초 뒤에 애니메이션이 시작된다고 생각하면 됨 */
+    /* ls(1초)=1000ms(1000분의 1초) */ /* .5s(0.5초) = 500ms */
+    /* -2s는 2초 전에 시작되었다는 의미. 즉, 2초가 지났다고 가정하고(2초전에 시작되었다고 생각하고) 마우스를 올리자마자 300px부터 trasition시작  */
+    /* 속도감을 직접 조절하고싶으면 브라우저의 개발자창에 들어가서 transition-timing-function을 선택하고 물결아이콘을 눌러서 직접 조정 하면 cubic-bezier(~)이 생성되고 이것을 복사해서 코드창에 복붙하면 됨! 이 계산값은 컴퓨터에서 계산되는 것이기때문에 개발자 창에서 복사해서 써야함 */
+}
+.b:hover{
+    width: 600px;
+    height: 600px;
+}
+
+.c{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    border: 10px solid springgreen;
+    transition:
+    width 1s ease 0s,
+    height 1s ease 1s,
+    background-color 1s ease 2s,
+    padding-left 1s ease 3s;
+    /* width가 변한 후에 height를 다음 순서로 바뀌게 하고싶으면 상단처럼 쓰면 됨 */
+    /* width가 전환되는 시간이 1초이고 그 다음 순서로 전환하려면 height는 1초뒤에 시작하는것으로 설정하면 됨 */
+    /* 보통 이런경우 css속성을 1열로 쓰지 않고 콤마 및 enter를 써서 작성 */
+}
+.c:hover{
+    width: 600px;
+    height: 600px;
+    background-color: thistle;
+    padding-left: 300px;
+}
+
+.box{
+    background-color: silver;
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+}
+.d{
+    background-color: orange;
+    height: 200px;
+    opacity: 0;
+    /* opacity(투명도) 0은 안보이지만 공간은 차지하고있음 */
+    transition: all 1s ease 0s;
+}
+.box:hover .d{
+    opacity: 1;
+    /* box클래스에 마우스 커서를 올렸을 때 d클래스의 투명도가 1이 되기 때문에 완전히 보이게 됨 */
+}
+.e{
+    background-color: chartreuse;
+    height: 200px;
+    display: none;
+    /* display:none;을 하면 아예 주석처리하듯 없애는 것이기 때문에 공간차지를 하지않음 */
+}
+.box:hover .e{
+    display: block;
+    /* none처리 되었던 값을 기본값인 block으로 바꾸면 마우스를 올렸을 때 다시 보이게 됨. 그러나 전환이 되지는 않음. 왜냐하면 none과 block 사이에는 수치화 할 수 있는 중간값이 없기 때문 */
+}

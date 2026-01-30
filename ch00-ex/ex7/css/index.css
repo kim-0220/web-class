@@ -1,0 +1,103 @@
+html{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.aborr{
+    font-family: "아보레토";
+}
+
+.wrap{
+    position: relative;
+}
+
+.hero-banner{
+    background: url(../img/hero-banner.jpg) no-repeat 50% 50% / cover;
+    height: 100vh;
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 1920px;
+    border-bottom: 2px solid #BE0707;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.B-title{
+    width: 1600px;
+    color: white;
+    font-size: 140px;
+    line-height: 90%;
+    text-transform: uppercase;
+}
+
+.common-frame{
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;  
+    justify-content: space-between;
+}
+
+.menu-all{
+    width: 966px;
+    height: 100px;
+}
+
+.sub-menu{
+    height: 30px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-menu{
+    height: 70px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title-menu li{
+    flex: 1;
+}
+
+.bottom-script{
+    width: 1600px;
+    margin: 0 auto;
+}
+.S-title{
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.bottom-script p{
+    margin-bottom: 80px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.bottom-script .banner{
+    background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
+    height: 441px;
+    margin-bottom: 155px;
+}
