@@ -1,0 +1,118 @@
+.box{
+    border: 5px solid black;
+    width: 300px;
+    height: 300px;
+    margin: 200px auto;
+    transition: all 1s ease 0s;
+}
+
+/* transform속성은 애니메이션 할 때 사용. 레이아웃 배치할 때는 사용x */
+
+.a{
+    background-color: tomato;
+}
+.a:hover{
+    transform: translateX(-50%);
+    /* 본인이 가지고 있는 너비의 반만큼 오른쪽으로 이동 (-는 왼쪽으로) */
+}
+
+.b{
+    background-color: cornflowerblue;
+}
+.b:hover{
+    transform: translateY(100px);
+    /* 아래로 100px 이동 (-는 위로) */
+}
+
+.c{
+    background-color: chartreuse;
+}
+.c:hover{
+    transform: 
+    translateX(100px)
+    translateY(-100px);
+}
+
+.parent{
+    background-color: thistle;
+    height: 700px;
+    perspective: 1000px;
+    /* 원근감의 공간(앞뒤의 공간)이 1000px이 만들어진다고 생각하면 됨 */
+    perspective-origin: 50% 50%;
+    /* 기본값. 원근감의 공간에 있는 중앙점(소실점)의 위치(좌표)가 50% 50%라는 의미. 변동가능 */
+}
+.d{
+    background-color: rebeccapurple;
+    margin: 0;
+    margin-left: auto;
+}
+.parent:hover .d{
+    transform: translateZ(-500px);
+    /* 앞으로 500px만큼 튀어나온다고 생각하면 됨(-는 뒤로). 따라서 소실점을 중심으로 앞쪽으로 더 가까이 오기 때문에 크기가 커지면서(-일때는 작아지면서) 사선으로 움직이게됨 */
+}
+
+.e{
+    background-color: salmon;
+    transform-origin: 100px 50px;
+    /* 회전시 기준좌표가 도형 내부 100px 50px로 설정되어 이를 중심으로 회전하게됨. (-로 설정하면 도형 외부에 중심점(가준좌표)을 두고 회전함) */
+}
+.e:hover{
+    transform: rotate(-30deg);
+    /* deg는 각도. -30도 만큼 반시계방향으로 회전한다는 의미 (+는 시계방향으로). 360도는 한바퀴 돌아감 */
+}
+
+.f{
+    background-color: aquamarine;
+}
+.f:hover{
+    transform: rotateX(180deg);
+    /* x축을 기준으로 180도 만큼 입체회전을 함. 앞뒤로 뒤집히듯 회전 */
+}
+
+.g{
+    background-color: pink;
+}
+.g:hover{
+    transform: rotateY(180deg);
+    /* y축을 기준으로 180도 만큼 입체회전을 함. 좌우로 뒤집히듯 회전 */
+}
+
+.h{
+    background-color: slateblue;
+}
+.h:hover{
+    transform: scaleX(200%);
+    /* 100%가 기본값. 가로 비율만 200% 키우겠다는 의미  */
+}
+
+.i{
+    background-color: burlywood;
+}
+.i:hover{
+    transform: scaleY(2);
+    /* 200%를 정수 2로 써도 됨. 세로 비율만 2배만큼 키우겠다는 의미 */
+}
+
+.j{
+    background-color: seagreen;
+}
+.j:hover{
+    transform: scale(0.7);
+    /* 가로 및 세로로 30% 작아진다는 의미 */
+}
+
+.k{
+    background-color: saddlebrown;
+}
+.k:hover{
+    transform: skewX(30deg);
+    /* x축을 따라서 30도 만큼 기울어진다는 의미 -> 좌측 상단 꼭지점이 왼쪽으로 기울어짐 */
+}
+
+.l{
+    background-color: yellow;
+}
+.l:hover{
+    transform: skewY(-30deg);
+    /* y축을 따라서 -30도 만큼 기울어진다는 의미 -> 우측 상단 꼭지점이 위로 기울어짐(올라감) */
+}

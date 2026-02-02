@@ -1,0 +1,118 @@
+html{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid #BE0707;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: white;
+}
+/* position:fixed로 설정하면 자동으로 포함하는 컨텐츠만큼의 너비와 높이를 갖게 됨. 따라서 inner-frame에게 설정되어있는 너비로 줄어들게 되기 때문에 header에게 너비를 부여해야 함. */
+/* 100%는 스크롤바를 제외한 너비로 인식하고, 100vw는 스크롤바를 포함한 너비이기 때문에 가로방향으로 안보이는 컨텐츠가 생길 수 있고, 그럼 가로방향으로도 스크롤바가 생겨버림. 따라서 %로 설정해주는것이 맞는 방법 */
+
+.inner-frame{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+header .inner-frame{
+    display: flex;
+    justify-content: space-between;
+    line-height: 0%;
+}
+
+header nav{
+    width: 966px;
+    height: 100px;
+}
+
+.lnb{
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.lnb li a{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* a태그에 높이를 100%로 부여 및 위의 속성을 적용함으로써 클릭하는 범위를 확장시켜 사용성을 높일 수 있음 */
+
+.gnb{
+    height: 70px;
+    display: flex;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.gnb li{
+    flex: 1;
+}
+
+.gnb li a{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* menu영역을 만들때는 nav태그를 사용 */
+/* local navigation bar = lnb */
+/* global navigation bar = gnb */
+
+.banner{
+    height: 100vh;
+    background: url(../img/hero-banner.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 120px;
+}
+
+.banner h2{
+    width: 1600px;
+    font-size: 140px;
+    line-height: 90%;
+    text-transform: uppercase;
+}
+
+.c1 h3{
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.c1 p{
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+}
+
+.sub-banner{
+    height: 441px;
+}
+
+.sub-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

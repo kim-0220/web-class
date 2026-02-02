@@ -250,3 +250,112 @@
     right: 0;
     bottom: 0;
 }
+
+
+
+.ex7{
+    position: relative;
+    overflow: hidden;
+}
+.ex7>div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.ex7 .a{
+    left: 0px;
+    top: 0px;
+    transition: all 1s ease 0s;
+}
+.ex7:hover .a{
+    left: -100px;
+    top: -100px;
+}
+.ex7 .b{
+    left: 0px;
+    bottom: 0px;
+    transition: all 1s ease 0s;
+}
+.ex7:hover .b{
+    left: -100px;
+    bottom: -100px;
+}
+.ex7 .c{
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+}
+.ex7 .d{
+    right: 0px;
+    top: 0px;
+    transition: all 1s ease 0s;
+}
+.ex7:hover .d{
+    right: -100px;
+    top: -100px;
+}
+.ex7 .e{
+    right: 0px;
+    bottom: 0px;
+    transition: all 1s ease 0s;
+}
+.ex7:hover .e{
+    right: -100px;
+    bottom: -100px;
+}
+
+
+
+.ex8{
+    position: relative;
+    overflow: hidden;
+}
+.ex8>div{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.ex8 .a{
+    left: -100px;
+    top: -100px;
+    transition: all 1s ease 0s;
+}
+.ex8:hover .a{
+    left: 0;
+    top: 0;
+}
+.ex8 .b{
+    left: -100px;
+    bottom: -100px;
+    transition: all 1s ease 0s;
+}
+.ex8:hover .b{
+    left: 0;
+    bottom: 0;
+}
+.ex8 .c{
+    left: calc(50% - 50px);
+    bottom: -100px;
+    transition: all 1s ease 0s;
+}
+.ex8:hover .c{
+    left: calc(50% - 50px);
+    bottom: calc(50% - 50px);
+}
+.ex8 .d{
+    right: -100px;
+    top: -100px;
+    transition: all 1s ease 0s;
+}
+.ex8:hover .d{
+    right: 0;
+    top: 0;
+}
+.ex8 .e{
+    right: -100px;
+    bottom: -100px;
+    transition: all 1s ease 0s;
+}
+.ex8:hover .e{
+    right: 0;
+    bottom: 0;
+}
