@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.gnb{
+    width: 300px;
+}
+
+.gnb a{
+    border: 1px solid tomato;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gnb>li{
+    max-height: 50px;
+    overflow: hidden;
+    transition: all 0.6s ease 0s;
+}
+
+.gnb>li:hover{
+    max-height: 500px;
+}
+
+.gnb ul{
+    background-color: pink;
+}

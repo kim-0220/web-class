@@ -116,3 +116,45 @@
     transform: skewY(-30deg);
     /* y축을 따라서 -30도 만큼 기울어진다는 의미 -> 우측 상단 꼭지점이 위로 기울어짐(올라감) */
 }
+
+
+
+.banner{
+    height: 600px;
+    background-color: pink;
+    position: relative;
+}
+.banner h1{
+    border: 1px solid tomato;
+    position: absolute;
+    /* absolute를 적용하면 공중에 뜨면서 포함하는 컨텐츠만큼의 공간너비를 갖고(인라인블록형태) 박스형태가 되어 가로와 세로사이즈를 지정해서 크기조정이 가능해짐 */
+    left: 50%;
+    /* 기준영역 너비의 절반만큼 왼쪽 사이드에서 안쪽으로 들어오게됨 */
+    /* @@@ transform: translateX(-50%); */
+    /* 본인 자신에 대한 단위로 transform이 설정된 h1의 너비의 50%만큼 왼쪽(-니까)으로 이동한다는 뜻. 본인의 너비가 달라져도 유동적으로 언제나 가운데 중앙배치가 가능해짐 -> absolute할때는 transform을 빈번하게 사용! */
+    top: 50%;
+    /* 기준영역 높이의 절반만큼 위쪽 사이드에서 아래쪽으로 들어오게됨 */
+    /* @@@ transform: translateY(-50%); */
+    /* 위의 너비와 동일하게 h1 높이의 50%만큼 위쪽(-니까)으로 이동한다는 뜻  */
+    /* 따라서 전체 가로너비의 중앙배치, 세로너비의 중앙배치가 가능해짐 */
+    /* 그러나 transform을 따로 쓰면 위쪽의 속성이 삭제되기때문에 축약형으로 콤마(,)를 사용 */
+    transform: translate(-50%,-50%);
+}
+
+/* 위처럼 title을 공중에 띄워서 중앙배치하는 경우 = banner의 공간에 video태그가 가득 채우고 있을 경우 h1태그와 겹쳐서 배치가 되지 않기 때문에 공중에 띄워서 중앙 배치 */
+
+/* inline형태는 transform이 사용 불가함 */
+
+.banner2{
+    height: 900px;
+    background-color: skyblue;
+    position: relative;
+}
+.banner2 div{
+    border: 1px solid navy;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* h1만이 아닌 p태그 등으로 내용이 추가된다면 h1과 p태그를 div로 한번 더 묶어서 위처럼 position 및 transform을 적용시키면 div로 묶인 애들이 언제나 중앙배치가 됨  */
+}

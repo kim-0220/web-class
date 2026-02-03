@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+header{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    overflow: hidden;
+    background-color: pink;
+    transition: all 0.6s ease 0s;
+}
+header:hover {
+    max-height: 400px;
+}
+
+.logo{
+    border: 1px solid blue;
+}
+
+.gnb{
+    border: 1px solid blue;
+    display: flex;
+}
+
+.gnb>li{
+    border: 1px solid green;
+}
+
+.gnb>li>a{
+    background-color: salmon;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header에 높이를 설정하여 밖으로 밀려난 애들을 overflow:hidden해주는 상황 -> 그러나 height를 고정하게 되면 추후 내용이 추가되면 높이를 직접 조정해주어야하는 부담이 있음 */
+/* 따라서 마우스를 올렸을때(hover일때) max-height로 적용시켜주면 현재 포함하는 컨텐츠만큼 높이가 표현됨. height의 기본 값이 auto이기 때문*/
