@@ -1,0 +1,102 @@
+html{
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header{
+    height: 100px;
+}
+
+.inner-header{
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
+    padding-bottom: 10px;
+}
+
+.gnb{
+    display: flex;
+}
+
+.gnb>li{
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 200px;
+    max-height: 100px;
+    border-radius: 0 0 5px 6px;
+    padding: 0 10px 10px 10px;
+    transition: all 0.6s ease 0s;
+    background-color: white;
+}
+
+.gnb>li:hover{
+    max-height: 500px;
+}
+
+.gnb>li>a{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.gnb ul>li{
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.gnb ul>li:last-of-type{
+    margin-bottom: 0;
+}
+
+.banner{
+    position: relative;
+    height: 800px;
+    z-index: -1;
+}
+
+.banner video{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    margin-bottom: 84px;
+}
+
+.floating-title{
+    width: 1600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.floating-title h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 7rem;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.floating-title p{
+    color: white;
+    font-weight: 500;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
