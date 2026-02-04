@@ -1,0 +1,77 @@
+html{
+    font-family: 'Pretendard';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header{
+    max-height: 100px;
+    /* 포함하는 컨텐츠만큼의 높이를 유지하면서 최대 100px만큼 보이겠다는 의미 */
+    overflow: hidden;
+    transition: all 1s ease 0s;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+}
+
+header:hover{
+    max-height: 500px;
+    /* 마우스를 올렸을 때 포함하는 컨텐츠만큼의 높이를 유지하면서 최대 500px만큼 보이겠다는 의미 */
+}
+
+.inner-header{
+    width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
+    padding-bottom: 49px;
+}
+
+.gnb{
+    display: flex;
+    gap: 3.3rem;
+}
+
+.gnb>li>a{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: .9rem;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.gnb ul>li{
+    margin-bottom: 1rem;
+    font-size: .8rem;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.gnb ul>li:last-of-type{
+    margin-bottom: 0;
+}
+
+.banner{
+    height: 800px;
+    margin-top: 5rem;
+    margin-bottom: 4.2rem;
+    background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1{
+    width: 1600px;
+    color: white;
+    font-size: 7rem;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
