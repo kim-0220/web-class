@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    border: 1px solid red;
+    display: grid;
+    /* (세로 colums)열 갯수를 우선적으로 정해야함 */
+    /* @@@ grid-template-columns: 100px 200px; */
+    /* grid-container는 블록처럼 부모만큼의 크기를 잡고있음 */
+    /* 띄어쓰기로 구분해서 columns를 몇개를 만들지 정할 수 있으며, 위는 해당 2개 열의 너비를 100px과 200px로 설정한 것임 */
+    /* box클래스 안에 있는 section 태그가 grid-items이 된 것임 */
+    /* @@@ grid-template-columns: 20% 25% 20% 25%; */
+    /* %로도 설정가능 */
+    gap: 10px 20px;
+    /* 첫번째 10px이 위아래gap, 두번째 20px이 좌우gap */
+    /* @@@ grid-template-columns: repeat(3,25%) 100px; */
+    /* repeat(3,25) -> 25%를 3번 반복하겠다는 의미 */
+    /* 3개의 열은 25% 너비로 가고 마지막 열은 100px로 하겠다는 의미. 혼용가능 */
+    /* ex) grid-template-columns: 25% 25% 25% 100px = repeat(3,25%) 100px */
+    /* ex) grid-template-columns: 150px 25% 25% 100px = 150px repeat(2,25%) 100px */
+    /* @@@ grid-template-columns: 1fr 1fr; */
+    /* 1대 1 비율로 하겠다는 의미 */
+    /* repeat(4,1fr) -> 열 4개를 1대1대1대1 비율로 만들겠다는 의미 */
+    grid-template-columns: 100px 200px 300px 1fr;
+    /* 4개 열을 만들되, 전체 grid-container 공간에서 확정되어있는 px과 gap을 제외한 나머지를 1fr이 모두 차지하겠다는 의미 */
+    /* 행의 갯수는 열의 갯수에 지배되어 수동적이고 유동적임 */
+    /* @@@ grid-template-rows: 100px 100px 100px 100px 100px; = repeat(5,100px) */
+    /* 행의 갯수를 100px 너비로 5개를 만들었으나, 위에서 열의 갯수를 4개로 잡으면 남는 부분이 가상의 item이 들어올것을 예상하여 공간이 차지되면서 container높이가 커진것처럼 보이게 됨 -> 즉, template-rows는 미리 정해질 수 있음 */
+
+
+
+
+
+    ????아래내용 이해 안됐음
+    grid-template-rows: repeat(5, auto);?
+    /* grid-template-rows: repeat(5,minmax(100px,auto)); */
+    /* 최소가 100px, 최대는 300px처럼 지정할 수 있으나 content가 많아지면 밖으로 삐져나올수 있기 때문에 보통 최대는 auto로 지정함 */
+    grid-auto-rows: minmax(100px,auto);?
+    /* grid-auto-rows는 행의 갯수가 자동계산 되는 것을 표현 */
+}
+
+.box section{
+    border: 1px solid blue;
+}
+/* .box section:nth-of-type(6){
+    background-color: skyblue;
+    grid-column: 1/3;
+    /* 1부터 3을 의미 */
+    grid-row: 1/3;

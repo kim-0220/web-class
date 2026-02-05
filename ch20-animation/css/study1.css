@@ -1,0 +1,106 @@
+.a{
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    margin: 200px auto;
+    animation-name: myrotate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes myrotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+/* myrotate라는 식별자(이름)을 부여 */
+/* 애니메이션은 동영상이라고 생각하면 됨. 0%는 시작, 100%는 끝 */
+/* 위처럼 쓰면 애니메이션이 등록된것임 -> 0도에서 360도로 돌리겠다는 의미 */
+/* animation-timing-function: linear -> 애니메이션의 속도감이 정비례하다는 의미 */
+/* animation-iteration-count: 1 -> 회전이 1번 실행된다는 의미 즉, 0에서 100%까지 한번 돌겠다는 의미 */
+/* animation-direction: normal -> 회전하는 방향이 normal(시계방향/0->100%)이라는 의미 */
+
+
+
+.b{
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+    margin: 200px auto;
+    animation-name: mytranslate;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    /* animation-iteration-count: 3; */
+    animation-iteration-count: infinite;
+    /* 무한반복 */
+    /* animation-direction: normal; */
+    /* animation-direction: reverse; */
+    /* animation-direction: alternate; */
+    /* 0->100->0->100 순서로 왔다갔다 */
+    animation-direction: alternate-reverse;
+    /* 100->0->100->0 순서로 왔다갔다 */
+}
+
+@keyframes mytranslate {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(300px);}
+}
+
+.b:hover{
+    animation-play-state: paused;
+    /* b클래스에 마우스를 올리면 멈추겠다는 의미 */
+}
+
+
+
+.c{
+    width: 100px;
+    height: 100px;
+    background-color: turquoise;
+    margin: 100px auto;
+    animation-name: myanimation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes myanimation {
+    0%{transform: translateY(0)rotate(0deg);}
+    100%{transform: translateY(300px)rotate(360deg);}
+}
+/* 2가지의 애니메이션을 모두 적용하고 싶으면 위처럼 연속적으로 적어주어야 함 */
+
+    
+
+.d{
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    margin: 400px auto;
+    animation: bounce .9s ease 0s 5 normal;
+    /* 축약형표현 띄어쓰기로 구분.
+    순서 : identifier duration timing-function delay iteration-count direction */
+}
+
+@keyframes bounce {
+    0%{
+        transform: scale(1);
+    }
+    45.5%{
+        background-color: tomato;
+        border-radius: 50%;
+    }
+    100%{
+        transform: scale(2);
+    }
+}
+
+.d:hover{
+    animation-play-state: paused;
+}

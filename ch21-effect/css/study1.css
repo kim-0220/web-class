@@ -1,0 +1,87 @@
+.box1{
+    border: 5px solid gold;
+    width: 200px;
+    height: 200px;
+    margin: 200px auto;
+    box-shadow: 10px 30px 0px greenyellow;
+    /* box-shadow: x좌표로 이동, y좌표로 이동, 확산정도(뭉개짐, 투명해짐), 그림자 컬러 */
+}
+
+.box2{
+    border: 5px solid palevioletred;
+    width: 200px;
+    height: 200px;
+    margin: 200px auto;
+    box-shadow:
+    20px 20px 10px purple,
+    -40px -40px 40px teal,
+    60px 60px 6px slategray;
+}
+
+.box3{
+    border: 5px solid tomato;
+    width: 200px;
+    height: 200px;
+    margin: 200px auto;
+    box-shadow: 0px 0px 0px maroon;
+    transition: all 0.5s linear 0s;
+}
+.box3:hover{
+    border: 20px solid burlywood;
+    box-shadow: 30px 30px 50px maroon
+}
+
+
+
+.filter1 img{
+    filter: grayscale(0.8);
+    /* 0은 기본값으로 변화없음. 1은 완전히 채도가 빠지고 회색으로 바뀜 */
+    transition: all 0.5s ease 0s;
+}
+.filter1 img:hover{
+    filter: grayscale(0);
+}
+
+.filter2 img{
+    filter: brightness(0.3);
+    /* 명도(밝기)조절. 1이 기본값 */
+    transition: all 1s ease 0s;
+}
+.filter2 img:hover{
+    filter: brightness(1);
+}
+
+.filter3 img{
+    filter: blur(20px);
+    transition: all 0.5s ease 0s;
+}
+.filter3 img:hover{
+    filter: blur(0px);
+}
+
+.filter4 img{
+    filter: hue-rotate(180deg);
+    /* 완전한 보색이 설정되는 것 */
+    transition: all 0.5s ease 0s;
+}
+.filter4 img:hover{
+    filter: hue-rotate(0deg);
+}
+
+
+.bg{
+    background: linear-gradient(30deg,powderblue,plum);
+    /* blend mode를 적용시키려면 혼합하려는 것(배경)보다 위쪽에 배치가 되어야 함 */
+}
+.blend1{
+    mix-blend-mode: color-burn;
+    /*  두 채널 사이의 대비를 증가시켜서 기본 색상을 어둡게 하여 혼합 색상을 반영. 흰색과 혼합하면 색상 변화가 없음 */
+}
+.blend2{
+    mix-blend-mode: difference;
+    /* 각 채널의 색상 정보를 보고 기본 색상과 혼합 색상 중 명도 값이 더 큰 색상에서 다른 색상을 뺌. 흰색과 혼합하면 기본 색상 값이 반전되고 검정색과 혼합하면 색상 변화가 없음 */
+}
+.blend3{
+    mix-blend-mode: overlay;
+    /* 기본 색상에 따라 색상을 곱하거나 스크린함. 패턴이나 색상은 기본 색상의 밝은 영역과 어두운 영역을 보존하면서 기존 픽셀 위에 겹쳐짐. 기본 색상은 대체되지 않고 혼합 색상과 섞여 원래 색상의 밝기와 농도를 반영함 */
+}
