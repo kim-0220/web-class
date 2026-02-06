@@ -1,0 +1,22 @@
+@media (max-width:1920px){
+    .container{
+        background-color: steelblue;
+        /* 최대 1920px 이하일 때 스타일 적용 */
+    }
+}
+
+@media (max-width:1024px){
+    .container{
+        background-color: darkorchid;
+        /* 최대 1024px 이하일 때 스타일 적용 */
+    }
+}
+
+@media (max-width:768px){
+    .container{
+        background-color: springgreen;
+        /* 최대 768px 이하일 때 스타일 적용 */
+    }
+}
+
+/* 즉, PC에서 적용되는 코딩을 그대로 적용되면서 탭과 모바일의 경우에 필요한 부분만 수정하는 방식으로 코딩을 진행. 실무에서 많이 사용되는 방식. 단 처음 디자인할 때부터 미리 고려해야할 부분이 많아서 조금 더 어려움 */

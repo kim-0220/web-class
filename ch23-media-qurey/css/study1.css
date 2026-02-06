@@ -1,0 +1,24 @@
+@media (min-width:1024px){
+    /* 화면너비가 최소 1024픽셀 이상일 때 적용되는 스타일 */
+    .container{
+        background-color: cadetblue;
+        /* 즉, 화면이 1024픽셀 미만이면 스타일 적용이 안됨! */
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px){
+    /* 화면너비가 최소 768픽셀 이상, 최대 1023픽셀 이하일 때 적용되는 스타일 */
+    .container{
+        background-color: yellowgreen;
+        /* 즉, 화면이 768픽셀 미만이면 스타일 적용이 안됨! */
+    }
+}
+
+@media (max-width:767px){
+    /* 화면너비가 최대 767픽셀 이하일 때 적용되는 스타일 */
+    .container{
+        background-color: coral;
+    }
+}
+
+/* 위의 방식은 초보 방식! 비추천! */
