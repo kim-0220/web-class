@@ -4,10 +4,17 @@
         font-size: var(--base-pc);
         font-weight: 400;
     }
+    
+    strong{
+        font-weight: 800;
+    }
 
     .banner{
         height: 599px;
         background: url(../img/baked.png) no-repeat 50% 50% / cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .banner h1{
@@ -15,13 +22,11 @@
         font-size: 2.5rem;
         line-height: 100%;
         text-transform: uppercase;
-        text-align: center;
-        padding-top: 13.5rem;
     }
 
     .content{
-        width: 1600px;
-        margin: 0 auto;
+        width: auto;
+        margin: 0 8rem;
         margin-top: 6rem;
     }
 
