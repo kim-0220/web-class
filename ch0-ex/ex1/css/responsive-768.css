@@ -1,0 +1,16 @@
+@media(max-width: 786px){
+    html{
+        font-size: var(--base-mo);
+    }
+
+    .inner-frame{
+        width: auto;
+        margin: 0 1rem;
+        margin-top: 3.75rem;
+        margin-bottom: 3.75rem;
+    }
+}
+/* 반응형 css에서 주의해야 할 점 -> 큰 화면에서 작은 화면(최신)순으로 순서를 지정해야 함 */
+/* link를 걸 때에도 순서대로 걸어야 적용이 됨! */
+/* 최소 width: 280px까지 고려해야 함 */
+/* Breakpoint = 화면 너비(px)에 따라 웹사이트의 레이아웃, 크기, 규칙이 변하는 분기점 */

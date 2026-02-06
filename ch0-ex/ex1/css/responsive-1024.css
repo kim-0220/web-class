@@ -1,0 +1,19 @@
+@media (max-width: 1024px){
+    html{
+        font-size: var(--base-pad);
+    }
+
+    .inner-frame{
+        width: auto;
+        margin: 0 2rem;
+        margin-top: 3.75rem;
+        margin-bottom: 3.75rem;
+    }
+    
+    .inner-frame h1{
+        font-size: 2rem;
+    }
+}
+/* 바뀌는 부분만 쓰면 됨! 기준px 사이즈를 정해놨기 때문에 rem단위로 쓴 속성들이 모두 같이 반영됨! */
+/* view-port(화면 너비)는 기종에 따라서 바뀔 수 있다는 전제를 기억하고 있어야 함 -> 이에따라 inner-frame의 너비가 고정이 되어있으면 안됨! -> 가변 컨테이너 고정 여백으로 설정하라는 의미 */
+/* 결론 = figma에서 여백이 36px임을 확인 할 수 있음. 그럼 좌우 고정 여백이 2rem이고 클래스 inner-frame의 너비는 auto가 되어야함 */

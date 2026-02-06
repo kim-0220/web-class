@@ -1,0 +1,55 @@
+@media (max-width: 1920px){
+    html{
+        font-family: 'Pretendard', sans-serif;
+        font-size: var(--base-pc);
+        font-weight: 400;
+    }
+
+    .banner{
+        height: 599px;
+        background: url(../img/baked.png) no-repeat 50% 50% / cover;
+    }
+
+    .banner h1{
+        color: white;
+        font-size: 2.5rem;
+        line-height: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 13.5rem;
+    }
+
+    .content{
+        width: 1600px;
+        margin: 0 auto;
+        margin-top: 6rem;
+    }
+
+    .content h2{
+        font-size: 4rem;
+        line-height: 90%;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+
+    .content p{
+        border-top: 1px solid black;
+        line-height: 140%;
+        text-align: right;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .content figure img{
+        width: 1000px;
+        height: 430px;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    .content figcaption{
+        line-height: 140%;
+        text-transform: lowercase;
+    }
+}

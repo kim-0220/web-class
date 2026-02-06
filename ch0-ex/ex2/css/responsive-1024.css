@@ -1,0 +1,11 @@
+@media (max-width: 1024px){
+    html{
+        font-size: var(--base-pad);
+    }
+
+    .content{
+        width: auto;
+        margin: 0 2rem;
+        margin-top: 6rem;
+    }
+}
