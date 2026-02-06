@@ -8,4 +8,15 @@
         margin: 0 2rem;
         margin-top: 6rem;
     }
+
+    .content h2{
+        font-size: 3.33rem;
+    }
+
+    .content figure img{
+        width: 952px;
+        height: 350px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
 }
