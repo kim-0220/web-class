@@ -5,10 +5,6 @@
         font-weight: 400;
     }
 
-    strong{
-        font-weight: 700;
-    }
-
     body{
         background: url(../img/background.png) repeat-x 0% 722px;
     }
@@ -24,7 +20,7 @@
 
     .banner h1{
         color: white;
-        font-size: 2.5rem;
+        font-size: 50px;
         line-height: 100%;
         text-transform: uppercase;
     }
@@ -32,6 +28,7 @@
     .common-frame{
         width: 1600px;
         margin: 0 auto;
+        margin-bottom: 218px;
     }
 
     .deco-title{
@@ -39,13 +36,13 @@
         line-height: 90%;
         text-align: center;
         text-transform: uppercase;
-        padding-top: 200px;
+        padding-top: 10rem;
         background: url(../img/deco.svg) no-repeat 50% 0%;
-        margin-bottom: 40px;
+        margin-bottom: 2rem;
     }
 
     .desc1{
-        font-size: 20px;
+        font-size: 1rem;
         line-height: 140%;
         text-align: center;
         text-transform: uppercase;
@@ -56,19 +53,19 @@
     }
 
     .cafe-title{
-        margin-bottom: 100px;
+        margin-bottom: 5rem;
     }
 
     .cafe-gal{
         display: flex;
-        gap: 20px;
+        gap: 1rem;
     }
 
     .cafe-gal figure{
         flex: 1;
         aspect-ratio: 790/434;
         line-height: 0%;
-        margin-bottom: 50px;
+        margin-bottom: 2.5rem;
     }
 
     .cafe-gal figure img{
@@ -80,10 +77,10 @@
     }
 
     .cafe-script h3{
-        font-size: 40px;
+        font-size: 2rem;
         line-height: 140%;
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
     }
 
     .cafe-script h3 em{
@@ -91,11 +88,11 @@
     }
 
     .cafe-script h3+p{
-        margin-bottom: 10px;
+        margin-bottom: 0.5rem;
     }
 
     .cafe-script p{
-        font-size: 20px;
+        font-size: 1rem;
         line-height: 140%;
     }
 
