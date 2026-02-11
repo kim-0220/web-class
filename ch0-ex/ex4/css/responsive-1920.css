@@ -1,0 +1,85 @@
+@media (max-width: 1920px){
+    html{
+        font-family: 'Pretendard', sans-serif;
+        font-size: var(--base-pc);
+        font-weight: 400;
+    }
+    
+    .common-frame{
+        width: 1600px;
+        margin: 0 auto;
+        padding: 6rem 0;
+    }
+
+    .banner{
+        height: 599px;
+        border-radius: 50px;
+        background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner h1{
+        color: white;
+        font-size: 2.5rem;
+        line-height: 100%;
+        text-transform: uppercase;
+    }
+
+    .common-frame h2{
+        font-size: 150px;
+        line-height: 90%;
+        text-transform: uppercase;
+        margin-top: 120px;
+    }
+
+    .desc1{
+        line-height: 140%;
+        text-transform: uppercase;
+        margin: 48px 0;
+    }
+
+    .gallery{
+        display: flex;
+        gap: 20px;
+    }
+
+    .gallery figure{
+        flex: 1;
+        aspect-ratio: 520/434;
+        line-height: 0%;
+    }
+
+    .gallery figure img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .common-frame h3{
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 40px;
+        line-height: 140%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .desc2{
+        line-height: 140%;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+    }
+
+    .gallery.type2 figure{
+        flex: 1;
+        aspect-ratio: 790/434;
+        line-height: 0%;
+    }
+
+    .wrap{
+        background: url(../img/bg.png) no-repeat 50% 0% / 100% auto;
+    }
+}
