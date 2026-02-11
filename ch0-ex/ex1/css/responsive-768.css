@@ -6,8 +6,8 @@
     .inner-frame{
         width: auto;
         margin: 0 1rem;
-        margin-top: 3.75rem;
-        margin-bottom: 3.75rem;
+        margin-top: 75px;
+        margin-bottom: 75px;
     }
 }
 /* 반응형 css에서 주의해야 할 점 -> 큰 화면에서 작은 화면(최신)순으로 순서를 지정해야 함 */

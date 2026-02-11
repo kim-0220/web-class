@@ -22,6 +22,7 @@
         color: white;
         font-size: 50px;
         line-height: 100%;
+        text-align: center;
         text-transform: uppercase;
     }
 
@@ -59,13 +60,13 @@
     .cafe-gal{
         display: flex;
         gap: 1rem;
+        margin-bottom: 2.5rem;
     }
 
     .cafe-gal figure{
         flex: 1;
         aspect-ratio: 790/434;
         line-height: 0%;
-        margin-bottom: 2.5rem;
     }
 
     .cafe-gal figure img{

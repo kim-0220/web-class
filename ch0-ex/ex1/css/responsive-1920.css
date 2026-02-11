@@ -8,8 +8,8 @@
     .inner-frame{
         width: 1440px;
         margin: 0 auto;
-        margin-top: 3.75rem;
-        margin-bottom: 3.75rem;
+        margin-top: 75px;
+        margin-bottom: 75px;
         text-align: center;
     }
 
@@ -38,7 +38,7 @@
         font-size: 1.5rem;
         line-height: 100%;
         text-transform: uppercase;
-        padding: 0.5rem;
+        padding: 0.5rem 0;
         margin-bottom: 1rem;
     }
 

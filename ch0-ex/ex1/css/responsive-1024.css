@@ -6,12 +6,8 @@
     .inner-frame{
         width: auto;
         margin: 0 2rem;
-        margin-top: 3.75rem;
-        margin-bottom: 3.75rem;
-    }
-    
-    .inner-frame h1{
-        font-size: 2rem;
+        margin-top: 75px;
+        margin-bottom: 75px;
     }
 }
 /* 바뀌는 부분만 쓰면 됨! 기준px 사이즈를 정해놨기 때문에 rem단위로 쓴 속성들이 모두 같이 반영됨! */
