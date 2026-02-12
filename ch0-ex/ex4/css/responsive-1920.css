@@ -28,10 +28,10 @@
     }
 
     .common-frame h2{
-        font-size: 150px;
+        font-size: 7.5rem;
         line-height: 90%;
         text-transform: uppercase;
-        margin-top: 120px;
+        margin-top: 6rem;
     }
 
     .desc1{
@@ -42,7 +42,7 @@
 
     .gallery{
         display: flex;
-        gap: 20px;
+        gap: 1rem;
     }
 
     .gallery figure{
@@ -58,9 +58,9 @@
         border-radius: 20px;
     }
     .common-frame h3{
-        margin-top: 40px;
-        margin-bottom: 20px;
-        font-size: 40px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
         line-height: 140%;
         text-align: center;
         text-transform: uppercase;
@@ -70,7 +70,7 @@
         line-height: 140%;
         text-align: center;
         text-transform: capitalize;
-        margin-bottom: 40px;
+        margin-bottom: 2rem;
     }
 
     .gallery.type2 figure{
@@ -80,6 +80,6 @@
     }
 
     .wrap{
-        background: url(../img/bg.png) no-repeat 50% 0% / 100% auto;
+        background: url(../img/bg1920.png) no-repeat 50% 0% / 100% auto;
     }
 }

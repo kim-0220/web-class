@@ -7,4 +7,11 @@
         margin: 0 1rem;
         padding: 6rem 0;
     }
+
+    .common-frame h2{
+        font-size: 50px;
+    }
+    .wrap{
+        background: url(../img/bg393.png) no-repeat 50% 76% / 100% auto;
+    }
 }
