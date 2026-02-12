@@ -28,6 +28,6 @@
         height: 200px;
         flex: 1;
         aspect-ratio: 365/200;
-        line-height: 0%;
+        line-height: 0;
     }
 }

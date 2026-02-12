@@ -12,6 +12,7 @@
     .common-frame h2{
         font-size: 80px;
     }
+
     .wrap{
         background: url(../img/bg1024.png) no-repeat 50% -3% / 100% auto;
     }
@@ -19,12 +20,12 @@
     .gallery figure{
         flex: 1;
         aspect-ratio: 1/1;
-        line-height: 0%;
+        line-height: 0;
     }
 
     .gallery.type2 figure{
         flex: 1;
         aspect-ratio: 1/1;
-        line-height: 0%;
+        line-height: 0;
     }
 }

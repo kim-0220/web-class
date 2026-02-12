@@ -48,7 +48,7 @@
     .gallery figure{
         flex: 1;
         aspect-ratio: 520/434;
-        line-height: 0%;
+        line-height: 0;
     }
 
     .gallery figure img{
@@ -57,6 +57,7 @@
         object-fit: cover;
         border-radius: 20px;
     }
+
     .common-frame h3{
         margin-top: 2rem;
         margin-bottom: 1rem;
@@ -76,7 +77,7 @@
     .gallery.type2 figure{
         flex: 1;
         aspect-ratio: 790/434;
-        line-height: 0%;
+        line-height: 0;
     }
 
     .wrap{

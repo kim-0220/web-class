@@ -74,7 +74,7 @@ body{
     /* border: 1px solid navy; */
     flex: 1;
     aspect-ratio: 790/434;
-    line-height: 0%;
+    line-height: 0;
     margin-bottom: 50px;
 }
 

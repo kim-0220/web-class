@@ -24,7 +24,7 @@ header{
 header .inner-frame{
     display: flex;
     justify-content: space-between;
-    line-height: 0%;
+    line-height: 0;
 }
 
 header nav{

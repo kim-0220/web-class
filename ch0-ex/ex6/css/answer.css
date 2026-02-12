@@ -11,7 +11,7 @@ header{
 .common-frame{
     width: 1600px;
     margin: 0 auto;
-    line-height: 0%;
+    line-height: 0;
 }
 header .common-frame{
     display: flex;

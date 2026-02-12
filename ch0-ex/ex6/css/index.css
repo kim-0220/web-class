@@ -28,7 +28,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 0%;
+    line-height: 0;
 }
 
 .menu li{

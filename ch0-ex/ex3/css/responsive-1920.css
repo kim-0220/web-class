@@ -66,7 +66,7 @@
     .cafe-gal figure{
         flex: 1;
         aspect-ratio: 790/434;
-        line-height: 0%;
+        line-height: 0;
     }
 
     .cafe-gal figure img{
