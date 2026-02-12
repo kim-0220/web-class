@@ -19,15 +19,19 @@
             <dd>169</dd>
             <dt>bmi</dt>
             <dd>18.21</dd>
+            <dt>상태</dt>
+            <dd>정상</dd>
         </dl>
         
         <script>
-        let userName = prompt("당신의 이름은 무엇입니까?")
-        let userWeight = prompt(""+userName+"님의 체중은 무엇입니까?")
-        let userHeight = prompt(""+userName+"님의 키는 무엇입니까?")
-        let heightCM = Number(userHeight)/100
-        let bmi = (Number(userWeight)/Math.pow((Number(heightCM)),2)).toFixed(2)
-        document.write("<p>"+userName+"님의 BMI는 "+bmi+"입니다.</p>")
+            let userName = prompt("당신의 이름은 무엇입니까?")
+            let userWeight = prompt(""+userName+"님의 체중은 무엇입니까?")
+            let userHeight = prompt(""+userName+"님의 키는 무엇입니까?")
+            let heightCM = Number(userHeight)/100
+            let bmi = (Number(userWeight)/Math.pow((Number(heightCM)),2)).toFixed(2)
+            let bmiNumber = Number(bmi)
+            let grade = bmiNumber>=25 ? "비만": bmiNumber>=23 ? "과체중" : bmiNumber>=18.5 ? "정상" : "저체중"
+            document.write(`<p>${userName}님의 BMI는 ${bmi}입니다. ${grade}입니다. </p>`)
         </script>
 
         <div class="bmigrp">

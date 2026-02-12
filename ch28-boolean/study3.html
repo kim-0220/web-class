@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리 연산자</title>
+</head>
+<body>
+    <script>
+        10>2 && 5>2
+        // '10이 2보다 크다'는 true, '5가 2보다 크다'도 true여서 최종적으로는 true값이 나온다.
+        // &&는 '그리고(and)'표현이고, 이는 모두가 true여야만 true 값이 도출되고, 하나라도 false가 나온다면 false값이 나온다.
+        5>1 && 5>2 && 5<3
+        // '5는 1보다 크다'는 true, '5가 2보다 크다'도 true, '5가 3보다 작다'는 false로 최종적으로는 false값이 나온다.
+        10>4 && 0 && 20
+        // '10은 4보다 크다'는 true, '0'은 false, '20'은 true, 따라서 최종적으로 false값이 나온다.
+        let b = 10>4 && 0 && 20
+        console.log(b)
+        //  &&는 하나라도 false면 false값이 도출되는데, 선언되어있는 b에 10>4는 true, 0은 false, 20은 true로 왼쪽부터 순서대로 해석하다가 나온 false값인 0이 최종적으로 도출된다.
+        0 && 10 && 20 && 30
+        // 0은 false, 10은 true, 20도 true, 30도 true이므로, 최종적으로 false값이 도출된다.
+
+
+        10>2 || 3!=3 || 4>2
+        // '10은 2보다 크다'는 true, '3은 3과 같지 않다'는 false, '4는 2보다 크다'는 ture여서 최종적으로는 true값이 나온다.
+        // ||는 '또는(or)' 표현이고, shift+원표시 누르면 나온다. 이는 하나라도 true가 있다면 전체가 true가 되며, false가 되려면 모두가 false로 나와야한다.
+        0 || !10 || !!20
+        // 0은 false, 10(true값)의 부정이니까 false, 20(true값)의 부정에 부정이니까 ture이므로, 최종적으로는 true값이 나온다.
+        10 || "" || 20
+        // 10은 true, ""는 false, 20은 true로 최종값은 true이다.
+        let a = 10 || "" || 20
+        console.log(a)
+        // ||은 하나라도 true가 있으면 true값이 도출되는데, 선언되어있는 a에 10은 true, ""는 false, 20은 true로 왼쪽부터 순서대로 해석해보면 첫번째로 나온 true값인 10이 최종적으로 도출된다.
+    </script>
+</body>
+</html>

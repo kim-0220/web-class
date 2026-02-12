@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼항 연산자</title>
+</head>
+<body>
+    <script>
+        10>2 ? "A" : "B"
+        // 조건부(10>2)가 true면 ? 뒤의 값이 계산되고, false면 : 뒤의 값이 계산된다.
+        // 즉, 위의 상황에서는 "A"가 도출된다.
+        5<3 ? "가" : "나"
+        //조건부(5<3)이 false이기 때문에 "나"가 도출된다.
+        10!=10 ? "다" : "라"
+        // 조건부 (10이 10과 같지 않다)가 false이기 때문에 "라"가 도출된다.
+        20 ? "C" : "D"
+        // 조건부에 20이라는 수가 있으니까 ture로 간주되고, 이에따라 "C"가 도출된다.
+        !0 ? "E" : "F"
+        // 0은 false로 간주되는데 이를 부정했기 때문에 ture가 나오고, 이에 따라 "E"가 도출된다.
+        30<20 ? "A" : 5==5 ? "C" : "D"
+        // 30이 20보다 작다는 false이기 때문에 :의 뒤만 남고, 5와 5가 같다는 true여서 최종적으로 "C"가 도출된다.
+        let score = 40
+        score>=90 ? "A" : score>=80 ? "B" : score>=70 ? "C" : "D"
+        // 먼저 score는 40이라고 저장되어있고, 40은 90보다 크거나 같다는 false값(:뒤의 값)이 나오고, 40이 80보다 크거나 같다도 false값(:뒤의 값)이 나온다. 따라서 마지막 40이 70보다 크거나 같다도 false값이 나오기 때문에 최종적으로 "D"가 도출된다. 
+    </script>
+</body>
+</html>

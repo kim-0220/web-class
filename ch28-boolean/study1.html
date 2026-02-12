@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean</title>
+</head>
+<body>
+    <h1>boolean - 참 거짓 데이터</h1>
+    <script>
+        console.log(10>2)
+        // 10이 2보다 크다. -> true
+        console.log(10<2)
+        // 10이 2보다 작다. -> false
+        console.log(10>=2)
+        // 10이 2보다 크거나 같다. -> true
+        console.log(10<=2)
+        // 10이 2보다 작거나 같다. -> false
+        console.log(10==10)
+        // 10이 10과 같다. -> true (값만 봤을때 동일함을 의미)
+        console.log(10===10)
+        // 10이 10과 데이터 형태까지 모두 같다. -> true (엄격한 비교)
+        console.log(10!=1)
+        // 10은 1과 같지 않다. -> true
+        // !는 부정의 의미를 지님
+        console.log(!(10>2))
+        // 10이 2보다 크다의 부정 -> false
+        // (10이 2보다 크다)는 true값이 도출되지만 이에 !(부정)을 하기 때문에 최종적으로는 false값이 도출됨
+        console.log(!!(10<2))
+        // 10이 2보다 작다의 부정의 부정 -> false
+        // (10이 2보다 작다)는 false값이 도출되지만 이에 !(부정)을하면 ture값, 또 이것의 !(부정)이기 때문에 false가 최종적으로 도출됨 
+    </script>
+
+    <h2>간주표현</h2>
+    <p>Truthy (참으로 간주되는 값) / Falsy (거짓으로 간주되는 값)을 의미</p>
+    <script>
+        0
+        // 0은 값이 없음 또는 의미 없는 상태를 대표하는 값으로 설계되어 있어서 조건문에서는 false로 간주됨
+        ""
+        // 위처럼 문자데이터 등에 내용이 없는 것도 false
+        let a
+        // 변수를 설정을 했으나 아무 값도 대입하지 않아 자동으로 undefined 값이 들어감. 따라서 false로 간주함
+        undefined
+        // 변수는 선언되었지만 아직 값이 할당되지 않은 상태 즉, 아무 정보도 없는 상태 -> "값이 존재하지 않음"을 의미하기 때문에 조건문에서는 false로 간주
+        null
+        // 변수가 존재하고, 값도 명확히 들어있지만 그 값이 '없음(null)'인 것임
+        // 단순히 비어있는 것이 아니라 값이 있어야 하는데 현재는 일부로 없는 상태
+        // 따라서 null은 값이 없는 것이고, 조건 판단 기준이 될 정보가 없어서 존재 여부 체크에서 '없다'에 해당해서 false로 간주
+        !-12
+        // -12는 true이고, 이것의 부정이기에 false로 간주됨
+        !""
+        // false로 간주되는 것을 부정하기 때문에 true로 간주됨
+        !a
+        // 위에서 a라는 변수를 설정했으나 아무 값이 없어서 false로 명시되었는데, 이에 부정(!)을 했기 때문에 ture로 간주됨
+        let b = null
+        // 변수 b를 선언하고, 그 값으로 null을 명시적으로 넣었다는 의미. 즉 변수에 값이 없다는 것을 명확히 지정한 것이며, false로 간주됨
+    </script>
+</body>
+</html>

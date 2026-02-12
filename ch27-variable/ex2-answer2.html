@@ -15,6 +15,8 @@
             let userWeight = Number(prompt("몸무게를 입력해주십시오"))
             let userHeight = Number(prompt("키를 입력해주십시오"))
             let bmi = (userWeight/Math.pow(userHeight/100,2)).toFixed(2)
+            let numberbmi = userWeight/Math.pow(userHeight/100,2)
+            let bmiState = numberbmi<=18.5 ? "저체중" : numberbmi<=23 ? "정상" : numberbmi<=25 ? "과체중" : "비만"
             document.write(`
                 <dl class="bmi-dl">
                     <dt>이름</dt>
@@ -25,6 +27,8 @@
                     <dd>${userHeight}cm</dd>
                     <dt>bmi</dt>
                     <dd>${bmi}</dd>
+                    <dt>상태</dt>
+                    <dd>${bmiState}</dd>
                 </dl>
             `)
             // 변수를 쓸때 "++"표현 이외에도 ${}라는 표현이 존재하며, 후자를 더 많이 사용함(단, 백틱(``)을 사용했을 때만 ${}사용가능)
