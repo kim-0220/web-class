@@ -1,0 +1,11 @@
+@media (max-width: 3840px){
+    html{
+        font-size: var(--base-wide1);
+    }
+
+    .common-frame{
+        width: auto;
+        margin: 0 2rem;
+        padding-top: 6rem;
+    }
+}
