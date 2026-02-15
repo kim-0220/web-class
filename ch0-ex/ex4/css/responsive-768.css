@@ -14,7 +14,7 @@
     }
 
     .wrap{
-        background: url(../img/bg393.png) no-repeat 50% 46% / 100% auto;
+        background: url(../img/bg393.png) no-repeat 50% 43% / 100% auto;
     }
 
     .gallery{
@@ -22,6 +22,7 @@
         gap: 1rem 1rem;
         grid-template-columns: repeat(2, 175px);
         grid-template-rows: repeat(2, auto);
+        height: 314px;
     }
 
     .gallery figure{
