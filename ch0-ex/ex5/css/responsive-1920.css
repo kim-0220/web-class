@@ -1,0 +1,99 @@
+@media (max-width: 1920px){
+    html{
+        font-family: 'Pretendard', sans-serif;
+        font-size: var(--base-pc);
+        font-weight: 400;
+    }
+
+    .common-frame{
+        width: 1600px;
+        margin: 0 auto;
+    }
+
+    .title{
+        padding-top: 8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 100%;
+        text-transform: uppercase;
+    }
+
+    .title+p{
+        line-height: 140%;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .banner{
+        height: 700px;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        background: url(../img/hero-banner.jpg) no-repeat 50% 50% / cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .banner h2{
+        width: 1600px;
+        font-weight: 400;
+        font-size: 7.5rem;
+        line-height: 90%;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .title2{
+        font-size: 2rem;
+        line-height: 140%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .title2+p{
+        line-height: 140%;
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+
+    .gallery{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .gallery>li{
+        flex: 1;
+    }
+
+    .gallery figure{
+        aspect-ratio: 1/1;
+        line-height: 0%;
+        margin-bottom: 1rem;
+    }
+
+    .gallery figure img{
+        width: 1000%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .gallery h4{
+        margin-bottom: .5rem;
+        font-weight: 700;
+        line-height: 140%;
+        text-transform: capitalize;
+    }
+
+    .gallery h4+p{
+        line-height: 140%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
