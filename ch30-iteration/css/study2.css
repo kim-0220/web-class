@@ -1,0 +1,8 @@
+ul,li{
+    list-style: none;
+}
+
+.box{
+    /* border: 1px solid black; */
+    display: grid;
+}
