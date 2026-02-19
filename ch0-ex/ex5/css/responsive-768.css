@@ -2,4 +2,28 @@
     html{
         font-size: var(--base-mo);
     }
+
+    .common-frame{
+        width: auto;
+        margin: 0 1rem;
+    }
+
+    .banner{
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner h2{
+        width: 365px;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .gallery{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 }

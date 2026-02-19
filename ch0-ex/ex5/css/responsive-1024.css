@@ -2,4 +2,18 @@
     html{
         font-size: var(--base-pad);
     }
+    
+    .common-frame{
+        width: auto;
+        margin: 0 2rem;
+    }
+
+    .banner{
+        height: 600px;
+    }
+
+    .banner h2{
+        width: 952px;
+        font-size: 80px;
+    }
 }
