@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체(object) - 사물데이터</title>
+</head>
+<body>
+    <h1>object</h1>
+    <p>자바스크립트에서 사물을 나타낼 때 사용하는 표현</p>
+    <p>그리고 각각의 프로퍼티 :_(콜론)을 사용하여 key:value형태로 구성되어있다. </p>
+    <p>여기서 key값을 사용하여 저장된 value값을 가져올 수 있다. key값은 객체안에 속해있는 변수처럼 활용된다.</p>
+    <script>
+        // [] -> 배열데이터(조합데이터), array
+        // {} -> 객체데이터(사물데이터), object
+        let person1 = ["김민지","여자",28]
+        console.log(person1[0])
+        // 0번째 배열데이터를 불러오면 "김민지"라는 데이터가 결과값으로 나옴
+        // 저장되는 순서가 중요하며, 먼저 생성된 순서에 따라 0이라는 순서가 부여됨 -> 즉, 해당 데이터의 데이터 순서를 기억해야 하는 단점 존재
+        let person2 = {name:"정현진",gender:"남자",age:40}
+        console.log(person2["name"])
+        // 배열데이터처럼 콤마로 구분하지만, 데이터가 단순 값이 아닌 'key : value'를 의미하는 속성형태로 들어감(property;프로퍼티)
+        // 객체데이터를 만들면 변수공간이 생기며, let이라는 키워드를 만들지 않아도 'ex)name'이라는 변수(key값)가 생김(변수명은 직접 생성하는 것, 영어로만!)
+        // key값은 문자데이터 형식으로 들어가며, 데이터 생성 순서는 중요하지 않음
+        let person3 = {name:"장윤서",gender:"여자",age:27}
+        console.log(person3.name)
+        // 자바스크립트 안에 똑같은 변수를 만들면 에러가 생기지만, 다른 변수공간에서는 같은 이름의 변수가 생성되어도 문제 없음.
+        // 보통 person3.name 등의 형식으로 사용되며, 배열데이터처럼 person3["name"]로 사용도 가능함
+    </script>
+</body>
+</html>
