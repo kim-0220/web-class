@@ -1,0 +1,52 @@
+@media (max-width: 1920px){
+    html{
+        font-family: 'Pretendard', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    header{
+        border-bottom: 2px solid #BE0707;
+    }
+
+    .common-frame{
+        width: 1600px;
+        margin: 0 auto;
+        line-height: 0;
+    }
+    header .common-frame{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .gnb{
+        display: flex;
+    }
+
+    .gnb li a{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
+        font-weight: 600;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .banner{
+        height: 700px;
+        background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner h1{
+        color: white;
+        font-size: 7.5rem;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
