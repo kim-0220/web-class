@@ -1,0 +1,159 @@
+html{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.common-frame{
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.stp1{
+    font-family: "아보레토";
+}
+
+.title{
+    padding-top: 8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.title+p{
+    line-height: 140%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.banner{
+    height: 700px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background: url(../img/hero-banner.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.banner h2{
+    width: 1600px;
+    font-size: 7.5rem;
+    line-height: 90%;
+    text-transform: uppercase;
+    color: white;
+}
+
+.title2{
+    font-size: 2rem;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.title2+p{
+    line-height: 140%;
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.gallery{
+    display: flex;
+    gap: 1rem;
+}
+
+.gallery>li{
+    flex: 1;
+}
+
+.gallery figure{
+    aspect-ratio: 1/1;
+    line-height: 0%;
+    margin-bottom: 1rem;
+}
+
+.gallery figure img{
+    width: 1000%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.gallery h4{
+    margin-bottom: .5rem;
+    font-weight: 700;
+    line-height: 140%;
+    text-transform: capitalize;
+}
+
+.gallery h4+p{
+    line-height: 140%;
+     display: -webkit-box;         /* 플렉스형 박스(옛 사양) */
+    -webkit-box-orient: vertical;  /* 세로 방향 줄바꿈 기준 */
+    -webkit-line-clamp: 2;         /* 보여줄 최대 줄 수 */
+    overflow: hidden;              /* 넘치는 내용 숨기기 */
+    text-overflow: ellipsis;       /* 말줄임 표기(보조) */
+}
+
+@media(max-width:5120px){
+    html{
+        font-size: var(--base-wide);
+    }
+}
+
+@media(max-width:3840px){
+    html{
+        font-size: var(--base-wide);
+    }
+}
+
+@media(max-width:1920px){
+    html{
+        font-size: var(--base-pc);
+    }
+}
+
+@media(max-width:1024px){
+    html{
+        font-size: var(--base-pad);
+    }
+    .common-frame{
+        width: auto;
+        margin: 0 2rem;
+    }
+    .banner{
+        height: 600px;
+    }
+    .banner h2{
+        width: auto;
+        margin: 0 2rem;
+        font-size: 4.4rem;
+    }
+}
+
+@media(max-width:786px){
+    html{
+        font-size: var(--base-mo);
+    }
+    .common-frame{
+        width: auto;
+        margin: 0 1rem;
+    }
+    .banner{
+        height: 500px;
+        align-items: center;
+    }
+    .banner h2{
+        width: auto;
+        margin: 0 1rem;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .gallery{
+        gap: 2rem;
+        flex-direction: column;
+    }
+}

@@ -1,8 +1,15 @@
+html{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
 .common-frame{
     width:1600px;
     margin:0 auto;
     padding-top: 6rem;
 }
+
 .banner{
     height:599px;
     border-radius: 2.5rem;
@@ -11,37 +18,44 @@
     justify-content: center;
     align-items: center;
 }
+
 .banner h1{
     color:#fff;
     font-size: 2.5rem;
     line-height: 100%;
     text-transform: uppercase;
 }
+
 .common-frame h2{
     font-size: 7.5rem;
     line-height: 90%;
     text-transform: uppercase;
     margin-top: 6rem;
 }
+
 .desc1{
     line-height: 140%;
     text-transform: uppercase;
     margin: 2.4rem 0;
 }
+
 .gallery{
     display: flex;
     gap:1rem;
 }
+
 .gallery figure{
     flex:1;
     aspect-ratio: 520/434;
 }
+
 .gallery figure img{
     width:100%;
     height:100%;
     object-fit: cover;
     border-radius: 1rem;
 }
+
 .common-frame h3{
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -49,33 +63,36 @@
     text-align: center;
     line-height: 140%;
 }
+
 .desc2{
     line-height: 140%;
     text-align: center;
     text-transform: capitalize;
     margin-bottom: 2rem;
 }
+
 .gallery.type2 figure{
     flex:1;
     aspect-ratio: 790/434;
 }
+
 .wrap{
     background: url(../img/bg1920.png) no-repeat 50% 0% / 100% auto;
 }
-html{
-    font-family: 'Pretendard';
-    font-weight: 400;
-}
+/* 위의 스타일은 화면너비와 상관없이 항시 적용되는 스타일 */
+
 @media (max-width:3840px){
     html{
         font-size: var(--base-wide);
     }
 }
+
 @media (max-width:1920px){
     html{
         font-size: var(--base-pc);
     }
 }
+
 @media (max-width:1024px){
     html{
         font-size: var(--base-pad);
@@ -97,6 +114,7 @@ html{
         aspect-ratio: 1/1;
     }
 }
+
 @media (max-width:768px){
     html{
         font-size: var(--base-mo);
