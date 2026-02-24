@@ -1,3 +1,23 @@
 @media (max-width: 768px){
-    
+    html{
+        font-size: var(--base-mo);
+    }
+
+    .common-frame{
+        width: auto;
+        margin: 0 1rem;
+    }
+
+    .banner{
+        height: 500px;
+    }
+
+    .banner h1{
+        font-size: 50px;
+    }
+
+    .logo{
+        width: 70px;
+        height: 70px;
+    }
 }
