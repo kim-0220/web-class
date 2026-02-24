@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 return</title>
+</head>
+<body>
+    <h1>함수 안에서 리턴 표현</h1>
+    <p>함수에서 return이라는 키워드를 만나면 그 즉시 함수는 종료되며, return키워드 오른쪽의 값을 함수가 사용되었던 자리에 남긴다.</p>
+    <script>
+        function a(){
+            return "좋은아침"
+            document.write("<h1>안녕하세요!</h1>")
+        }
+        a()
+        // a라는 함수를 실행시켰으나 return이라는 키워드를 만나 함수가 종료되어 이후에 나오는 document.write는 해석이 실행되지 않았고, 또한 a()의 자리에 "좋은아침"이라는 문자데이터가 남게된다.
+        let b = a()
+        alert(b)
+        // 이에따라, b라는 변수에는 a()에서 대체되어 남은 "좋은아침"이라는 값이 저장이 되었고, 이를 확인하기위해 alert함수를 적용하면 화면에도 "좋은아침"이라는 알림창이 뜨게 된다.
+
+        function c(){
+            document.write("<p>c함수가 실행되었습니다.</p>")
+            return 1
+        }
+        c()
+        console.log(c())
+        // c라는 함수가 실행되었기 때문에 일단 document.write가 화면에 보여지고, return함수에 의해 c()의 자리에 1이 남는다.
+        // 따라서 console.log를 해도 위와 같은 프로세스로 진행이 되어 화면에 보여진 후 똑같이 1이 남고, console창에 보이게 된다.
+
+        function d(){
+            document.write("<p>d함수가 실행되었습니다.</p>")
+            return 4
+        }
+        c()+d()
+        console.log(c()+d())
+        // c와 동일한 프로세스로 진행이 되어 화면에 'c함수가 실행되었습니다.'라는 문구가 보여지면서 c()자리에는 1이 남고, d()가 실행됨에 따라 화면에는 'd함수가 실행되었습니다.'라는 문구가 보여지면서 d()자리에 4가 리턴되어서(남아서) 1+4의 결과값인 5가 console창에 보이게 된다.
+        
+        function e(n1,n2){
+            return n1+n2
+        }
+        e(1,2)
+        console.log(e(1,2))
+        // return함수로 인해 함수가 실행되면 n1=1, n2=2로 해석되어 3이라는 값이 e(1,2)자리에 남게된다.
+        // 따라서 console창에서 확인해보면 숫자데이터 3이 보인다.
+        console.log(e(e(1,2),4))
+        // 위의 과정에 이어서 e(1,2)자리에는 3이라는 값이 남아있는데 이것이 다시 n1이 되고, 숫자 4가 n2여서 e(3,4)이 인자가 되어 n1=3, n2=4가 인자로 전달되어 결과값은 7이 출력되고 이것이 console창에 보이게 된다.
+
+        function f(word){
+            document.write("<p>나는 "+word+"이 될거야!</p>")
+            return word
+        }
+        f("아이언맨")
+        // 위의 경우 인자가 매개변수에 들어가기때문에 word는 "아이언맨"이며, 이에따라 화면에는 '나는 아이언맨이 될거야!'가 보이며, return으로 인해 함수가 종료되면서 그 자리에 문자데이터인 "아이언맨"이 남는다.
+        console.log(f("아이언맨")?"그래그렇게해라":"안돼")
+        // 두번째 경우를 해석해보면 화면에 document.write가 도출되고, return으로 인해 함수가 종료되며 "아이언맨"이 자리에 남게 되는데, 이는 문자데이터인 true값이기 때문에 console창에 보여지는 최종 결과값은 '그래그렇게해라'가 나온다.
+
+        function g(simpsons){
+            document.write(`${simpsons[0]}씨의 직업은 ${simpsons[1]}이고 ${simpsons[2]}세이군요.`)
+            return simpsons
+        }
+        g(["김나윤","웹퍼블리셔",28])
+        // 인자에 배열데이터가 들어있고 이는 각 0번째, 1번째, 2번째 데이터가 해당하는 자리에 들어갈 것이고, 매개변수인 simpsons을 통하여 변수가 전달되어 결과값이 출력되어 화면에 보이게 된다. -> 김나윤씨의 직업은 웹퍼블리셔이고 28세이군요.
+        // 이후 return 이라는 키워드를 만나 함수를 종료가 되며, g()의 자리에 배열데이터인 ["김나윤","웹퍼블리셔",28]이 남는다.
+        console.log(g(["김나윤","웹퍼블리셔",28])[1].length)
+        // 일단은 g()함수가 실행되어 또다시 화면에 '김나윤씨의 직업은 웹퍼블리셔이고 28세이군요.'라는 문구가 보이게 될 것이고, return키워드로 인해 g()에 남은 배열데이터 즉, ["김나윤","웹퍼블리셔",28]에서 1번째 원소값의 개수를 console창에 보이도록 하는 것이기 때문에 결과값으로 '웹퍼블리셔'의 개수인 숫자 5가 보이게 된다.
+
+        function h(people){
+            document.write(`${people[0]}님의 직업은 ${people[1]}이고 ${people[2]}세군요!`)
+            return {age:people[2],name:people[0],job:people[1]}
+        }
+        h(["김민지","의무기록사",27])
+        // 배열데이터 형태의 인자를 매개변수로 받아 0번째, 1번째, 2번째 데이터가 원소로 들어가서 화면에는 `김민지님의 직업은 의무기록사이고 27세군요!`로 출력되고, return 키워드때문에 함수는 종료되며, 객체데이터 형태로 남게된다.
+        // 남은 데이터를 보면 h(["김민지","의무기록사",27])의 자리에 {age:people[2],name:people[0],job:people[1]}이 남게되는 것이다.
+        // 남은 객체데이터를 해석해보면 age라는 key값에 숫자 27, name이라는 key값에 "김민지", job이라는 key값에 "의무기록사"가 저장되어 있음을 알 수 있다.
+        console.log(h(["김민지","의무기록사",27]).age)
+        console.log(h(["김민지","의무기록사",27]).name)
+        console.log(h(["김민지","의무기록사",27]).job)
+        // 따라서 위처럼 실행시키면 각 h()함수가 실행되어 화면에 문구가 표현되고, return키워드로 인해 h함수 자리에 객체데이터가 남으며, ".key값"의 형식으로 표현되는 객체데이터를 해석하여 console창에 띄우면 각 '27 / 김민지 / 의무기록사'라는 값이 보이게 된다.
+
+        function j(getAver){
+            return ((getAver[0]+getAver[1]+getAver[2])/3).toFixed(3)
+        }
+        j([10,20,30])
+        console.log(j([10,20,30]))
+        // 위를 보면 매개변수로 들어오는 데이터는 배열데이터이며, 평균값을 계산해서 리턴하는 j함수이다.
+        // 배열데이터를 각 0번째, 1번째, 2번째를 받으면 10+20+30이 되고, 이 합산한 값을 3으로 나누어 소수점 3번째자리까지 표시하면 return되는 값이 나온다. 이를 console창에 띄우면 20.000이라는 값이 나온다.
+
+        function k(getAver2,sosu){
+            let sum = 0
+            for(let i = 0 ; i<getAver2.length ; i++){
+                sum += getAver2[i]
+            }
+            return (sum / getAver2.length).toFixed(sosu)
+        }
+        console.log(k([10,20,30,40,50],2))
+        // let sum = 0 -> 배열안의 숫자들을 sum이라는 변수에 누적해서 저장 즉, 합계를 저장할 공간을 먼저 만들어놓는다.
+        // 계속 더해지는 변수를 누적 변수(accumulator)라 부름
+        // 
+    </script>
+</body>
+</html>
