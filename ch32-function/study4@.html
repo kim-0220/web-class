@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+</head>
+<body>
+    <h1>콜백함수</h1>
+    <script>
+        function aa(bb){
+            bb()
+        }
+        aa(function(){
+            alert("bb")
+        })
+        // 익명함수형태로 적어주면됨?
+        // 변수에 저장되는 형태를 인자로 넣으면 이 인자가 bb라는 매개변수에 저장이 되어 실행이 됨
+
+        let cc = dd=>{
+            dd()
+        }
+        // 매개변수하나일때는 소괄호 생략
+        // dd를 실행해라,,,?
+        cc(()=>{
+            alert("dd")
+        })
+        // 화살표함수를 쓰면 function키워드를 안써도 되는 장점이있다.
+    </script>
+</body>
+</html>

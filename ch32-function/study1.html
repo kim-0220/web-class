@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function - 함수</title>
+</head>
+<body>
+    <h1>함수</h1>
+    <p>자바스크립트에서 동작을 표현하는 데이터 형태</p>
+    <p>함수는 alert(), console log() 등 기본적으로 브라우저에 설치되어있는 표준 내장함수들이 있고, 또는 직접 기능을 만드는 사용자 정의함수가 있다.</p>
+    <ol>
+        <li>함수를 정의 - 정의부</li>
+        <li>함수를 실행 - 실행부/호출부</li>
+    </ol>
+    <script>
+        function a(){
+            alert("test")
+        }
+        // 정의부
+        a()
+        // 실행부/호출부
+
+        // script에 function을 쓰면 함수를 만들겠다(정의하겠다는)는 의미
+        // function a(){} -> 기본구조, a라는 이름의 함수가 등록되어있는 상태
+        // {}안에는 실행될 소스코드가 들어감
+        // 정의된 function함수를 실행시키려면 a()를 적으면 실행됨. 적은 갯수만큼 여러번 실행 가능
+
+        function b(){
+            document.write("<h2>hello!</h2>")
+        }
+        b()
+        b()
+        b()
+
+        function c(name){
+            document.write("<p>"+name+"님 안녕하세요</p>")
+        }
+        // ()안에는 함수에서 쓰이는 변수를 만들 수 있음. let이라는 키워드를 사용하지 않아도 생성이 가능하며 직접 변수이름을 정해주면 됨
+        // name이라는 변수는 c라는 함수 안에서 사용되는 '매개변수'라 칭함
+        c("김민지")
+        // 위를 해석해보면 c라는 함수를 김민지라는 문자데이터를 매개(재료)로 하여 실행하라는 의미 
+        // 실행부()에는 매개변수에 전달할 내용을 넣으면 됨. 즉, 매개변수에 들어갈 값들은 '인자'라고 칭함
+
+        function d(name="김짱아",age=10){
+            document.write("<p>"+name+"님 안녕하세요</p>")
+            document.write(`${name}님은 ${age}살이군요. 반갑습니다!`)
+        }
+        // 매개변수는 콤마로 구분하여 여러개를 사용할 수 있음
+        d()
+        d("김민지",27)
+        d("김나윤",28)
+        // 매개변수에 전달될 인자가 없을때는 undefined로 표시됨
+        // 인자가 없을 경우를 대비하여 기본값을 설정해 놓을 수 있음. 이는 인자가 전달되면 무시되는 기본값이며, 매개변수 옆에 =을 써서 적으면 됨
+
+        function e(person=[20,"홍길동"]){
+            document.write(`<h3>${person[0]}세 ${person[1]}님 반갑습니다.</h3>`)
+        }
+        e()
+        e([28,"김나윤"])
+        // 배열데이터가 사용되어 0번째 데이터, 1번째 데이터가 해당 자리에 들어갈 것임.
+        // 인자가 없을 경우 기본으로 설정된 값이 들어가며, '20세 홍길동님 반갑습니다' 등의 내용이 출력됨.
+
+        function f(person){
+            document.write(`<h3>${person.age}세 ${perso.name}님 반갑습니다.</h3>`)
+        }
+        f({age:19,name:"김민지"})
+        // 객체데이터가 사용되어 age라는 key값에 저장된 수와 name이라는 key값에 저장된 문자가 인자로써 매개변수에 전달이 되고, 변수가 전달되어 결과값이 출력됨
+        // 프로퍼티 나열 순서는 상관이 없음! (age와 name의 순서가 바뀌어도 무관)
+    </script>
+</body>
+</html>
