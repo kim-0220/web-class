@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 메서드 표현</title>
+</head>
+<body>
+    <script>
+        let ac = {
+            bodycolor:"흰색",
+            // 객체(사물)의 변수, 변수데이터 안에 문자데이터가 저장되어있는 것임
+            width:60,
+            height:200,
+            weight:70,
+            brand:"carrier",
+            powerOn:function(){
+                alert("전원이 켜졌습니다.")
+            },
+            // 프로퍼티중에서 동작이 표현되는 프로퍼티를 '메서드'라고 부름********
+            // 프로퍼티는 콤마로 구분
+            // 객체를 움직이는 함수를 익명함수로 저장하면 됨?
+            powerOff:function(){
+                alert("전원이 꺼졌습니다.")
+            },
+            temperature:25,
+            temperatureUp:function(){
+                alert("온도를 1도 올립니다.")
+                this.temperature+=1
+                // 객체에서 this는 객체 자체를 가르킴. 즉 this는 ac(사물)을 의미?
+                // 1을 더해서 저장을 한다는 의미
+            },
+            temperatureDown:function(){
+                alert("온도를 1도 내립니다.")
+                this.temperature+=-1
+            }
+            
+            
+        }
+        ac.bodycolor
+        // ac["bodycolor"]와 동일한 표현
+        // ac에 bodycolor를 불러와라는 표현 즉, "흰색"이라는 문자데이터 값을 불러와서 남김
+        ac.powerOn()
+        // 위의 경우는 powerOn이라는 변수에 저장된 익명함수 동작이 불려오는거지 실행을 한 것이 아님. 실행을 하기 위해서는 소괄호()를 써야함 (소괄호는 함수를 실행한다는 의미)
+        ac.powerOff()
+        alert(ac.temperature)
+        ac.temperatureUp()
+        alert(ac.temperature)
+        ac.temperatureUp()
+        alert(ac.temperature)
+        ac.temperatureDown()
+        alert(ac.temperature)
+    </script>
+</body>
+</html>
