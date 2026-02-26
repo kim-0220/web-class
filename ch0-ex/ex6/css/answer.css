@@ -19,6 +19,20 @@ header .common-frame{
 }
 /* 조금 더 구체화 및 분리시켜서 태그를 지정해주면 추후에 작업할 때 편리 */
 
+.logo{
+    width: 5rem;
+    height: 5rem;
+}
+.logo a{
+    display: block;
+    height: 100%;
+}
+.logo a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .gnb{
     display: flex;
     /* align-items: center; */
@@ -39,6 +53,20 @@ header .common-frame{
     text-align: center;
     text-transform: uppercase;
 }
+
+.logo{
+        width: 5rem;
+        height: 5rem;
+    }
+.logo a{
+        display: block;
+        height: 100%;
+    }
+.logo a img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 
 .banner{
     height: 700px;

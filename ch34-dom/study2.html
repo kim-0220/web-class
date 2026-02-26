@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>제목</h1>
+
+    <p class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ea autem deserunt. Magnam cum exercitationem et facilis odit, corporis dicta magni accusamus labore voluptates aliquam explicabo nobis in animi accusantium.</p>
+    <p class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, neque. Officiis, suscipit quia. Iusto voluptatibus optio nulla aliquam rem reiciendis fuga, omnis nostrum accusamus dicta maiores deserunt, id pariatur labore.</p>
+    <p class="a">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, repellendus. Accusantium quae explicabo nobis impedit vel veniam animi. Accusamus, recusandae eveniet? Iste autem sequi laborum ea ipsam tenetur asperiores illo!</p>
+
+    <p class="b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, animi! Illo, commodi nihil sequi ex dicta soluta unde sed praesentium vel esse hic, illum incidunt enim, modi expedita repellendus distinctio.</p>
+    <p class="b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, animi! Illo, commodi nihil sequi ex dicta soluta unde sed praesentium vel esse hic, illum incidunt enim, modi expedita repellendus distinctio.</p>
+    <p class="b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, animi! Illo, commodi nihil sequi ex dicta soluta unde sed praesentium vel esse hic, illum incidunt enim, modi expedita repellendus distinctio.</p>
+
+    <p class="c">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi natus tempora incidunt a molestias eum, amet laudantium alias iusto doloremque, fuga cum assumenda facilis vitae asperiores nulla nesciunt blanditiis voluptatum?</p>
+    <p class="c">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi natus tempora incidunt a molestias eum, amet laudantium alias iusto doloremque, fuga cum assumenda facilis vitae asperiores nulla nesciunt blanditiis voluptatum?</p>
+    <p class="c">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi natus tempora incidunt a molestias eum, amet laudantium alias iusto doloremque, fuga cum assumenda facilis vitae asperiores nulla nesciunt blanditiis voluptatum?</p>
+    <p class="c">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi natus tempora incidunt a molestias eum, amet laudantium alias iusto doloremque, fuga cum assumenda facilis vitae asperiores nulla nesciunt blanditiis voluptatum?</p>
+
+    <p class="d">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, sit officia neque quia vitae, eos vel commodi odio eaque, unde ratione facilis ullam numquam veritatis vero nostrum architecto nulla quasi.</p>
+    <p class="d">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, sit officia neque quia vitae, eos vel commodi odio eaque, unde ratione facilis ullam numquam veritatis vero nostrum architecto nulla quasi.</p>
+    <p class="d">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, sit officia neque quia vitae, eos vel commodi odio eaque, unde ratione facilis ullam numquam veritatis vero nostrum architecto nulla quasi.</p>
+    <p class="d">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, sit officia neque quia vitae, eos vel commodi odio eaque, unde ratione facilis ullam numquam veritatis vero nostrum architecto nulla quasi.</p>
+
+    <script>
+        let h1tag = document.querySelector("h1")
+        h1tag.style.color = "red"
+        // 인라인스타일 형식으로 들어감
+        h1tag.style.fontSize = "80px"
+        // css설정처럼 font-size라고 쓰면 안되고, 카멜 형식으로 fontSize로 써야 함
+        h1tag.style.textDecoration = "underline"
+        // 색상, 픽셀단위 수 등 설정값들은 ""를 사용하여 문자데이터 형식으로 써주어야 함
+
+        let ptag = document.querySelector(".a")
+        ptag.style.color = "green"
+        // 위에서 아래로 a클래스를 찾으면서 1개 찾으면 바로 종료됨 즉, 가장 먼저 찾은 a클래스만 스타일이 적용됨 
+        
+        let ptag2 = document.querySelectorAll(".b")
+        // [{},{},{}] -> b클래스를 가지고있는 모든 태그들이 배열데이터의 원소 형태로 ptag2라는 변수에 저장됨
+        ptag2[0].style.color = "yellow"
+        ptag2[1].style.color = "yellow"
+        ptag2[2].style.color = "yellow"
+        // 각각의 태그들을 배열의 원소로 선택하여 따로 스타일을 지정해주어야함
+
+        let ptag3 = document.querySelectorAll(".c")
+        for(let i=0 ; i<ptag3.length ; i++){
+            ptag3[i].style.color = "orange"
+        }
+        // 그러나 원소가 되어지는 태그들의 개수가 많을 때에는 b클래스처럼 행위를 개별적으로 하나씩 쓰기는 불가능하기 때문에 반복문을 이용해주어야함
+        // 해당 표현은 기초적인 표현이므로 필수적으로 알아두어야 함
+
+        let ptag4 = document.querySelectorAll(".d")
+        ptag4.forEach(function(tag){
+            tag.style.color = "blue"
+        })
+        // 배열의 원소에 대해서 각각 '익명함수'동작을 하게 한다는 의미
+        // tag는 매개변수(tag라는 이름은 자유롭게 부여 가능) -> 이는 선택한 배열의 각 원소를 뜻함
+        // 요즘은 이 표현을 더 많이 사용하므로 더 잘 알아두어야 함
+        ptag4.forEach(tag=>{
+            tag.style.color = "navy"
+        })
+        // 익명함수를 표현할때는 화살표함수 형식으로 표현할 수 있으며, 화살표함수는 매개변수가 하나일 경우 소괄호를 생략 할 수 있음
+
+    </script>
+</body>
+</html>

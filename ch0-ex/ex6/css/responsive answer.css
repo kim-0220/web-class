@@ -1,0 +1,135 @@
+html{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header{
+    border-bottom: 2px solid #BE0707;
+}
+
+headermobile{
+    display: none;
+}
+
+.common-frame{
+    width: 1600px;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+header .common-frame{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gnb{
+    display: flex;
+}
+
+.gnb li a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-weight: 600;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.banner{
+    height: 700px;
+    background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1{
+    color: white;
+    font-size: 7.5rem;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media(max-width:5120px){
+    html{
+        font-size: var(--base-wide);
+    }
+}
+
+@media(max-width:3840px){
+    html{
+        font-size: var(--base-wide);
+    }
+}
+
+@media(max-width:1920px){
+    html{
+        font-size: var(--base-pc);
+    }
+}
+
+@media(max-width:1600px){
+    .common-frame{
+        width: auto;
+        margin: 0 2rem;
+    }
+}
+
+@media(max-width:1024px){
+    html{
+        font-size: var(--base-pad);
+    }
+    .banner{
+        height: 600px;
+    }
+    .banner h1{
+        font-size: 4.4rem;
+    }
+}
+
+@media(max-width:900px){
+    header{
+        display: none;
+    headermobile{
+        display: block;
+    }
+    headermobile .common-frame{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    }
+}
+
+@media(max-width:786px){
+    html{
+        font-size: var(--base-mo);
+    }
+    header{
+        display: none;
+    }
+    /* header의 형식이 모바일에서는 스타일이 완전히 바뀌기 때문에 기존의 header를 보이지 않게 숨긴 후 모바일 header가 적용이 될 수 있게 해야함 */
+    .common-frame{
+        width: auto;
+        margin: 0 1rem;
+    }
+    headermobile .common-frame{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .banner{
+        height: 500px;
+    }
+    .banner h1{
+        font-size: 3.5rem;
+    }
+    headermobile{
+        display: block;
+    }
+    /* 기본 css구조에서는 보이지 않게 해놨다가 필요한 모바일 화면에서 보일 수 있도록 display:block을 해야함 */
+}
