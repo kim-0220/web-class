@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom의 메서드와 프로퍼티</title>
+</head>
+<body>
+    <h1>태그의 속성 편집하기</h1>
+    <p>태그가 갖고있는 속성 값을 설정하거나 가져올 수 있다.</p>
+    <figure>
+        <img class="img1" src="./img/snow_tree.jpg" alt="눈 오는날 트리">
+        <figcaption class="cap1">눈 오는날 트리</figcaption>
+    </figure>
+    <!-- src와 alt 즉, 자바스크립트를 통해 사진을 바꾸고싶은때에는 가장 먼저 태그를 선택해야 한다. 그 후 선택한 태그의 속성값을 바꾼다 -->
+    <script>
+        // 태그 선택
+        let img1 = document.querySelector(".img1")
+        // img1 이라는 변수에 문서객체가 저장되어있음
+        // 객체안의 변수들은 점을 통해서 value값에 접근할 수 있음
+        let originalSrc = img1.getAttribute("src")
+        console.log(typeof(originalSrc))
+        // 문서객체는 모두 getAttribute를 포함하고 있음 이는 속성을 가져온다는 것이고 ()안에 속성인자. 키값을 써주어야한담
+
+        // getAttribute:function(key){
+        //     key에 연결된 속성값을 리턴하는 소스코드
+        // }
+
+        console.log(img1)
+        console.dir(img1)
+        // 콘솔창에서 객체 펼쳐서 확인 가능
+        let originalAlt = img1.getAttribute("alt")
+        console.log(originalAlt)
+        console.log(img1.alt)
+        console.log(img1.src)
+
+        let cap1 = document.querySelector(".cap1")
+        console.log(cap1.textContent)
+        // textContent태그의 내용을 가지고 온다. 
+        // cap.textContent = "<p>음하하하핫</p>"
+        cap1.innerHTML = "<i>눈눈 나무</i>"
+        // html 수정을 못하는 상황 (중앙 부서에서 관리)
+    </script>
+
+    <h1>태그의 클래스 제어</h1>
+    <p>선택된 태그의 클래스를 추가하거나 삭제할 수 있다.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur modi accusantium veritatis error cumque quisquam commodi ut repudiandae voluptatibus harum neque cupiditate blanditiis deserunt quas magnam alias, dolorem totam. Rem.</p>
+    <script>
+        let para = document.querySelector(".para")
+        para.classList.add("on")
+        // class 추가 가능!
+        para.classList.remove("on")
+        // class 삭제 가능!
+
+        let paras = document.querySelectorAll(".para")
+        paras.forEach(tag=>{
+            tag.classList.add("on")
+        })
+    </script>
+
+    <h1>태그의 포함관계를 사용하여 태그 선택하기</h1>
+    <ul class="list">
+        <li>1</li>
+        <li class="me">2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        let ultag = document.querySelector(".list")
+        let litags = ultag.children
+        litags[3].style.color = "red"
+        let me = document.querySelector(".me")
+        me.parentElement.style.border = "2px soild green"
+        me.nextElementSibling.style.color = "blue"
+    </script>
+</body>
+</html>
