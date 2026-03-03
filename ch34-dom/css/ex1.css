@@ -1,0 +1,41 @@
+img{
+    max-width: 100%;
+}
+/* 이미지가 팝업창의 크기보다 커서 넘어가기 때문에 기본적인 설정이 필요 (보통 reset파일에) */
+
+.popup{
+    border: 1px solid gold;
+    position: fixed;
+    left: 200px;
+    top: 200px;
+    width: 300px;
+    background-color: white;
+    /* 배경색이 없으면 팝업이 공중에 떠있는데 뒤의 내용이 가려지지 않아 가독성이 떨어짐. 따라서 기본 배경색(white)을 설정해주어야 함 */
+}
+
+.popup-controler{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-controler span{
+    border: 1px solid black;
+    background-color: yellow;
+    cursor: pointer;
+    padding: 0.4rem 1rem;
+}
+
+.popup{
+    transition: all 0.4s ease 0s;
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.popup.hide{
+    opacity: 0;
+    pointer-events: none;
+    /* 팝업이 아예 없어지는 것이 아닌 투명하게 만들어서 안보이는 것이기 때문에 방해가 됨. 따라서 pointer-event: none;으로 태그가 마우스에도 반응하지 않게 함 */
+    transform: scale(0.1);
+}

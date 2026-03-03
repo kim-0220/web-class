@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 메서드 표현</title>
+</head>
+<body>
+    <script>
+        // 객체(object)란 특징(값) + 동작(기능) 을 같이 묶어놓은 것
+        // 아래 내용은 에어컨(ac)이라는 객체를 하나 만들어 자바스크립트로 표현한 것임
+        let ac = {
+            bodycolor:"흰색",
+            width:80,
+            height:200,
+            weight:70,
+            brand:"samsung",
+            temperature:22,
+            // 위의 5가지는 프로퍼티(속성, 값 저장)이며, 객체 안에 들어있는 변수로 값을 저장하는 공간이고 콤마(,)로 구분함
+            powerOn:function(){
+                alert("전원이 켜졌습니다.")
+            },
+            powerOff:function(){
+                alert("전원이 꺼졌습니다.")
+            },
+            powerRestart:function(){
+                alert("다시 시작합니다.")
+            },
+            temperatureUp:function(){
+                alert("온도를 1도 올립니다.")
+                this.temperature += 1
+            },
+            temperatureDown:function(){
+                alert("온도를 1도 내립니다.")
+                this.temperature -= 1
+            },
+            // 객체 안에 함수는 동작을 수행하며, 메서드(동작)라고 불림. 다시말해서, 프로퍼티 중 동작이 표현되는 프로퍼티를 메서드라고 부르고, 이는 콤마(,)로 구분함
+            // this는 객체 자기 자신을 가리키는 것이며, 여기서 this = ac임
+        }
+        ac.bodycolor
+        // ac 객체 안에 있는 bodycolor라는 이름의 프로퍼티의 값을 가져오라(꺼내라)는 뜻
+        // 결과적으로 "흰색"이라는 문자데이터 값을 불러와서 남김. 단, 화면에 나오지 않음
+        ac["brand"]
+        // ac 객체 안에서 "brand"라는 이름을 가진 프로퍼티를 찾으라는 뜻 (문자열로 프로퍼티 이름을 찾아가는 방식)
+        // 결과적으로 "samsung"이라는 문자데이터 값을 불러와서 남김. 단, 화면에 나오지 않음
+
+        // 점(.) 표기법 → Dot Notation / 대괄호([]) 표기법 → Bracket Notation 두 가지 모두 같은 표현법
+        // 일반적인 경우 점(.)을 사용하고, 문자열 또는 변수로 접근해야할 때는 대괄호[]를 사용함
+
+        ac.powerRestart
+        // 위의 경우는 powerRestart라는 변수에 저장된 익명함수 동작이 불려오는거지 실행을 한 것은 아님. 실행을 하기 위해서는 소괄호()를 써야함 (소괄호를 쓰면 함수를 실행한다는 뜻임)
+
+        ac.powerOn()
+        // powerOn 메서드를 실행하여 "전원이 켜졌습니다."라는 알림창이 뜸
+        alert(ac.temperature)
+        // ac 객체의 temperature 속성 값을 가져와서 alert로 출력. 현재 온도는 22로 설정되어 있음
+        ac.temperatureUp()
+        // temperatureUp 메서드를 실행하여 "온도를 1도 올립니다."라는 알림창이 뜸
+        // `this.temperature += 1`은 `this.temperature = this.temperature + 1`을 줄여서 표현한 것
+        // 기존 값(22)을 읽어서 계산한 뒤(22+1) 그 결과를 다시 그 자리에 저장하는 것(23)임
+        alert(ac.temperature)
+        // ac 객체의 temperature 속성 값을 가져와서 alert로 출력. 위의 과정을 통해 현재 23으로 설정되어 있음
+        ac.temperatureDown()
+        // temperatureDown 메서드를 실행하여 "온도를 1도 내립니다."라는 알림창이 뜸
+        // `this.temperature -= 1`은 `this.temperature = this.temperature - 1`을 줄여서 표현한 것
+        // 현재 값(23)을 읽어서 계산한 뒤(23-1) 그 결과를 다시 그 자리에 저장하는 것(22)임
+        alert(ac.temperature)
+        // ac 객체의 temperature 속성 값을 가져와서 alert로 출력. 위의 과정을 통해 현재 22로 설정되어 있음
+        ac.powerOff()
+        // powerOff 메서드를 실행하여 "전원이 꺼졌습니다."라는 알림창이 뜸
+    </script>
+</body>
+</html>

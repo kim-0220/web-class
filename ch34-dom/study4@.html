@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event</title>
+    <script src="./js/study4.js"></script>
     <style>
         .button-type{
             border: 1px solid pink;
@@ -19,6 +20,7 @@
             <li class="button-type">글씨-</li>
             <li class="button-type">글씨+</li>
             <li class="button-type">기본크기</li>
+            <li id="btn-font-base"></li>
         </ul>
     </aside>
 
@@ -32,17 +34,6 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut distinctio, laudantium enim sit earum iure rem excepturi quasi delectus magnam, quam quo ipsa temporibus itaque cumque deleniti dignissimos in assumenda.
     </div>
 
-    <script>
-        const btn1 = document.querySelector("#btn1")
-        btn1.addEventListener("click", function(){
-            alert("안녕하세요")
-        })
-
-        const btn2 = document.querySelector("#btn2")
-        const box = document.querySelector(".box")
-        btn2.addEventListener("click", function(){
-            box.style.backgroundColor = "orange"
-        })
-    </script>
+    
 </body>
 </html>
