@@ -6,3 +6,5 @@ document.addEventListener("DOMContentLoaded",function(){
         popup.classList.add("hide")
     })
 })
+
+// 다시 해야함 수업 못들었음
