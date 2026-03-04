@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문 - for</title>
+</head>
+<body>
+    <h1>반복문</h1>
+    <p>조건이 참으로 계산되는 동안 소스코드를 반복하는 문법구조</p>
+
+    <script>
+        // for(초기값 ; 조건식 ; 증감식){반복될 코드}
+        // 반복문은 무한대로 반복되는 상황은 절대 없어야 하며, 의도된 횟수를 만들어야 한다.
+        // for가 붙으면 무조건 반복문이라고 생각하면 된다.
+
+        for(let i=0 ; i<4 ; i++){
+            console.log(i)
+        }
+        // i라는 변수를 만들고 거기에 0을 저장한다. (이는 최초 한번만 해석됨)
+        // 조건식 i가 4보다 작으면 실행한다.(이 조건이 true일 동안만 반복)
+        // 즉, 조건이 참일 때 중괄호 안의 소스코드를 계산한다. 단, 조건이 false일 경우 바로 계산이 종료된다.
+        // i++은 i에 1을 더한다는 뜻으로, i = i + 1 과 같은 의미이다.
+
+        let dan = Number(prompt("몇 단을 출력할까요?"))
+        for(let i=1 ; i<=9 ; i++){
+            document.write(`<li>${dan}X${i}=${dan*i}</li>`)
+        }
+        // 사용자에게 prompt("몇 단을 출력할까요?")라는 입력창을 띄운다.
+        // prompt는 문자열로 값을 받가 때문에 Number()을 사용하여 숫자 데이터로 변환시켜준다. 이를 dan이라는 함수에 저장(선언)한다.
+        // 반복문 for(let i=1 ; i<=9 ; i++)를 해석해보면 i는 1부터 시작하고, i가 9 이하일 때까지 1씩 증가한다는 의미이다.
+        // 코드를 해석해보면 dan 곱하기 i는 얼마인지를 계산해서 `<li>dan X i = 결과</li>` 모양으로 만들어 document.write()로 브라우저 화면에 글자를 출력한다는 뜻이다.
+    </script>
+
+    <ul>
+        <script>
+            let myclass = ["김가희","김민지","김선영","배민지","연진주"]
+            for(let i=0 ; i<myclass.length ; i++){
+                document.write(`<li>${myclass[i]}</li>`)
+            }
+            // 첫줄에 보면 myclass라는 함수에 배열데이터가 선언되어있다.
+            // myclass.length는 배열 안에 들어있는 데이터 개수를 의미하며, 5개의 데이터가 있다.
+            // 배열은 0번째부터 시작하므로 i는 0부터 시작하고, i가 5보다 작은 동안 1씩 증가하며 반복 된다.
+            // document부분을 해석해보면 myclass라는 함수에 저장된 n번째 데이터를 리스트 태그 형식으로 문자데이터를 화면에 보여준다는 뜻이다.(반복문에 들어가있기 때문에 false가 나오기 전까지 모든 결과값이 도출된다.)
+        </script>
+    </ul>
+</body>
+</html>

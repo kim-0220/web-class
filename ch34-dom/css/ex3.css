@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.tab-menu{
+    width: 800px;
+    margin: 50px auto;
+}
+
+.tabs{
+    border: 1px solid orange;
+    display: flex;
+    gap: 1rem;
+}
+
+.tabs span{
+    box-shadow: 1px 1px 10px lightslategray;
+    border: 1px solid lime;
+    font-size: .8rem;
+    text-transform: uppercase;
+    padding: 2rem 1.2rem;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.tabs span:hover{
+    background: black;
+    color: white;
+}
+
+.tabs span.active{
+    background: black;
+    color: white;
+}
+
+.tab-descriptions{
+    margin-top: 2rem;
+}
+
+.tab-descriptions section{
+    display: none;
+}
+
+.tab-descriptions section.active{
+    display: block;
+}

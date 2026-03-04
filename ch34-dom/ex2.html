@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이어 팝업 기능 만들기</title>
-    <link rel="stylesheet" href="./css/ex1.css">
-    <script src="./js/ex1.js"></script>
+    <title>모달 팝업 기능</title>
+    <link rel="stylesheet" href="./css/ex2.css">
+    <script src="./js/ex2.js"></script>
 </head>
 <body>
+    <div class="modal"></div>
+
     <div class="popup">
         <div class="content-popup">
-            <img src="./img/블프_3안.jpg" alt="블랙프라이데이 세일 팝업">
+            <a href="#">
+                <img src="./img/블프_3안.jpg" alt="블랙프라이데이 세일 팝업">
+            </a>
         </div>
         <div class="popup-controler">
-            <span class="btn-close-popup-oneday">하루동안 안보기</span>
-            <span class="btn-close-popup">닫기</span>
+            <span class="btn-yes">dP</span>
+            <span class="btn-mo">아니오</span>
         </div>
     </div>
+
+    <!-- 팝업이 나왔을 때, 뒷배경이 까맣게 깔림 -> 클릭 오작동 방지 -->
+    <!-- 기존의 흐름대로 가되, 잠시 사용자에게 정보 및 결정을 요구함 -->
+    <!-- 팝업이 스크롤을 움직였을때 딸려가지 않도록 position:fixed로 해주어야함 -->
 
     <div class="container">
         <h1>title</h1>
@@ -30,3 +38,5 @@
     </div>
 </body>
 </html>
+
+<!-- 화살표함수를 쓰면 this가 바인딩이 안되어 누군가를 찾을 수 없음 -->

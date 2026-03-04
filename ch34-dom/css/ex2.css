@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+.popupblind{
+    display: none;
+}
+
+
+.popup{
+    position: fixed;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+}
+
+.popup img{
+    width: 100%;
+}
+
+.popip-controler{
+    display: flex;
+    justify-content: center;
+    
+}
+.popop-controler-span{
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 0.2rem, 1rem;
+    font-size: 8rem;
+}

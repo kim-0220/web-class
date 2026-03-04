@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문의 중첩</title>
+</head>
+<body>
+    <script>
+        for(let i=0 ; i<2 ; i++){
+            for(let j=0 ; j<3 ; j++){
+                document.write(`<p>i의 값: ${i} / j의 값: ${j}</p>`)
+            }
+        }
+        // for문 안에 또 for문이 들어있는 형태를 중첩 반복문이라 한다.
+        // 바깥 for문이 한 번 돌 때 안쪽 for문은 '전부 다' 돈다.
+        // 즉, 바깥 반복 횟수 × 안쪽 반복 횟수 만큼 실행된다.
+    </script>
+
+    <h1>구구단 2단부터 9단까지</h1>
+    <style>
+        /* '내부 스타일 시트'방식으로 스타일 적용 */
+        .box{
+            border: 2px solid seagreen;
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+        }
+        ul{
+            list-style: none;
+            border: 1px solid salmon;
+            padding: 10px;
+        }
+        li{
+            list-style: none;
+            border: 1px solid skyblue;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+        let columns = prompt("몇 열로 구구단을 정리할까요?")
+        console.log(columns)
+        // prompt로 입력받은 숫자를 문자데이터 형식으로 cosole창에 보여줌(입력칸 확인용)
+        document.write(`<div class="box" style="grid-template-columns: repeat(${columns},1fr);">`)
+        // 태그에 직접 style=""을 쓰는 경우를 '인라인 스타일'이라고 하며, 해당 태그에만 적용되고 우선순위가 매우 높으며 유지보수가 불리하다는 특징이 있다.
+            for(let dan=2 ; dan<=9 ; dan++){
+                document.write("<ul>")
+                    document.write(`<h3>${dan}</h3>`)
+                    for(let i=1 ; i<=9 ; i++){
+                        document.write(`<li>${dan}X${i}=${dan*i}</li>`)
+                    }
+                document.write("</ul>")
+            }
+        document.write(`</div>`)
+    </script>
+</body>
+</html>
