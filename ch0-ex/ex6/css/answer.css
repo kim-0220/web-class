@@ -37,9 +37,9 @@ header .common-frame{
     display: flex;
     /* align-items: center; */
 }
-.gnb li{
-    /* padding: 0 1rem; */
-}
+/* .gnb li{
+    padding: 0 1rem;
+} */
 /* 위에서 align-items와 padding을 부여하면 딱 글씨 크기만큼만 클릭이 되기 때문에 a태그를 넓게 잡아서 사용성을 높여야 함 */
 /* a태그는 인라인태그이기 때문에, 단순 height:100%;로는 설정이 적용되지 않아서 a태그에 display:flex;를 하면 글씨가 items이 되고, align items 설정이 가능해지면서 a태그를 선택할 수 있는 간격이 넓어짐 */
 
