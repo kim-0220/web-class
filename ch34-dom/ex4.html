@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로형 슬라이드</title>
+    <link rel="stylesheet" href="../ch0-ex/common-css/reset.css">
+    <link rel="stylesheet" href="./css/ex4.css">
+    <script src="./js/ex4.js"></script>
+    <!-- html에서 <script src="./js/ex4.js" defer></script>사용 또는 js파일에서 DOMContentLoaded 사용. 둘 중 하나만 사용 -->
+    <!-- `defer`는 <script>태그에 사용하는 속성으로, html문서의 파싱(parsing:위에서 아래로 읽기)이 완료된 후에 자바스크립트를 실행하도록 지연시키는 속성이다. -->
+    <!-- 동작순서를 보면 html파싱이 먼저 시작되고, js파일이 다운로드 된 후, html 파싱이 완료되면 js가 실행된다. -->
+    <!-- defer의 특징은 html의 파싱을 막지 않고, html이 모두 만들어진 후 실행되며, 만약 여러 개면 작성 순서대로 실행이 된다. -->
+    <!-- defer을 사용하는 이유는 html구조가 먼저 생성된 후에 js가 실행되도록 하기 위함이 있으며, 페이지 로딩속도 개선 및 DOM요소를 안전하게 제어하기 위함이 있다. -->
+    <!-- DOMContentLoaded는 DOM 생성 완료 시 실행되는 이벤트로 특정 시점에 js를 실행시키는 역할을 가지고 있고, defer과 유사하지만 실무에서는 많이 사용하지 않는다. (defer를 더 많이 사용) -->
+</head>
+<body>
+    <div class="station">
+        <ul class="train">
+            <li>slide1</li>
+            <li>slide2</li>
+            <li>slide3</li>
+            <li>slide4</li>
+        </ul>
+        <div class="controler">
+            <button id="btn-prev">이전</button>
+            <button id="btn-next">다음</button>
+        </div>
+    </div>
+</body>
+</html>

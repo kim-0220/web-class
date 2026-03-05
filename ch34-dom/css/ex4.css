@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.station{
+    width: 100%;
+    /* 임의로 설정한 값 width: 1000px; */
+    /* 부모 요소(현재는 body)의 100%를 의미하며, body의 width는 화면 전체를 뜻함 */
+    /* 실무(반응형)할 때에는 width에 100%로 설정하고, max-width에 최대 설정값(px)을 잡아줌 */
+    /* 실무 예시 - width: 100%; max-width: 1000px; */
+    height: 800px;
+    border: 10px solid darkblue;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.train{
+    width: 400%;
+    /* width: 4000px; */
+    /* 슬라이드 4개니까 4000px 또는 100% x 4 = 400% */
+    height: 100%;
+    display: flex;
+    transition: all 1s ease 0s;
+}
+
+.train li{
+    flex: 1;
+    /* station에서 임의로 설정한 값 width: 1000px; */
+    /* 슬라이드에서 flex: 1;보다는 flex: 0 0 100%;가 더 정확한 표현 */
+    /* flex: [grow] [shrink] [basis]의 축약형 */
+    /* grow는 늘어나는 정도를 말하며 1이면 남는공간을 서로 나눠서 커지고, 0이면 자기 크기를 유지함 */
+    /* shrink는 줄어드는 정도를 말하며 1이면 공간이 부족할 시 작아지고, 0이면 공간이 부족해도 크기를 유지함 */
+    /* basis는 기본 크기를 100%로 설정한다는 의미로, 부모(.train)기준이 기본 크기 */
+    height: 100%;
+    font-size: 100px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.train li:nth-of-type(1){background-color: tomato;}
+.train li:nth-of-type(2){background-color: orange;}
+.train li:nth-of-type(3){background-color: seagreen;}
+.train li:nth-of-type(4){background-color: powderblue;}
+
+.controler{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 부모 기준으로 정확히 중앙 좌표에 위치시킴(단, 요소의 왼쪽 위 모서리가 중앙에 위치) */
+    transform: translate(-50%,-50%);
+    /* 자기 크기의 절반만큼 다시 이동. 결과적으로 완벽한 정중앙 배치가 가능 */
+    /* 요약하면, 요소를 정확히 중앙 정렬하기 위해 자기 크기의 절반만큼 되돌리는 코드 */
+    width: 80%;
+    /* 임의로 설정한 값 width: 800px; */
+    display: flex;
+    justify-content: space-between;
+}
