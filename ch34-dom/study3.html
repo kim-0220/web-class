@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom의 메서드와 프로퍼티</title>
+</head>
+<body>
+    <h1>태그의 속성 편집하기</h1>
+    <p>태그가 갖고있는 속성 값을 설정하거나 가져올 수 있다.</p>
+    <figure>
+        <img class="img1" src="./img/snow_tree.jpg" alt="눈 오는날 트리">
+        <figcaption class="cap1">눈 오는날 눈이 쌓인 트리</figcaption>
+    </figure>
+    <!-- src는 이미지 경로, alt는 이미지 설명 -->
+    <!-- src와 alt 즉, 자바스크립트를 통해 사진을 바꾸고싶은때에는 가장 먼저 태그를 선택한 후 선택한 태그의 속성값을 바꾼다 -->
+    <script>
+        let img1 = document.querySelector(".img1")
+        // document는 현재 html문서, querySelector는 원하는 태그를 선택하는 함수
+        // 즉, 위를 코드를 해석해보면 'html에서 class="img1"인 태그를 찾아서 img1 변수에 저장한다'는 뜻이다.
+        // img1 변수에는 img 태그가 객체 형태로 저장되며, 객체의 속성이나 기능은 점(.)을 사용해서 접근할 수 있다.
+
+        let originalSrc = img1.getAttribute("src")
+        // html 요소 객체는 getAttribute() 메서드를 포함하고 있으며, 이는 태그의 속성값을 가져오는 메서드다.
+        // 괄호()안에 가져올 속성 이름은 문자열""로 작성해야 한다.
+        // 예를 들어 <img class="img1" src="./img/snow_tree.jpg" alt="눈 오는날 트리">라고 했을 때, 속성구조를 보면 src="snow_tree.jpg"이고, 키(key)=src, 값(value)=snow_tree.jpg이다.
+        // 따라서 img1.getAttribute("src")의 결과값은 "./img/snow_tree.jpg"이고, 이 값이 originalSrc 변수에 저장된다.
+
+        console.log(typeof(originalSrc))
+        // typeof는 데이터 타입을 확인하는 연산자(operator)이다.
+        // originalSrc의 값은 "./img/snow_tree.jpg"이기 때문에 console창에 들어가는 결과는 string(문자데이터)이다.
+
+        console.log(img1)
+        // html 태그 형태로 출력
+        console.dir(img1)
+        // 자바스크립트 객체 구조를 보여줌
+
+        let originalAlt = img1.getAttribute("alt")
+        // 위에서 나온 src의 경우와 동일하게 해석되며, 결과값은 "눈 오는날 트리"이고 이 값이 originalAlt 변수에 저장된다. 
+
+        console.log(originalAlt)
+        console.log(img1.alt)
+        console.log(originalSrc)
+        console.log(img1.src)
+        // 위의 경우 1번2번, 그리고 3번4번은 각각 동일한 결과값이 도출된다.
+        // html 객체는 속성에 직접 접근이 가능하며, 결과값은 동일하나 차이점이 있다면 getAttribute("src")는 html속성이고 img1.src는 dom속성이라는 것이다.
+
+        let cap1 = document.querySelector(".cap1")
+        console.log(cap1.textContent)
+        // textContent는 태그 안의 텍스트만 가져오는 속성이다. 따라서 결과값은 `눈 오는날 눈이 쌓인 트리` 이다. 
+
+        cap1.innerHTML = "<i>눈눈 나무</i>"
+        // innerHTML은 태그 안의 html 내용을 변경하는 속성이다.
+        // 위처럼 입력하면, <figcaption class="cap1"><i>눈눈 나무</i></figcaption>로 변경되어 결과값에는 이텔릭체(기울어진 글씨)로 `눈눈 나무`라는 값이 도출된다.
+
+        // 결과적으로 textContent는 텍스트만 처리하여 태그가 같이 적혀 있어도 그냥 문자 데이터 형식으로 결과값이 나오며, innerHTML는 태그가 같이 적혀있으면 그 태그의 본래 속성이 적용이 되면서 결과값이 나온다.
+    </script>
+    <!-- 핵심 개념 정리 -->
+    <!-- document.querySelector()는 태그선택, getAttribute("속성")는 속성 가져오기, textContent는 텍스트 가져오기, innerHTML은 html 내용 변경 -->
+
+    <h1>태그의 클래스 제어</h1>
+    <p>선택된 태그의 클래스를 추가하거나 삭제할 수 있다.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur modi accusantium veritatis error cumque quisquam commodi ut repudiandae voluptatibus harum neque cupiditate blanditiis deserunt quas magnam alias, dolorem totam. Rem.</p>
+    <script>
+        let para = document.querySelector(".para")
+        // 해석하면 para변수 = <p class="para">Lorem ~ Rem.</p>이다. 즉, p태그 객체가 저장된다.
+        para.classList.add("on")
+        // classList는 태그의 class 목록을 관리하는 객체로, classList.add("on")을 하면 p태그에 on클래스가 추가된다.
+        para.classList.remove("on")
+        // classList.remove("on")을 하면 p태그에 on클래스가 제거된다.
+        para.classList.toggle("off")
+        // classList.toggle("off")을 하면 p태그에 off클래스가 있으면 제거, 없으면 추가된다.
+
+        let paras = document.querySelectorAll(".para")
+        // querySelectorAll은 조건에 맞는 모든 태그를 선택한다는 의미다.
+        paras.forEach(babo=>{
+            babo.classList.add("on")
+        })
+        // 위를 해석해보면 paras에 들어있는 모든 para클래스 태그들을 하나씩 꺼내서 on클래스를 추가한다는 의미다.
+        // forEach는 여러개의 데이터를 하나씩 반복하면서 실행하는 함수이다.
+        // babo는 내가 만든 변수이름이고, function과 소괄호()가 생략되어있는 화살표 함수가 사용되고 있다.
+    </script>
+
+    <h1>태그의 포함관계를 사용하여 태그 선택하기</h1>
+    <ul class="list">
+        <li>1</li>
+        <li class="me">2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        let ultag = document.querySelector(".list")
+        let litags = ultag.children
+        // children은 선택한 태그의 자식 태그들을 가져오는 속성이다.
+        litags[3].style.color = "red"
+        // litags[3]은 li태그의 3번째 자식 즉, 0번째부터 시작하니까 결과적으로는 4번째 li를 의미한다.
+        // .style은 css스타일 접근, .color="red"는 글자색 변경을 뜻한다.
+        // 결과적으로 4번 li 글자색이 빨간색으로 바뀐다.
+
+        let me = document.querySelector(".me")
+        me.parentElement.style.border = "2px solid green"
+        // parentElement는 현재 태그의 부모 태그를 의미한다. 따라서 이 상황에서는 ul태그를 말하는 것이다. 결과적으로 ul태그에는 테두리가 2px 실선 초록색이 나타난다.
+        me.nextElementSibling.style.color = "blue"
+        // nextElementSibling은 현재 태그 다음에 있는 형제 태그를 의미한다. 따라서 me라는 클래스를 가지고 있는 li태그의 다음태그(3번 li태그)의 글자색이 파란색으로 변경된다.
+        me.previousElementSibling.style.colr = "pink"
+        // previousElementSibling은 현재 태그 이전에 있는 형제 태그를 의미한다. 따라서 me라는 클래스를 가지고 있는 li태그의 이전태그(1번 li태그)의 글자색이 핑크색으로 변경된다.
+
+        // 응용문제
+        me.parentElement.parentElement.children[1].style.backgroundColor = "orange"
+        // 해석해보면 `(me클래스 갖는) 2번째 li태그의 부모인 ul태그, 다시 ul태그의 부모인 body태그, 다시 body태그의 자식인 h1, ul, script 중 1번째 자식인 ul태그에 스타일로 배경색을 오렌지색으로 준다.`는 의미이다. (단, "태그의 포함관계를 사용하여 태그 선택하기"라는 3번째 h1태그부터 시작하였을때만!!! 전체로 하면 결과값이 달라짐)
+    </script>
+    <!-- 핵심 개념 정리 -->
+    <!-- children = 자식들, parentElement = 부모, nextElementSibling = 다음 형제, previousElementSibling = 이전 형제 -->
+</body>
+</html>
