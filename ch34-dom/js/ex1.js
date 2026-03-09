@@ -5,6 +5,5 @@ document.addEventListener("DOMContentLoaded",function(){
     btnClosePopup.addEventListener("click", ()=>{
         popup.classList.add("hide")
     })
+    // 닫기 버튼과 팝업 자체를 js변수에 저장한 후 닫기 버튼을 클릭했을 때 popup클래스에 hide 클래스가 추가되어 팝업창이 숨겨지도록(보이지 않도록) 한다.
 })
-
-// 다시 해야함 수업 못들었음

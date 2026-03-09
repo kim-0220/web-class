@@ -24,11 +24,16 @@ document.addEventListener("DOMContentLoaded",function(){
     let basicFontSize = 20
     let minFontSize = 14
     let maxFontSize = 26
-    // 위 4가지는 초기설정으로, originFontSize는 기본글씨, basicFontSize는 현재글씨, minFontSize는 최소, maxFontSize는 최대
+    // 위 4가지는 초기설정으로, originFontSize는 기본글씨, basicFontSize는 현재글씨, minFontSize는 최소, maxFontSize는 최대이다.
     const chip = document.querySelector(".chip")
+    // 클래스 chip은 사용자가 현재 글씨 크기를 화면에서 확인하도록 하는 역할이다.
+    // 작은 알약 모양 정보 UI를 보통 chip이라고 부른다. 추가적으로 알림숫자는 badge, 카테고리는 tag, 설명텍스트는 label이라는 클래스 명을 보편적으로 사용한다.
     const html = document.querySelector("html")
+    // 클래서 html은 실제 글씨 크기(font-size)를 변경하는 역할이다.
+    // 웹에서는 html의 font-size가 전체 글씨크기의 기준이 되는 경우가 많기 때문이다.
 
     const btnSmallFont = document.querySelector("#btn-small-font")
+    // 해석하면, "글씨-"버튼을 js에서 사용할 수 있도록 가져온다는 뜻이다.
     btnSmallFont.addEventListener("click",function(){
         if(basicFontSize<=minFontSize){
             alert(minFontSize + "px보다 작게 글씨를 줄일 수 없습니다.")
@@ -38,9 +43,13 @@ document.addEventListener("DOMContentLoaded",function(){
         chip.innerHTML = `${basicFontSize}px`
         html.style.fontSize = `${basicFontSize}px`
     })
+    // 클릭 이벤트를 등록하여 버튼 클릭시 function을 실행시켜 글씨크기를 변경한다.
+    // if 조건문을 보면 현재글씨크기가 최소글씨크기보다 작거나 같으면 alert경고창을 표시하고, 함수 실행을 멈추어(return) 더이상 글씨 크기가 줄이들지 않게 막는 역할을 한다.
+    // .innerHTML은 js에서 html 내용을 읽거나 바꾸는 가장 기본적인 DOM기능이다. 특징으로는 html 태그도 넣을 수 있다는 것이고(html태그 고유속성이 적용), 주의할 점은 기존 내용을 전부 지우고 새로 넣는다는 것이다.
+    // basicFontSize-=1은 버튼을 클릭했을때 1씩 줄어들게 하는 것이며, chip.innerHTML로 화면에 보이는 숫자 표시를 변경하고 html.style.fontSize로 페이지 전체의 실제 글씨 크기를 바꾼다.
 
     const btnBigFont = document.querySelector("#btn-big-font")
-    btnBigFont. addEventListener("click",function(){
+    btnBigFont.addEventListener("click",function(){
         if(basicFontSize>=maxFontSize){
             alert(maxFontSize + "px보다 크게 글씨를 키울 수 없습니다.")
             return
