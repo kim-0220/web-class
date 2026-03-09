@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.clock{
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: antiquewhite;
+}
+
+.clock.day{
+    background: url("../img/day.jpg") no-repeat 50% 50% / cover;
+}
+
+.clock.night{
+    background: url(../img/night.jpg) no-repeat 50% 50% / cover;
+}
+
+#time{
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    /* 반투명일때 사용하는 블러 스타일 */
+}
+
+.clock.day #time{
+    border: 1px solid slategray;
+    background-color: rgba(240, 248, 255, 0.61);
+    color: black;
+}
+
+.clock.night #time{
+    border: 1px solid whitesmoke;
+    background-color: rgba(77, 77, 77, 0.61);
+    color: white;
+}
+
+.mode{
+    list-style: none;
+    border: 1px sandybrown;
+    position: absolute;
+    left: 50%;
+    top: 1.5rem;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;    
+}
+
+.mode li{
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.clock.day .mode li{
+    border: 1px solid dimgray;
+    background-color: rgba(255, 255, 255, 0.61);
+    color: black;
+}
+
+.clock.night .mode li{
+    border: 1px solid ghostwhite;
+    background-color: rgba(54, 54, 54, 0.61);
+    color: white;
+}
+
+.onday{
+    font-size: 3rem;
+}
+
+.ontime{
+    font-size: 9rem;
+}
