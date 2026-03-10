@@ -23,38 +23,181 @@ html{
 }
 
 .popup{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    padding: 30px;
+    background-color: cornsilk;
+    z-index: 3000;
     display: none;
+}
+
+.popup.on{
+    display: block;
+}
+
+.popup p{
+    margin: 1rem 0;
+}
+
+.popup-ctl{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#btn-close{
+    cursor: pointer;
 }
 
 .modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 2000;
     display: none;
 }
 
+.modal.on{
+    display: block;
+}
+
 header{
-    position: relative;
-    z-index: 1000;
-    border: 1px solid steelblue;
+    /* border: 1px solid steelblue; */
     width: 1200px;
     height: 100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     position: relative;
     z-index: 1000;
 }
 
 .gnb{
+    /* border: 1px solid salmon; */
     margin-top: 50px;
+    max-height: 50px;
     display: flex;
+    overflow: hidden;
+    transition: all 0.5s ease 0s;
 }
-.gnb>li{
-    border: 1px solid orange;
+
+.gnb:hover{
+    max-height: 400px;
+}
+
+.gnb:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 0px;
+    background-color: green;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+/* gnb태그의 마지막 자식을 after로 만든다??? */
+
+.gnb:hover:after{
+    height: 150px;
 }
 
 .gnb a{
+    /* border: 1px solid seagreen ; */
     display: flex;
-    height: 50px;
     width: 180px;
+    height: 50px;
     align-items: center;
-    border: 1px solid seagreen ;
+    padding: 0 15px;
+}
+
+.gnb>li:hover>a{
+    background-color: yellowgreen;
+    color: cornsilk;
+}
+
+.gnb ul{
+    color: white;
+}   
+
+.gnb ul>li>a:hover{
+    background-color: darkorange;
+    color: cornsilk;
+}
+
+.station{
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.train{
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: all 0.6s ease 0s;
+}
+
+.train li{
+    flex: 1;
+}
+
+.content{
+    display: flex;
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.content section{
+    /* border: 1px solid tomato; */
+    flex: 1;
+    padding: 10px;
+}
+
+.content h3{
+    margin-bottom: 20px;
+}
+
+.notice li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery{
+    display: flex;
+    gap: 20px;
+}
+
+.banner{
+    background: url(../img/banner.jpg) no-repeat 50% 50% / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner a{
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    background-color: forestgreen;
+    color: black;
+}
+
+footer{
+    background-color: darkolivegreen;
+    color: azure;
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
