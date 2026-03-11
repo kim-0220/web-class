@@ -9,50 +9,66 @@
 }
 
 .tabs{
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     display: flex;
-    gap: 1rem;
+    /* gap: 1rem; */
+    justify-content: space-between;
 }
 
 .tabs span{
-    box-shadow: 1px 1px 10px lightslategray;
-    border: 1px solid lime;
-    font-size: .8rem;
-    text-transform: uppercase;
     padding: 0.2rem 1.2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
     cursor: pointer;
+    border: 1px solid blueviolet;
     border-radius: 50px;
+    box-shadow: 1px 1px 10px lightslategray;
+    /* `요소의 오른쪽 아래 방향으로 1px 이동한 위치에, 10px정도 흐릿하게 퍼지는 회색의 그림자를 만든다.`는 의미 */
+    /* box-shadow 기본 문법: x-offset y-offset blur-radius spread-radius color; */
+    /* x-offset:가로 방향 그림자 위치 (양수: 오른쪽 / 음수: 왼쪽) */
+    /* y-offset:세로 방향 그림자 위치 (양수: 아래 / 음수: 위) */
+    /* blur-radius:그림자 흐림 정도 */
+    /* spread-radius:그림자 크기 확장 */
+    /* color: 그림자 색 */
 }
 
 .tabs span:hover{
-    background: black;
-    color: white;
+    background-color: plum;
+    color: aliceblue;
 }
 
 .tabs span.active{
-    background: black;
-    color: white;
+    background-color: plum;
+    color: aliceblue;
 }
 
 .tab-descriptions{
     margin-top: 2rem;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
+/* .tab-descriptions section{
+    display: none;
+} */
+
+/* .tab-descriptions section:active{
+    display: block;
+} */
+
 .tab-descriptions section{
-    /* display: none; */
     border: 1px solid slateblue;
+    border-radius: 18px;
+    padding: 1.6rem;
     flex: 0;
-    padding: 1rem;
+    /* flexbox에서 크기를 늘리지 않는다는 의미. 즉, 공간을 확장하지 않는 상태다. */
+    /* flex-grow: 0; flex-shrink: 1; flex-basis: 0; */
     opacity: 0.2;
-    transition: all 1s ease 0s;
+    transition: all 0.8s ease 0s;
 }
 
 .tab-descriptions section.active{
-    /* display: block; */
     flex: 1;
     opacity: 1;
 }
-
-/* ???? 공부필요 */
+/* 위에 display를 none에서 block으로 바꾸면 화면에 보이지 않으며, 공간도 없고, 클릭 및 접근이 안된다. 즉 완전히 숨긴 상태인 것이다. */
