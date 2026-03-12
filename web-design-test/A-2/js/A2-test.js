@@ -20,10 +20,14 @@ document.addEventListener("DOMContentLoaded",function(){
 
     setInterval(()=>{
         count++
-        if(count>2){count=0}
+        train.style.transition = `all 0.7s ease 0s`
         train.style.transform = `translateX(${-25*count}%)`
-    },3000)
+        if(count==3){
+            setTimeout(()=>{
+                train.style.transition = `none`
+                train.style.transform = `translateX(0%)`
+                count = 0
+            },800)
+        }
+    },2500)
 })
-
-
-// ???무한 슬라이드 졸려서 못들었음 ㅜㅜ

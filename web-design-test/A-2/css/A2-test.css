@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 *{
     margin: 0;
     padding: 0;
@@ -89,7 +90,7 @@ header{
 }
 
 .gnb:hover{
-    max-height: 400px;
+    max-height: 300px;
 }
 
 .gnb:after{
@@ -103,7 +104,6 @@ header{
     z-index: -1;
     transition: all 0.5s ease 0s;
 }
-/* gnb태그의 마지막 자식을 after로 만든다??? */
 
 .gnb:hover:after{
     height: 150px;
@@ -141,7 +141,7 @@ header{
 
 .train{
     display: flex;
-    width: 300%;
+    width: 400%;
     height: 100%;
     transition: all 0.6s ease 0s;
 }
@@ -186,7 +186,6 @@ header{
 
 .banner a{
     padding: 0.4rem 1rem;
-    border-radius: 10px;
     background-color: forestgreen;
     color: black;
 }
