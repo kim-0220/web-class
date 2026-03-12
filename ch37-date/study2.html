@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>updateClock() - study1의 문제점 해결하기</title>
+</head>
+<body>
+    <p id="clock"></p>
+    <script>
+        const clock = document.querySelector("#clock")
+        const monthArray = ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]
+        // 월 배열은 매번 생성할 필요가 없으므로 밖에 둔다.(한 번만 생성하면 계속 사용)
+
+        function updateClock(){
+            // updateClock은 현재 시간을 가져와서 화면에 표시하는 사용자 정의 함수로, 시계 화면을 업데이트(갱신)하는 기능만 담당한다. 즉, 현재 시간을 계산하고 p태그에 보여주는 함수다.
+
+            let today = new Date()
+            let year = today.getFullYear()
+            let month = today.getMonth()
+            let date = today.getDate()
+            let hour = today.getHours()
+            let minute = today.getMinutes()
+            let second = today.getSeconds()
+
+            minute = String(minute).padStart(2,"0")
+            second = String(second).padStart(2,"0")
+
+            clock.innerHTML = `현재 ${year}년 ${monthArray[month]} ${date}일 ${hour}시 ${minute}분 ${second}초입니다.`
+        }
+
+        updateClock()
+        // 페이지 로드 시 호출 (화면에 바로 현재 시간 표시)
+
+        setInterval(updateClock,1000)
+        // 1초마다 반복(업데이트, 시계 갱신)
+    </script>
+
+    <!-- study1의 문제를 해결하는 방법 -->
+    <!-- 1. 시간을 출력하는 함수 updateClock()을 따로 만든다. -->
+    <!-- 2. 페이지 로드 시 updateClock()을 한 번 실행한다. -->
+    <!-- 3. 이후 setInterval()을 사용하여 1초마다 updateClock()을 반복 실행한다. -->
+    <!-- 이렇게 하면 페이지를 새로고침했을 때 처음부터 현재 시간이 바로 표시된다. -->
+</body>
+</html>
