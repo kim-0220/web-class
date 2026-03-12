@@ -8,36 +8,41 @@
 <body>
     <h1>date객체</h1>
     <p>date객체를 통하여 날짜 정보를 가져올 수 있다.</p>
-    <p id="clock">현재 2026년 3월 9일 9시 37분 10초입니다.</p>
+    <p id="clock">현재 2026년 3월 12일 11시 17분 35초입니다.</p>
+    <!-- p태그는 시간을 표시할 자리로, 자바스크립트가 실행되면 이 내용이 계속 새 시간으로 바뀐다. -->
     <script>
-        const colck = document.querySelector("#clock")
-
+        const clock = document.querySelector("#clock")
         setInterval(function(){
-            
+            let today = new Date()
+            // 현재 날짜와 시간을 가진 Date객체를 만들어서 today라는 변수에 저장한다.
+            // Date는 자바스크립트에 기본으로 존재하는 내장 객체(Built-in Object)이다. 즉, 브라우저가 이미 만들어 둔 기능이고, 날짜와 시간 정보를 다루기 위해 사용된다.
+            // 안에는 getFullYear(연도)/getMonth(월)/getDate(일)/getDay(요일)/getHours(시간)/getMinutes(분)/getSeconds(초)/getMilliseconds(밀리초)등의 메서드들이 있다.
+            let year = today.getFullYear()
+            let month = today.getMonth()
+            // 현재 3월이지만 console창에 확인해보면 숫자 2라는 값이 도출된다. 왜냐하면 1월이 0, 2월이 1, 3월이 2 ... 12월은 11로 배열의 원소처럼 0부터 카운팅되기 때문이다.
+            let monthArray = ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]
+            // getMonth()는 0~11의 숫자를 반환하기 때문에 실제 월 이름을 출력하기 위해 배열을 만들어 사용한다.
+            let date = today.getDate()
+            let hour = today.getHours()
+            // getHours는 24시간 기준으로 표기된다.
+            let minute = today.getMinutes()
+            let second = today.getSeconds()
+
+            minute = String(minute).padStart(2,"0")
+            second = String(second).padStart(2,"0")
+            // String()을 사용해서 문자열로 바꾸는 이유는 padStart가 문자열 메서드이기 때문에 숫자에는 사용할 수 없다.
+            // padStart()는 문자열의 앞쪽을 특정 문자로 채우는 메서드이다.
+            // 기본 문법: string().padStart(최종길이, 채울문자) -> 만약 길이가 충분하다면 아무것도 바뀌지 않는다.
+            // padStart(2,"0")를 해석해보면 길이가 2가 될 때까지 앞에 0을 붙인다는 의미다.
+
+            clock.innerHTML = `현재 ${year}년 ${monthArray[month]} ${date}일 ${hour}시 ${minute}분 ${second}초입니다.`
+            // innerHTML은 html 내용을 바꿔주는 기능이다. 즉, id가 clock인 p태그 안의 글자를 바꾼다.
         },1000)
-        
-        let today = new Date()
-        // new가 있기 때문에 암묵적으로 Date가 생성자함수? 객체 만드는 함수 객체가 만들어짐? 객체는 getFullYear, getHours 등의 메서드가 이미 만들어져 있고
-        let year = today.getFullYear()
-        let month = today.getMonth()
-        let monthArray = ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]
-        let date = today.getDate()
-        let hour = today.getHours()
-        let minute = today.getMinutes()
-        let second = today.getSeconds()
-
-        colck.innerHTML = `현재${year}년 ${monthArray[month]}월 ${date}일 ${hour}시 ${minute}분 ${second}초입니다.`
-
-        console.log(year)
-        console.log(month)
-        // 2라는 값이 도출됨. 그 이유는 1월이 0, 2월이 1, 3월이 2 ... 12월은 11로 배열의 원소처럼 0부터 카운팅이 되기 때문이다.
-        console.log(monthArray[month])
-        // 따라서 배열데이터 형태로 써야 3월이 나옴!
-        console.log(date)
-        console.log(hour)
-        console.log(minute)
-        console.log(second)
-
+        // setInterval()은 지정한 시간 간격마다 특정 코드를 반복 실행하는 함수이다. 즉, 일정 시간마다 계속 실행되는 타이머 함수다.
+        // 기본 문법: setInterval(반복으로 실행할 함수, 몇ms마다 실행할지 시간)
+        // js에서 시간은 ms단위를 사용한다 따라서 1초는 1000ms인 것이다.
     </script>
+    <!-- 현재 코드 실행 흐름을 보면 `페이지 로드/html 먼저 표시/1초 기다림/setInterval 실행/현재시간 출력`순서로 진행이 되며, 때문에 맨 처음에 html에 적어둔 p태그의 내용이 먼저 보이고 1초 뒤에 js가 덮어쓰면서 현재 시간이 나오게 된다. -->
+    <!-- 이를 해결하기 위해서는 시간을 출력하는 함수`updateClock()`을 따로 만들고 페이지 로드 시 1번만 실행한 후 setInterval로 반복실행하면 된다. -->
 </body>
 </html>

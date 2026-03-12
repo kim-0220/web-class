@@ -7,28 +7,40 @@
 </head>
 <body>
     <h1>setTimeout(동작,시간)</h1>
-    <p>입력한 일정시간 후에 입력한 특정동작이 실행되도록 예약하는 함수. 함수가 사용된 자리에 스케줄을 리턴한다.</p>
-    <h1>clearTimeout(예약)</h1>
-    <p>setTimeout()함수가 실행되고 남긴 스케줄을 취소하는 함수</p>
+    <!-- setTimeout(실행할 함수, 시간) - 일정 시간이 지난 후 딱 한 번 실행 -->
+    <p>입력한 일정 시간 후에 입력한 특정동작을 <mark>한 번만 실행</mark>하는 함수이다. setTimeout()은 실행 예약번호(ID)를 반환한다.</p>
+
+    <h1>clearTimeout(예약번호)</h1>
+    <p>setTimeout()이 반환된 예약번호(ID)를 전달받아 예약된 작업을 <mark>취소</mark>하는 함수이다.</p>
+
     <script>
         const timer = setTimeout(function(){
             alert("5초가 지났습니다.")
         },5000)
-        // 5000=5초
+        // 5000=5초 (시간 단위: ms = 밀리초)
 
         clearTimeout(timer)
-        // 스케줄을 취소했기 때문에 아예 알림창이 뜨지 않음
+        // 예약을 취소했기 때문에 알림창이 뜨지 않음
     </script>
 
     <h1>setInterval(동작,시간)</h1>
-    <p>입력한 일정시간마다 입력한 특정동작이 반복되게 하는 함수. 함수가 사용된 자리에 스케줄을 리턴한다.</p>
-    <h1>clearInterval</h1>
-    <p>setInterval함수가 만든 스케줄을 취소할 때 사용하는 함수</p>
+    <!-- setInterval(함수, 시간) - 일정 시간마다 계속 반복 실행. 멈추지 않으면 계속 실행 -->
+    <p>입력한 일정 시간마다 특정 동작을 <mark>계속 반복 실행</mark>하는 함수. setInterval()도 실행 예약번호(ID)를 반환한다.</p>
+
+    <h1>clearInterval(예약번호)</h1>
+    <p>setInterval()이 반환된 예약번호(ID)를 전달받아 반복 실행을 <mark>중지</mark>하는 함수이다.</p>
+
     <script>
-        setInterval(function(){
+        const timer2 = setInterval(function(){
             console.log("콘솔창에 0.5초마다 새로 생김")
         },500)
         // 500=0.5초
+
+        clearInterval(timer2)
+        // 반복 실행이 취소되어 콘솔에 출력되지 않음
     </script>
+
+    <!-- 개발에서는 `스케줄을 리턴한다`보다는 `예약ID를 반환한다.` 또는 `타이머ID를 반환한다.`라고 표현한다. -->
+    <!-- setTimeout()과 setInterval()은 실행을 예약하면서 타이머 번호(예약 ID)를 반환한다. 이 번호가 변수(timer등)에 저장되고, clearTimeout() 또는 clearInterval()을 사용해 해당 타이머를 취소할 수 있다. -->
 </body>
 </html>
