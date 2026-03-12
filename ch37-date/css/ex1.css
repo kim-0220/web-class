@@ -18,7 +18,7 @@
 }
 
 .clock.night{
-    background: url(../img/night.jpg) no-repeat 50% 50% / cover;
+    background: url("../img/night.jpg") no-repeat 50% 50% / cover;
 }
 
 #time{

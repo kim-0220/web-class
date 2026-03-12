@@ -17,3 +17,5 @@ document.addEventListener("DOMContentLoaded",()=>{
     let arrayMonth = ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]
 
 })
+
+// d아아아아아ㅏㅇ 아직 못함js만 수정하고 복습하면 됨
