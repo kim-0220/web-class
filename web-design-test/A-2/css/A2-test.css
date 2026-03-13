@@ -69,7 +69,6 @@ html{
 }
 
 header{
-    /* border: 1px solid steelblue; */
     width: 1200px;
     height: 100px;
     margin: 0 auto;
@@ -81,7 +80,6 @@ header{
 }
 
 .gnb{
-    /* border: 1px solid salmon; */
     margin-top: 50px;
     max-height: 50px;
     display: flex;
@@ -110,12 +108,12 @@ header{
 }
 
 .gnb a{
-    /* border: 1px solid seagreen ; */
     display: flex;
     width: 180px;
     height: 50px;
     align-items: center;
     padding: 0 15px;
+    box-sizing: border-box;
 }
 
 .gnb>li:hover>a{
@@ -158,9 +156,8 @@ header{
 }
 
 .content section{
-    /* border: 1px solid tomato; */
     flex: 1;
-    padding: 10px;
+    padding: 20px;
 }
 
 .content h3{
@@ -173,8 +170,10 @@ header{
 }
 
 .gallery{
+    height: 90px;
     display: flex;
     gap: 20px;
+    justify-content: space-between;
 }
 
 .banner{
@@ -191,7 +190,7 @@ header{
 }
 
 footer{
-    background-color: darkolivegreen;
+    background-color: black;
     color: azure;
     width: 1200px;
     height: 100px;
