@@ -79,12 +79,16 @@ header{
     z-index: 1000;
 }
 
+.logo{
+    margin-top: 30px;
+}
+
 .gnb{
     margin-top: 50px;
     max-height: 50px;
     display: flex;
     overflow: hidden;
-    transition: all 0.5s ease 0s;
+    transition: all 0.6s ease 0s;
 }
 
 .gnb:hover{
@@ -100,11 +104,11 @@ header{
     height: 0px;
     background-color: green;
     z-index: -1;
-    transition: all 0.5s ease 0s;
+    transition: all 0.8s ease 0s;
 }
 
 .gnb:hover:after{
-    height: 150px;
+    height: 160px;
 }
 
 .gnb a{
@@ -112,13 +116,13 @@ header{
     width: 180px;
     height: 50px;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
 .gnb>li:hover>a{
     background-color: yellowgreen;
-    color: cornsilk;
+    color: whitesmoke;
 }
 
 .gnb ul{
@@ -127,7 +131,7 @@ header{
 
 .gnb ul>li>a:hover{
     background-color: darkorange;
-    color: cornsilk;
+    color: whitesmoke;
 }
 
 .station{
@@ -172,8 +176,8 @@ header{
 .gallery{
     height: 90px;
     display: flex;
-    gap: 20px;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .banner{
