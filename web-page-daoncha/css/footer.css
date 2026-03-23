@@ -10,12 +10,8 @@ footer{
     margin-bottom: 1.5rem;
 }
 
-.ft1 .sns svg path{
-    fill: white;
-}
-
 .ft1 .sns svg:hover path{
-    fill: var(--pt-color-100);
+    stroke: var(--pt-color-100);
 }
 
 .ft-menu{

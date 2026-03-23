@@ -29,17 +29,31 @@
                 <ul class="sns">
                     <li>
                         <a href="#" target="_blank">
-                            <img src="./img/snsmenu-InstagramLogo.svg" alt="다온차 인스타그램 바로가기">
+                            <!-- <img src="./img/snsmenu-InstagramLogo.svg" alt="다온차 인스타그램 바로가기"> -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15.75C14.0711 15.75 15.75 14.0711 15.75 12C15.75 9.92893 14.0711 8.25 12 8.25C9.92893 8.25 8.25 9.92893 8.25 12C8.25 14.0711 9.92893 15.75 12 15.75Z" stroke="#4B7522" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M16.125 3.375H7.875C5.38972 3.375 3.375 5.38972 3.375 7.875V16.125C3.375 18.6103 5.38972 20.625 7.875 20.625H16.125C18.6103 20.625 20.625 18.6103 20.625 16.125V7.875C20.625 5.38972 18.6103 3.375 16.125 3.375Z" stroke="#4B7522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.875 8.25C17.4963 8.25 18 7.74632 18 7.125C18 6.50368 17.4963 6 16.875 6C16.2537 6 15.75 6.50368 15.75 7.125C15.75 7.74632 16.2537 8.25 16.875 8.25Z" fill="#4B7522"/>
+                            </svg>
                         </a>
                     </li>
                     <li>
                         <a href="#" target="_blank">
-                            <img src="./img/snsmenu-FacebookLogo.svg" alt="다온차 페이스북 바로가기">
+                            <!-- <img src="./img/snsmenu-FacebookLogo.svg" alt="다온차 페이스북 바로가기"> -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="#4B7522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.75 8.25002H14.25C13.9542 8.24878 13.6611 8.30613 13.3875 8.41876C13.114 8.5314 12.8654 8.69708 12.6563 8.90626C12.4471 9.11544 12.2814 9.36397 12.1688 9.63752C12.0561 9.91106 11.9988 10.2042 12 10.5V21" stroke="#4B7522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 13.5H15" stroke="#4B7522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </a>
                     </li>
                     <li>
                         <a href="#" target="_blank">
-                            <img src="./img/snsmenu-YoutubeLogo.svg" alt="다온차 유튜브 바로가기">
+                            <!-- <img src="./img/snsmenu-YoutubeLogo.svg" alt="다온차 유튜브 바로가기"> -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 12L10.5 9V15L15 12Z" stroke="#4B7522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12.4626C2 15.2563 2.29062 16.8876 2.50625 17.7313C2.56571 17.9602 2.67813 18.172 2.83447 18.3495C2.9908 18.527 3.18666 18.6653 3.40625 18.7532C6.54688 19.9532 11.75 19.9251 11.75 19.9251C11.75 19.9251 16.9531 19.9532 20.0938 18.7532C20.3133 18.6653 20.5092 18.527 20.6655 18.3495C20.8219 18.172 20.9343 17.9602 20.9938 17.7313C21.2094 16.8876 21.5 15.2563 21.5 12.4626C21.5 9.66881 21.2094 8.03756 20.9938 7.19381C20.9343 6.96487 20.8219 6.75311 20.6655 6.57561C20.5092 6.39811 20.3133 6.25983 20.0938 6.17193C16.9531 4.97193 11.75 5.00006 11.75 5.00006C11.75 5.00006 6.54688 4.97193 3.40625 6.17193C3.18666 6.25983 2.9908 6.39811 2.83447 6.57561C2.67813 6.75311 2.56571 6.96487 2.50625 7.19381C2.29062 8.03756 2 9.66881 2 12.4626Z" stroke="#4B7522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </a>
                     </li>
                 </ul>
@@ -116,20 +130,24 @@
                     <img src="./img/banner3-mobile.jpg" alt="offering a free mug promotion" class="mo">
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="pagination"></div>
+            <!-- swiper는 pagination을 만들면 자동으로 내부에 아래 구조가 생김 -->
+            <!--
+                <div class="pagination">
+                    <span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                    <span class="swiper-pagination-bullet"></span>
+                </div>
+            -->
+            <!-- 여기에서 각 span은 슬라이드 하나씩을 의미하며, -active는 현재 슬라이드를 뜻함 -->
         </div>
         <script>
-            const swiper = new Swiper('.swiper', {
+            const swiper = new Swiper('.hero-slider', {
                 direction: 'horizontal',
                 loop: true,
                 pagination: {
-                    el: '.swiper-pagination',
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    el: '.pagination',
+                    clickable: true,
                 },
             })
         </script>
@@ -301,17 +319,31 @@
                 <ul class="sns">
                     <li>
                         <a href="#">
-                            <img src="./img/snsmenu-InstagramLogo.svg" alt="다온차 인스타그램 바로가기">
+                            <!-- <img src="./img/snsmenu-footer-Instagram.svg" alt="다온차 인스타그램 바로가기"> -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15.75C14.0711 15.75 15.75 14.0711 15.75 12C15.75 9.92893 14.0711 8.25 12 8.25C9.92893 8.25 8.25 9.92893 8.25 12C8.25 14.0711 9.92893 15.75 12 15.75Z" stroke="white" stroke-width="2" stroke-miterlimit="10"/>
+                                <path d="M16.125 3.375H7.875C5.38972 3.375 3.375 5.38972 3.375 7.875V16.125C3.375 18.6103 5.38972 20.625 7.875 20.625H16.125C18.6103 20.625 20.625 18.6103 20.625 16.125V7.875C20.625 5.38972 18.6103 3.375 16.125 3.375Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.875 8.25C17.4963 8.25 18 7.74632 18 7.125C18 6.50368 17.4963 6 16.875 6C16.2537 6 15.75 6.50368 15.75 7.125C15.75 7.74632 16.2537 8.25 16.875 8.25Z" fill="white"/>
+                            </svg>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="./img/snsmenu-FacebookLogo.svg" alt="다온차 페이스북 바로가기">
+                            <!-- <img src="./img/snsmenu-footer-Facebook.svg" alt="다온차 페이스북 바로가기"> -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.75 8.25002H14.25C13.9542 8.24878 13.6611 8.30613 13.3875 8.41876C13.114 8.5314 12.8654 8.69708 12.6563 8.90626C12.4471 9.11544 12.2814 9.36397 12.1688 9.63752C12.0561 9.91106 11.9988 10.2042 12 10.5V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 13.5H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="./img/snsmenu-YoutubeLogo.svg" alt="다온차 유튜브 바로가기">
+                            <!-- <img src="./img/snsmenu-footer-Youtube.svg" alt="다온차 유튜브 바로가기"> -->
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 12L10.5 9V15L15 12Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12.4626C2 15.2563 2.29062 16.8876 2.50625 17.7313C2.56571 17.9602 2.67813 18.172 2.83447 18.3495C2.9908 18.527 3.18666 18.6653 3.40625 18.7532C6.54688 19.9532 11.75 19.9251 11.75 19.9251C11.75 19.9251 16.9531 19.9532 20.0938 18.7532C20.3133 18.6653 20.5092 18.527 20.6655 18.3495C20.8219 18.172 20.9343 17.9602 20.9938 17.7313C21.2094 16.8876 21.5 15.2563 21.5 12.4626C21.5 9.66881 21.2094 8.03756 20.9938 7.19381C20.9343 6.96487 20.8219 6.75311 20.6655 6.57561C20.5092 6.39811 20.3133 6.25983 20.0938 6.17193C16.9531 4.97193 11.75 5.00006 11.75 5.00006C11.75 5.00006 6.54688 4.97193 3.40625 6.17193C3.18666 6.25983 2.9908 6.39811 2.83447 6.57561C2.67813 6.75311 2.56571 6.96487 2.50625 7.19381C2.29062 8.03756 2 9.66881 2 12.4626Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </a>
                     </li>
                 </ul>

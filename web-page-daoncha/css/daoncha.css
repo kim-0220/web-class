@@ -9,6 +9,32 @@
     object-fit: cover;
 }
 
+.swiper.hero-slider .pagination{
+    display: flex;
+    gap: var(--space-normal);
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 2.5rem;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.pagination>span{
+    background-color: white;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.pagination>span.swiper-pagination-bullet{
+    opacity: 1;
+}
+
+.pagination>span.swiper-pagination-bullet-active{
+    background-color: var(--pt-color-700);
+}
+
 .story{
     width: 1440px;
     margin: var(--space-3x-large) auto;

@@ -71,6 +71,10 @@ header .sns{
     align-items: center;
 }
 
+header .sns svg:hover path{
+    stroke: var(--pt-color-700);
+}
+
 .login{
     font-size: var(--fs-det);
     font-weight: var(--fw-med);
