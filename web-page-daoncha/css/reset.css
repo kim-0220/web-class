@@ -16,7 +16,10 @@ a{
     color: inherit;
     text-decoration: inherit;
 }
-address,i{
+address{
+    font-size: inherit;
+}
+i{
     font-style: inherit;
 }
 ul,ol{

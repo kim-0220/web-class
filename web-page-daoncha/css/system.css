@@ -29,7 +29,18 @@
     --pm-color-700: #61942E;
     --pm-color-800: #4B7522;
     --pm-color-900: #365418;
-    --point-color: #907D30;
+
+    /* point 색상 - rosted leaves */
+    --pt-color-0: #FAF3D9;
+    --pt-color-100: #F7EAB9;
+    --pt-color-200: #F0DF99;
+    --pt-color-300: #E7D27D;
+    --pt-color-400: #DAC265;
+    --pt-color-500: #C7AF50;
+    --pt-color-600: #AF983F;
+    --pt-color-700: #907D30;
+    --pt-color-800: #6D5E22;
+    --pt-color-900: #473D15;
 
     /* 여백 */
     --space-2x-small: 0.125rem;

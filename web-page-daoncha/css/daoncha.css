@@ -2,84 +2,68 @@
     width:100%;
     height: calc(100vh - 100px);
 }
+
 .hero-slider .swiper-slide img{
     width:100%;
     height:100%;
     object-fit: cover;
 }
-.hero-slider.swiper .pagination{
-    display: flex;
-    gap:.5rem;
-    position: absolute;
-    left:50%;
-    transform: translateX(-50%);
-    bottom:2rem;
-    z-index: 10;
-    justify-content: center;
-}
-.pagination>span{
-    background:#fff;
-    box-shadow: 0 0 10px #ddd;
-    width:0.8rem;
-    height:0.8rem;
-    border-radius: 50%;
-}
-.hero-slider .swiper-pagination-bullet {
-    opacity: 1;
-}
-.pagination>span.swiper-pagination-bullet-active {
-    background: var(--point-color);
-}
+
 .story{
     width: 1440px;
     margin: var(--space-3x-large) auto;
 }
+
 .story h1{
     margin-bottom: var(--space-2x-large);
     text-transform: uppercase;
-    color: var(--point-color);
+    color: var(--pm-color-800);
 }
+
 .story-frame{
     display: flex;
     justify-content: space-between;
 }
 
-.signature>.common-frame>h1{
-    color: var(--point-color);
-}
-.best>.common-frame>h1{
-    color: var(--point-color);
-}
-
-.txt-story{flex:5;}
-.img-story{flex:7;}
-
 .story-frame h2{
     margin-bottom: var(--space-normal);
 }
+
 .story-frame h4{
     margin-bottom: var(--space-large);
 }
+
 .story-frame h4+p{
     margin-bottom: var(--space-normal);
 }
+
+.txt-story{flex: 1;}
+.img-story{flex: 1;}
+/* story-frame안에서 txt와 img 두 요소가 남은 공간을 나눠 가지는 비율을 의미 */
+/* 보통 실무에서는 1:1, 4:6, 5:7, 3:9 정도의 비율로 나눔(화면이 커지거나 작아짐에 따라 달라짐) */
+
 .philo{
-    margin-top: 4.5rem;
+    margin-top: 4rem;
 }
+
 .philo-list{
     display: flex;;
-    gap:var(--space-normal);
+    gap: var(--space-normal);
 }
+
 .philo-list>li{
     flex:1;
 }
+
 .philo-list>li h3{
     margin-bottom: var(--space-large);
 }
+
 .philo-list>li h3+div{
-    border-left: 0.2rem solid var(--point-color);
+    border-left: 0.2rem solid var(--pt-color-700);
     padding-left: var(--space-normal);
 }
+
 .philo-list>li h3+div p:nth-of-type(1){
     margin-bottom: var(--space-normal);
 }
@@ -87,88 +71,80 @@
 .menu-frame{
     margin-bottom: var(--space-3x-large);
 }
+
 .menu-frame h1{
     margin-bottom: var(--space-small);
 }
+
 .menu-frame h1+p{
     margin-bottom: var(--space-x-large);
 }
-.menu-frame .swiper-slide h4{
+
+.menu-frame .swiper-slide p:nth-of-type(1){
     margin-top: 1.5rem;
     margin-bottom: var(--space-small);
 }
 
+.signature>.common-frame>h1{
+    color: var(--pm-color-800);
+}
+
+.best>.common-frame>h1{
+    color: var(--pm-color-800);
+}
+
 .franchise{
-    background:
-    linear-gradient(30deg,rgba(0, 0, 0, 0.62),rgba(0, 0, 0, 0.62)),
-    url(../img/bg-franchise.jpg) no-repeat 50% 50% / cover;
-    color:#fff;
+    background: linear-gradient(30deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),
+    /* 30도 기울기로 그라데이션 방향이 설정되어있고 시작색과 끝색이 동일하여 단색처럼 보인다. */
+    /* #000이므로 검정색이고 0.5는 투명도 50%를 의미한다. 따라서 반투명 검은색 레이어가 씌워진다. */
+    url(../img/franchise-bg.jpg) no-repeat 50% 50% / cover;
+    /* 위에서 아래 순서로 쌓이며 반투명 검은색 레이어 밑에 배경이미지가 있는 상황이다. */
+    color: white;
     padding: var(--space-3x-large) 0;
     text-align: center;
 }
+
 .franchise h1{
     margin-bottom: var(--space-small);
 }
+
 .franchise h1+p{
     margin-bottom: var(--space-x-large);
 }
-.franchise h3{
+
+.franchise h2{
     margin-top: var(--space-3x-large);
     margin-bottom: var(--space-small);
 }
+
 .why{
     margin-top: var(--space-x-large);
     display: flex;
     gap: var(--space-normal);
-    text-align: center;
     justify-content: space-between;
+    text-align: center;
 }
+
 .why>li{
-    background-color: #4c752275;
+    background-color: rgba(75, 117, 34, 0.4);
     padding: var(--space-normal);
     border-radius: 0.5rem;
     backdrop-filter: blur(10px);
-    /* 배경색이 투명해야만 적용이 된다. */
+    /* 배경색에 투명도가 존재해야만 위의 blur가 적용된다. */
 }
+
 .why>li>p:first-of-type{
     margin-bottom: var(--space-normal);
-    font-size: var(--fs-bd1);
-    font-weight: var(--fw-bold);
 }
+
 .why>li>p:last-of-type{
-    font-size: var(--fs-bd2);
-    font-weight: var(--fw-med);
     width: 305px;
+    font-size: var(--fs-bd2);
 }
-
-
-
-
 
 @media (max-width:1440px){
-    .hero-slider{
-        width:100%;
-        height: auto;
-    }
-    .txt-story{flex:1;}
-    .img-story{flex:1;}
+
 }
 @media (max-width:768px){
-    .story h1 {
-        text-align: center;
-    }
-    .story-frame {
-        flex-direction: column;
-        text-align: center;
-    }
-    .philo-list {
-        display: flex;
-        gap: var(--space-x-large);
-        flex-direction: column;
-    }
-    .why{
-        display: grid;
-        gap:var(--space-normal);
-        grid-template-columns: repeat(2,1fr);
-    }
+
 }

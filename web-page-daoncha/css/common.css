@@ -3,7 +3,9 @@ html{
     font-size: var(--basic-font-pc);
 }
 main{
+    margin-top: 100px;
     min-height: 60vh;
+    /* 내용이 적어도, 최소한의 화면 높이는 60%를 차지하게 만든다는 뜻 */
 }
 h1{
     font-size: var(--fs-h1);
@@ -23,11 +25,12 @@ h4{
 }
 p{
     line-height: 140%;
+    /* font-size 지정하지 않은 이유는 상속되는 기본값이 bd1 값과 동일하기 때문 */
 }
-.b2{
+.fs-bd2{
     font-size: var(--fs-bd2);
 }
-.de{
+.fs-det{
     font-size: var(--fs-det);
 }
 .fwr{
@@ -59,31 +62,33 @@ p{
 .pc{
     display: block;
 }
-main{
-    margin-top: 100px;
-}
 .btn-style{
     display: inline-flex;
+    /* 내부 요소들을 가로정렬(flex)하면서, 버튼 자체는 줄 안에서 자연스럽게 inline요소처럼 배치됨 */
     padding: 0.25rem 0.75rem;
     align-items: center;
     gap: var(--space-normal);
-    border-bottom:1px solid white;
+    border-bottom: 1px solid white;
 }
 .btn-style:hover{
     background-color: var(--pm-color-800);
     color:white;
 }
-.ptc{
-    color: var(--point-color);
+.pt100{
+    color: var(--pt-color-100);
 }
 
 @media(max-width: 1440px){
     html{
         font-size: var(--basic-font-pad);
     }
+    main{
+        margin-top: 5rem;
+    }
     .common-frame{
         width: auto;
         margin: 0 2rem;
+        /* 보통 태블릿 기본 여백: 2rem ~ 3rem */
     }
     .mo{
         display: none;
@@ -94,9 +99,6 @@ main{
     .pc{
         display: none;
     }
-    main{
-        margin-top: 5rem;
-    }
 }
 
 @media(max-width: 768px){
@@ -106,6 +108,7 @@ main{
     .common-frame{
         width: auto;
         margin: 0 1rem;
+        /* 보통 모바일 기본 여백: 1rem ~ 2rem */
     }
     .mo{
         display: block;

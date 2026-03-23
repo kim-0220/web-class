@@ -1,5 +1,5 @@
 footer{
-    background-color: var(--pm-color-800);
+    background-color: var(--pm-color-900);
     color: white;
     padding: var(--space-x-large) 0;
 }
@@ -15,7 +15,7 @@ footer{
 }
 
 .ft1 .sns svg:hover path{
-    fill: var(--point-color);
+    fill: var(--pt-color-100);
 }
 
 .ft-menu{
@@ -25,32 +25,12 @@ footer{
 
 .ft2{
     margin-bottom: 1.5rem;
-}
-
-.f-gnb{
-    display: flex;
-    gap: var(--space-2x-large);
-}
-
-.f-gnb>li>a{
-    font-weight: var(--fw-bold);
-    display: flex;
-    align-items: center;
-    height: 50px;
-}
-
-.f-gnb ul{
-    font-weight: var(--fw-med);
-    margin-top: var(--space-small);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-small);
-}
-
-.ft3{
-    margin-bottom: 1.5rem;
     display: flex;
     justify-content: space-between;
+}
+
+.ft-logo img{
+    height: 7rem;
 }
 
 .co-info-list{
@@ -63,45 +43,19 @@ footer{
     font-weight: var(--fw-bold);
 }
 
-.f-logo img{
-    height: 5rem;
-}
-
-.ft4{
+.ft3{
     padding: var(--space-small) 0;
+    font-size: var(--fs-det);
     font-weight: var(--fw-med);
     text-align: center;
 }
 
 @media (max-width: 1440px){
-    .ft2{
-        display: none;
-    }
-    .ft3{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-    }
-    .f-logo{
-        align-self: center;
-    }
+
 }
 @media (max-width: 768px){
-    .ft1{
-        flex-direction: column;
-        align-items: center;
-        gap: var(--space-normal);
-    }
-    .co-info-list{
-        grid-template-columns: repeat(2,auto);
-    }
-    .ft3{
-        align-items: center;
-    }
+
 }
 @media (max-width: 320px){
-    .ft-menu{
-        flex-direction: column;
-        align-self: stretch;
-    }
+    
 }
