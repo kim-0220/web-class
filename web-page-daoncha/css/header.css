@@ -81,8 +81,41 @@ header .sns svg:hover path{
     color: var(--pm-color-800);
 }
 
+.header-smart{
+    display: none;
+}
+
 @media (max-width:1440px){
+    header{
+        display: none;
+    }
     
+    .header-smart{
+        display: block;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid var(--pt-color-700);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .header-smart .common-frame{
+        display: flex;
+        align-items: center;
+    }
+
+    .header-smart .logo img{
+        height: 5rem;
+    }
+
+    .header-smart .btn-menu{
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 @media (max-width:768px){
