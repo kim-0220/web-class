@@ -1,0 +1,127 @@
+.sub-banner{
+    background: linear-gradient(30deg,rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),
+    url(../img/story-banner-bg.jpg) no-repeat 50% 50% / cover;
+    height: 780px;
+}
+
+.sub-banner .common-frame{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-banner .img{
+    width: 804px;
+    height: 80px;
+    /* svg 벡터 이미지 가져올 때 주의사항! 그룹으로 묶인 상태에서 가지고 와야 함 */
+}
+
+.about-us{
+    margin-top: var(--space-3x-large);
+}
+
+.about-us .common-frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us h1{
+    font-size: 60px;
+    color: var(--pt-color-700);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: var(--space-2x-large);
+}
+
+.about-us img{
+    width: 954px;
+    height: 545px;
+}
+
+.about-us h3{
+    font-size: 50px;
+    margin-top: var(--space-large);
+    margin-bottom: var(--space-normal);
+}
+
+.about-us p{
+    margin-bottom: var(--space-small);
+}
+
+.what-is-daon{
+    background-color: #F5EFE5;
+}
+
+.what-is-daon .common-frame{
+    margin: var(--space-3x-large) auto;
+    padding: var(--space-3x-large) 0;
+}
+
+main h2{
+    font-size: 40px;
+    color: var(--pt-color-700);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: var(--space-2x-large);
+}
+
+.what-is-daon .fig-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fig-box img{
+    width: 710px;
+    height: 480px;
+}
+
+.fig-box .content{
+    width: 642px;
+}
+
+.fig-box .content h3{
+    margin-bottom: var(--space-normal);
+}
+
+.fig-box .content p{
+    margin-bottom: var(--space-small);
+}
+
+.fig-box .content .left-line{
+    border-left: 4px solid var(--pt-color-700);
+    padding: 0 var(--space-normal);
+}
+
+.fig-box .content div:first-of-type{
+    margin-bottom: var(--space-x-large);
+}
+
+.tea-philosophy{
+    margin-bottom: var(--space-3x-large);
+}
+
+.core-value>li{
+    border: 2px solid var(--pt-color-700);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.core-value>li>h3{
+    margin-bottom: var(--space-normal);
+}
+
+.core-value>li>figure{
+    width: 300px;
+    margin-bottom: var(--space-normal);
+}
+
+.core-value>li>p{
+    margin-bottom: var(--space-small);
+}
+
+.core-value>li>p:last-of-type{
+    margin-bottom: 0;
+}
