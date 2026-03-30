@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    /* height: 5000px; */
+    /* background-color: blanchedalmond; */
+    padding-top: 200px;
+}
+/* 스크롤이 기능을 하려면 컨텐츠가 있어야 하기 때문에 임의로 box에 높이를 부여 */
+/* section(bg-wave)에 height를 잡아놔서 box의 height는 잠깐 없애기 + background-color도 가려지니까 없애기 */
+
+header#scr{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    padding: 10px;
+    background-color: tan;
+    border-radius: 4px;
+}
+/* 단순하게 공중에 떠 있는 플로팅 디자인을 만들어 놓고 진행 -> 스크롤을 내려도 고정되어 따라옴 */
+
+header#scr.on{
+    background-color: lightsalmon;
+}
+
+#current-count{
+    color: darkred;
+    font-weight: bold;
+}
+
+.rotate-box{
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    /* transform: rotate(30deg); */
+    /* 자바스크립트를 작성하기 전에 회전이 되는지 확인하는 용도 */
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+.box>section{
+    background: url(../img/bg1.png) repeat-x 0% 0%;
+    min-height: 2000px;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
