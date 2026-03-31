@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intersection observer</title>
+    <link rel="stylesheet" href="./css/study1.css">
+    <link rel="stylesheet" href="./css/observer.css">
+    <script src="./js/observer.js"></script>
+</head>
+<body>
+    <h1>인터섹션 옵져버 객체</h1>
+    <div>
+        <p>웹디자인은 단순히 시각적으로 아름다운 화면을 구성하는 것을 넘어, 사용자에게 정보를 효과적으로 전달하고 편리한 사용 경험을 제공하는 것을 목표로 한다. 이를 위해 레이아웃, 타이포그래피, 색상, 이미지, 인터페이스(UI), 사용자 경험(UX) 등의 요소가 유기적으로 결합된다. 레이아웃은 콘텐츠의 배치를 통해 사용자의 시선 흐름을 자연스럽게 유도하며, 타이포그래피는 글꼴과 크기, 간격 등을 조절하여 가독성을 높이고 정보의 위계를 명확하게 전달한다. 색상은 브랜드 이미지를 형성하고 시각적 집중도를 높이는 역할을 하며, 이미지와 그래픽 요소는 콘텐츠에 대한 이해를 돕고 감성적인 전달을 강화한다. 또한 버튼, 메뉴, 아이콘과 같은 UI 요소는 사용자가 직관적으로 기능을 이해하고 조작할 수 있도록 설계되어야 하며, UX는 전반적인 사용 과정에서의 편의성과 만족도를 결정짓는 중요한 요소이다.</p>
+        <p>웹접근성은 장애인이나 고령자 등 정보 접근에 제약이 있는 사용자들을 포함하여 모든 사람이 웹 콘텐츠를 동등하게 이용할 수 있도록 하는 개념이다. 이는 단순한 선택이 아닌 필수적인 요소로, 다양한 사용자 환경을 고려한 설계가 요구된다. 웹접근성은 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고성이라는 네 가지 원칙을 기반으로 한다. 인식의 용이성은 이미지에 대체 텍스트를 제공하거나 영상에 자막을 추가하는 등 콘텐츠를 다양한 방식으로 인식할 수 있도록 하는 것이며, 운용의 용이성은 키보드만으로도 모든 기능을 사용할 수 있도록 하는 것을 의미한다. 이해의 용이성은 사용자가 콘텐츠와 인터페이스를 쉽게 이해할 수 있도록 일관된 구조와 명확한 표현을 사용하는 것이고, 견고성은 다양한 브라우저와 기기에서도 콘텐츠가 문제없이 동작하도록 만드는 것을 의미한다.</p>
+        <p>웹표준은 서로 다른 브라우저와 환경에서도 동일한 결과를 제공하기 위해 정해진 기술적 규칙과 약속을 의미한다. 이는 웹의 호환성과 일관성을 확보하고, 유지보수를 용이하게 하며, 접근성을 향상시키는 데 중요한 역할을 한다. 웹표준은 주로 HTML, CSS, JavaScript와 같은 기술을 기반으로 하며, 구조와 표현을 분리하는 것을 기본 원칙으로 한다. 즉, HTML은 콘텐츠의 구조를 담당하고, CSS는 디자인을 담당하며, JavaScript는 동적인 기능을 구현한다. 이러한 표준을 준수하면 다양한 브라우저에서 동일한 결과를 얻을 수 있고, 코드의 재사용성과 확장성이 높아지며, 검색 엔진 최적화에도 유리한 장점을 가진다.</p>
+    </div>
+    <div class="content">
+        <h2>웹 디자인 핵심 요소</h2>
+        <section>
+            <h3 class="ltr">1. 레이아웃</h3>
+            <p class="blur">그리드, 플렉스박스, CSS Grid를 사용해 안정적이고 일관된 구조를 만듭니다.</p>
+        </section>
+        <section>
+            <h3 class="ltr">2. 타이포그래피</h3>
+            <p class="blur">가독성 좋은 폰트, 적절한 라인높이와 글자 크기를 설정합니다.</p>
+        </section>
+        <section>
+            <h3 class="ltr">3. 색상과 대비</h3>
+            <p class="blur">브랜드 컬러와 접근성을 고려한 대비를 적용하여 시각적 계층을 만듭니다.</p>
+        </section>
+        <section>
+            <h3 class="ltr">4. 반응형 디자인</h3>
+            <p class="blur">미디어 쿼리로 화면 크기별 최적화된 UI를 제공합니다.</p>
+        </section>
+        <section>
+            <h3 class="ltr">5. 웹 접근성</h3>
+            <p class="blur">웹 접근성은 모든 사용자가 콘텐츠를 동등하게 이용할 수 있도록 확보하는 것입니다. 시각 장애인용 스크린 리더 친화적인 ARIA 속성, 키보드만으로 탐색 가능한 탭 순서, 명확한 대체 텍스트(alt) 등을 적용합니다.</p>
+            <p class="blur">색 대비(최소 4.5:1), 충분한 클릭/터치 영역, 폼 필드 레이블 및 에러 메시지 제공, 그리고 동적 콘텐츠 업데이트 시 알림 역할(aria-live) 사용을 권장합니다.</p>
+        </section>
+        <section>
+            <h3 class="ltr">6. 웹 표준</h3>
+            <p class="blur">웹 표준을 준수하면 호환성과 유지보수성이 높아집니다. 올바른 DOCTYPE, 언어 지정(lang), 시맨틱 HTML 요소(header, nav, main, article, section, footer) 사용, 그리고 외부 CSS/JS 분리 구조를 유지해야 합니다.</p>
+            <p class="blur">HTML5/CSS3 표준과 W3C 검증 도구를 통해 마크업 오류를 최소화하고, 국제화(i18n) 및 모바일 우선 접근법(mobile-first)을 적용합니다.</p>
+        </section>
+        <section>
+            <h3 class="ltr">7. HTML 마크업 설명 목차</h3>
+            <ol class="blur">
+                <li><strong>문서 구조</strong> - DOCTYPE, html, head, body</li>
+                <li><strong>메타데이터</strong> - charset, viewport, title, meta description</li>
+                <li><strong>시맨틱 요소</strong> - header, nav, main, article, section, aside, footer</li>
+                <li><strong>텍스트 콘텐츠</strong> - h1~h6, p, em, strong, blockquote, code</li>
+                <li><strong>링크와 내비게이션</strong> - a, nav, aria-label, rel</li>
+                <li><strong>이미지/미디어</strong> - img, figure, figcaption, video, audio, alt, lazy-loading</li>
+                <li><strong>폼</strong> - form, label, input, textarea, button, select, fieldset, legend</li>
+                <li><strong>테이블</strong> - table, thead, tbody, tfoot, tr, th, td, scope</li>
+                <li><strong>다양한 레이아웃</strong> - div, span, article, section과 CSS Grid/Flex와의 결합</li>
+                <li><strong>접근성 태그</strong> - aria-label, aria-hidden, role, tabindex</li>
+                <li><strong>스크립트와 스타일</strong> - script, link, style, defer/async</li>
+                <li><strong>폴백/호환성</strong> - picture / source, feature queries, progressive enhancement</li>
+            </ol>
+            <p>위 목차를 따라서 HTML 마크업을 설계하면 구조적, 접근성, 유지보수성 측면에서 좋은 웹페이지가 만들어집니다.</p>
+        </section>
+        <section>
+            <h3 class="ltr">8. CSS 기본 개념 목차</h3>
+            <ol class="blur">
+                <li><strong>선택자</strong> - 요소, 클래스, 아이디, 속성, 계층 선택자</li>
+                <li><strong>박스 모델</strong> - content, padding, border, margin</li>
+                <li><strong>디스플레이</strong> - block, inline, inline-block, none</li>
+                <li><strong>포지셔닝</strong> - static, relative, absolute, fixed, sticky</li>
+                <li><strong>플렉스박스</strong> - display:flex, justify-content, align-items, flex-wrap</li>
+                <li><strong>그리드</strong> - display:grid, grid-template-columns, grid-template-rows, gap</li>
+                <li><strong>타이포그래피</strong> - font-family, font-size, line-height, text-align, letter-spacing</li>
+                <li><strong>색상과 배경</strong> - color, background-color, background-image, gradient</li>
+                <li><strong>반응형</strong> - media queries, min/max-width, mobile-first 전략</li>
+                <li><strong>전환과 변환</strong> - transition, transform, animation</li>
+                <li><strong>변수와 재사용</strong> - CSS Custom Properties(--var), mixins, utility 클래스</li>
+                <li><strong>접근성 스타일</strong> - focus-visible, high-contrast 지원, reduced motion</li>
+            </ol>
+            <p>이 순서에 따라 학습하면 CSS 기초 개념을 체계적으로 이해할 수 있습니다.</p>
+        </section>
+        <section>
+            <h3 class="ltr">9. JavaScript 기초 개념 목차</h3>
+            <ol class="blur">
+                <li><strong>변수와 데이터 타입</strong> - let, const, var, number, string, boolean, null, undefined, object, array</li>
+                <li><strong>연산자</strong> - 산술, 비교, 논리, 할당, 삼항 연산자</li>
+                <li><strong>조건문</strong> - if, else if, else, switch</li>
+                <li><strong>반복문</strong> - for, while, do...while, for...of, for...in</li>
+                <li><strong>함수</strong> - 선언식, 표현식, 화살표 함수, 매개변수, 반환값</li>
+                <li><strong>객체</strong> - 프로퍼티, 메서드, this, 객체 리터럴</li>
+                <li><strong>배열</strong> - push, pop, shift, unshift, forEach, map, filter, reduce</li>
+                <li><strong>DOM</strong> - querySelector, classList, textContent, appendChild, event listeners</li>
+                <li><strong>이벤트</strong> - click, submit, keydown, debounce, throttling</li>
+                <li><strong>비동기</strong> - callback, Promise, async/await, fetch</li>
+                <li><strong>모듈</strong> - export, import</li>
+                <li><strong>디버깅과 콘솔</strong> - console.log, console.error, debugger</li>
+            </ol>
+            <p>이렇게 정리하면 JavaScript 기본 개념을 빠르게 파악할 수 있습니다.</p>
+        </section>
+        <ul class="blur">
+            <li>사용자 경험(UX)을 우선으로 설계하기</li>
+            <li>빠른 로딩을 위한 이미지 최적화</li>
+            <li>접근성(ARIA, 키보드 네비게이션) 고려</li>
+        </ul>
+    </div>
+</body>
+</html>
