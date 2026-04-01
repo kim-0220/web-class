@@ -23,10 +23,12 @@
     cursor: pointer;
     transition: all 1s ease 0s;
     transform: translateX(300px);
+    /* 우측 하단에 위치한 버튼을 오른쪽으로 300px만큼 이동시켜서(화면 밖으로 나가게 만들어서) 처음에는 보이지 않게 만듬 */
 }
 
 .btn-top.on{
     transform: translateX(0px);
+    /* btn-top클래스에 on클래스가 붙으면 오른쪽으로 300px만큼 이동했던 것을 다시 제자리(0px)에 오도록 함 */
 }
 
 .gnb{
@@ -37,6 +39,7 @@
     left: 50%;
     top: 1rem;
     transform: translateX(-50%);
+    /* 상단 중앙에 위치시키기 위함 */
     background-color: aliceblue;
     box-shadow: 0 0 10px steelblue;
     border-radius: 20px;
@@ -46,6 +49,7 @@
     pointer-events: none; */
     transition: all 1s ease 0s;
     transform: translate(-50%,-200px);
+    /* translateY는 -200px만큼 이동시켜(위쪽 세로방향으로 올라갈수있도록) 화면 밖으로 내보내서 보이지 않도록 만듬 */
     /* 이전에 gnb메뉴바를 중앙에 위치시키기 위해 transform을 사용했기 때문에 이후에 마우스 휠을 내리면 메뉴바를 올리기 위해서는 x와 y의 좌표를 같이 써준다! */
 }
 
@@ -53,6 +57,7 @@
     /* opacity: 1;
     pointer-events: auto; */
     transform: translate(-50%,0px);
+    /* gnb클래스에 on클래스가 붙으면 translateX는 동일하게 놔두고, Y좌표만 다시 원위치로 올 수 있도록 0px로 바꾸어 설정하면 화면에 다시 보이게 됨  */
 }
 /* 투명도를 이용해서 사라졌다가 나타나게 할 수 있고, 또는 transform을 이용해서 화면 밖으로 나갔다가 다시 들어오게 만들 수도 있으니 둘 중 하나 선택해서 사용! */
 
@@ -64,4 +69,5 @@
     font-weight: 600;
     text-decoration: none;
     white-space: nowrap;
+    /* white-space는 텍스트의 공백(띄어쓰기, 줄바꿈)을 어떻게 처리할지 결정하는 속성 */
 }
