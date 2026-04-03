@@ -126,18 +126,19 @@ header .sns svg:hover path{
 
     .header-smart .common-frame{
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        line-height: 0;
         position: relative;
     }
 
     .header-smart .logo img{
-        align-items: center;
         height: 5rem;
     }
 
     .header-smart .btn-menu{
         position: absolute;
-        right: 5%;
+        right: 0;
         top: 50%;
         transform: translateY(-50%);
         line-height: 0;
@@ -183,7 +184,7 @@ header .sns svg:hover path{
     .gnb-smart{
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        gap: 3rem 1rem;
+        gap: 2rem 1rem;
         font-size: var(--fs-bd2);
     }
 
@@ -197,6 +198,7 @@ header .sns svg:hover path{
     } 
 
     .gnb-smart ul{
+        color: var(--pm-color-800);
         font-weight: var(--fw-med);
         display: flex;
         flex-direction: column;
@@ -209,9 +211,21 @@ header .sns svg:hover path{
         justify-content: flex-end;
         align-items: center;
     }
+
+    .btn-more{
+        display: none;
+    }
+
+    .menu-login li{
+        padding-top: 1rem;
+    }
 }
 
 @media (max-width:768px){
+    .btn-more{
+        display: block;
+    }
+
    .gnb-smart{
         display: grid;
         grid-template-columns: repeat(1,1fr);
