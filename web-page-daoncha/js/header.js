@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     // 메뉴버튼을 누르면 header가 나오는 기능
     const btnMenu = document.querySelector(".btn-menu")
-    const menuSmartHidden = document.querySelector(".menu-smart-hidden")
+    const menuSmartHidden = document.querySelector(".header-smart-hidden")
     const btnClose =  document.querySelector(".btn-close")
     const gnbSmartList = document.querySelectorAll(".gnb-smart>li")
 
