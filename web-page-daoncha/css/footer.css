@@ -47,13 +47,34 @@ footer{
 }
 
 @media (max-width: 1440px){
-
+    .ft2{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .sns svg{
+        height: 1.2rem;
+    }
 }
 @media (max-width: 768px){
-
+    .ft2{
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-normal);
+    }
+    .co-info-list{
+        grid-template-columns: repeat(2,auto);
+    }
+    .sns svg{
+        height: 1.2rem;
+    }
 }
 @media (max-width: 320px){
-    
+    .ft-menu{
+        flex-direction: column;
+        align-self: stretch;
+    }
+    .sns svg{
+        height: 1.2rem;
+    }
 }
-
-/* footer pc 미완성 */
