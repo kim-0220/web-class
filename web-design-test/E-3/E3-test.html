@@ -4,25 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>영상박물관</title>
+    <link rel="stylesheet" href="./css/E3-test.css">
+    <script src="./js/E3-test.js"></script>
 </head>
 <body>
+    <div class="popup">
+        <h3>영상 박물관에 오신 것을 환영합니다!</h3>
+        <p>안녕하세요! 영상 박물관을 방문해주셔서 감사합니다.<br>우리 박물관은 다양한 시대의 영상을 체험할 수 있는 특별한 공간입니다.<br>신규 특별 전시회와 다양한 프로그램이 준비되어 있으니 놓치지 마세요!</p>
+        <div class="popup-ctl">
+            <span id="btn-close">X 닫기</span>
+        </div>
+    </div>
     <div class="container">
         <header>
-
+            <div class="logo">
+                <a href="#">
+                    <img src="./img/logo.jpg" alt="영상 박물관 로고">
+                </a>
+            </div>
+            <ul class="gnb">
+                <li>
+                    <a href="#">박물관 소개</a>
+                    <ul>
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">박물관 연혁</a></li>
+                        <li><a href="#">박물관 조직도</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">전시</a>
+                    <ul>
+                        <li><a href="#">전시 리스트</a></li>
+                        <li><a href="#">전시 일정</a></li>
+                        <li><a href="#">특별전</a></li>
+                        <li><a href="#">지역 작가</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">체험행사</a>
+                    <ul>
+                        <li><a href="#">문화행사</a></li>
+                        <li><a href="#">진로체험</a></li>
+                        <li><a href="#">명사특강</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">커뮤니티</a>
+                    <ul>
+                        <li><a href="#">사용자 메뉴얼</a></li>
+                        <li><a href="#">박물관 약도</a></li>
+                        <li><a href="#">게시판</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="spot">
+                <li><a href="#">spotmenu1</a></li>
+                <li><a href="#">spotmenu2</a></li>
+            </ul>
         </header>
         <main>
             <div class="content">
-                <section></section>
-                <section></section>
-                <section></section>
+                <section class="banner">
+                    <figure>
+                        <img src="./img/banner.jpg" alt="">
+                    </figure>
+                    <div>
+                        <h3>영상박물관에서 시각 예술의 세계를 탐험하세요!</h3>
+                        <p>영상박물관은 영화와 영상 예술의 역사와 발전을 한눈에 볼 수 있는 특별한 공간입니다.<br>다양한 전시와 특별 프로그램을 통해 시각 매체의 매력을 느껴보세요!<br>신규 방문객을 위한 할인 혜택도 마련되어 있으니, 지금 바로 방문해 보세요!</p>
+                    </div>
+                    <a href="#">
+                        <img src="./img/arrow.png" alt="배너 바로가기">
+                    </a>
+                </section>
+                <section>
+                    <h3>공지사항</h3>
+                    <ul class="notice">
+                        <li id="btn-popup">
+                            <a href="#">2024년 특별 전시회 개막</a>
+                            <span>2024년 6월 1일</span>
+                        </li>
+                        <li>
+                            <a href="#">가족 단위 체험 프로그램</a>
+                            <span>2024년 6월 5일</span>
+                        </li>
+                        <li>
+                            <a href="#">안전 수칙 안내</a>
+                            <span>2024년 6월 10일</span>
+                        </li>
+                        <li>
+                            <a href="#">영상 만들기 체험</a>
+                            <span>2024년 6월 15일</span>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>갤러리</h3>
+                    <ul class="gallery">
+                        <li>
+                            <a href="#">
+                                <img src="./img/gal1.jpg" alt="영상박물관 오픈">
+                                영상박물관 오픈
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/gal2.jpg" alt="오래된 영상 모음집">
+                                오래된 영상 모음집
+                            </a>
+                        </li>
+                    </ul>
+                </section>
             </div>
             <div class="station">
-
+                <ul class="train">
+                    <li><img src="./img/slide1.jpg" alt="시각매체의 발전과정"></li>
+                    <li><img src="./img/slide2.jpg" alt="영화와 영상 예술 탐험하기"></li>
+                    <li><img src="./img/slide3.jpg" alt="특별 상영 및 체험 이벤트"></li>
+                </ul>
             </div>
         </main>
     </div>
     <footer>
-
+        <div class="logo">
+            <a href="#">
+                <img src="./img/logo-footer.jpg" alt="영상 박물관 하단로고">
+            </a>
+        </div>
+        <div class="copy">COPYRIGHTⓒ by BARUNWEBDESIGN. ALL RIGHTS RESERVED.</div>
+        <ul class="sns">
+            <li><a href="#"><img src="./img/sns1.jpg" alt="페이스북 연결하기"></a></li>
+            <li><a href="#"><img src="./img/sns2.jpg" alt="트위터 연결하기"></a></li>
+            <li><a href="#"><img src="./img/sns3.jpg" alt="인스타그램 연결하기"></a></li>
+        </ul>
     </footer>
 </body>
 </html>

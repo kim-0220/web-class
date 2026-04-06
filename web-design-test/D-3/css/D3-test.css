@@ -172,6 +172,7 @@ main{
     height: 200px;
     padding: 20px;
     box-sizing: border-box;
+    background-color: plum;
 }
 
 .tab-menu{

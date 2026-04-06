@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;}
+ul{list-style: none;}
+img{max-width: 100%;}
+a{color:inherit;text-decoration: inherit;}
+
+html{
+    background-color: #fff;
+    color:#333;
+}
+.popup{
+    position: fixed;
+    width:300px;
+    padding:30px;
+    left:300px;
+    top:300px;
+    background-color: #fff;
+    z-index: 2000;
+    display: none;
+}
+.popup.on{
+    display: block;
+}
+.popup p{
+    margin:10px 0;
+}
+.popup-ctl{
+    display: flex;
+    justify-content: flex-end;
+}
+.container{
+    width:1000px;
+    display: flex;
+}
+header{
+    width:200px;
+    background-color: rgb(247, 76, 104);;
+}
+.gnb{
+    width:180px;
+    margin:0 auto;
+    color:#fff;
+}
+.gnb a{
+    display: flex;
+    width:180px;
+    height:50px;
+    align-items: center;
+}
+.gnb ul a{
+    height:40px;
+    background-color: purple;
+}
+.gnb>li{
+    max-height: 50px;
+    overflow: hidden;
+    transition: all .4s ease 0s;
+}
+.gnb>li:hover{
+    max-height: 300px;
+}
+.gnb li:hover>a{
+    background-color: #000;
+    color:#fff;
+}
+.station{
+    width:800px;
+    height:350px;
+}
+.train{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.train li{
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    opacity: 0;
+    pointer-events: none;
+    transition:all 0.7s ease 0s;
+}
+.train li.on{
+    opacity: 1;
+    pointer-events: auto;
+}
+.content{
+    display: flex;
+    height:200px;
+}
+.content section{
+    flex:1;
+}
+.content section:nth-of-type(1){
+    flex:1.5;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/banner.jpg") no-repeat 50% 50% / cover;
+}
+.banner a{
+    padding:.4rem 1rem;
+    background-color: purple;
+    color:#fff;
+}
+.direct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/direct.jpg") no-repeat 50% 50% / cover;
+}
+.direct a{
+    padding:.4rem 1rem;
+    background-color: purple;
+    color:#fff;
+}
+.tabs{
+    display: flex;
+    margin:10px 0;
+    gap:10px;
+}
+.tabs span{
+    border:1px solid purple;
+    padding:5px 10px;
+    cursor: pointer;
+}
+.tabs span.on{
+    background-color: purple;
+    color:#fff;
+}
+.notice li{
+    display: flex;
+    justify-content: space-between;
+}
+.gallery{
+    display: flex;
+    gap:10px;
+}
+.tab-desc>div{
+    display: none;
+}
+.tab-desc>div.on{
+    display: block;
+}
+footer{
+    background-color: #000;
+    color:#fff;
+    height:100px;
+    display: flex;;
+    align-items: center;
+}
+.fmenu{
+    display: flex;
+    gap:10px;
+}
+
+/* <!-- 다시 공부 필요 쌤꺼 복사함 ㅎㅋ --> */

@@ -1,138 +1,180 @@
 @charset "utf-8";
 
-*{
-    margin: 0;
-    padding: 0;
-}
-
-a{
-    color: inherit;
-    text-decoration: inherit;
-}
-
-img{
-    max-width: 100%;
-}
-
-ul{
-    list-style: none;
-}
+*{margin:0;padding:0;}
+a{color: inherit; text-decoration: inherit;}
+img{max-width: 100%;}
+ul{list-style: none;}
 
 html{
     background-color: #fff;
-    color: #333;
+    color:#333;
 }
 
 .popup{
+    position: fixed;
+    width:300px;
+    padding:30px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    background-color: #fff;
+    z-index: 3000;
     display: none;
 }
-
+.popup.on{
+    display: block;
+}
+.popup-ctl{
+    display: flex;
+    justify-content: flex-end;
+}
+.popup-ctl span{
+    cursor: pointer;
+}
 .modal{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: 2000;
+    background-color: #000;
+    opacity: 0.7;
     display: none;
 }
-
+.modal.on{
+    display: block;
+}
 header{
-    width: 1340px;
-    height: 100px;
-    margin: 0 auto;
+    width:1340px;
+    height:100px;
+    margin:0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: relative;
     z-index: 1000;
+    align-items: center;
+}
+.gnb a{
+    display: flex;
+    width:180px;
+    height:50px;
+    align-items: center;
+    padding:0 0.5rem;
+    box-sizing: border-box;
+}
+.gnb{
+    display: flex;
+    margin-top: 50px;
+    align-self: flex-start;
+}
+.gnb>li{
+    max-height: 50px;
+    overflow: hidden;
+    transition: all .5s ease 0s;
+}
+.gnb>li:hover{
+    max-height: 300px;
+}
+.gnb ul{
+    background-color: #ccc;
+}
+.gnb li:hover>a{
+    background-color: #000;
+    color:#fff;
+}
+.station{
+    width:100%;
+    height:350px;
+}
+.train{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.train>li{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    opacity: 0;
+    pointer-events: none;
+    transition:all .5s ease 0s;
+}
+.train>li.on{
+    opacity: 1;
+    pointer-events: auto;
+}
+.direct{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:270px;
+    display: flex;
+    background-color: #fff;
+    height: 80px;
+    width: 1340px;
+}
+.direct>li{
+    flex:1;
+}
+.direct>li>a{
+    display: flex;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
 }
 
 main{
     position: relative;
 }
-
-.gnb{
-    margin-top: 50px;
-    display: flex;
-}
-
-.gnb a{
-    width: 180px;
-    height: 50px;
+.banner{
+    width:1340px;
+    margin:0 auto;
     display: flex;
     align-items: center;
-    padding: 0 0.5rem;
+    gap:20px;
+    padding:20px;
     box-sizing: border-box;
 }
-
-.gnb ul{
-    background-color: lightgray;
+.content{
+    display: flex;;
+    width:1340px;
+    margin:0 auto;
 }
-
-.gnb>li{
-    max-height: 50px;
-    overflow: hidden;
-    transition: all 0.5s ease 0S;
+.content>section{
+    flex:1;
+    padding: 20px;
 }
-
-.gnb>li:hover{
-    max-height: 300px;
-}
-
-.gnb li:hover>a{
-    background-color: slategray;
-    color: azure;
-}
-
-.station{
-    width: 100%;
-    height: 350px;
-}
-
-.train{
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.train>li{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.5s ease 0s;
-}
-
-.train>li.on{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.direct{
-    position: absolute;
-    left: 50%;
-    top: 270px;
-    transform: translateX(-50%);
+.notice li{
     display: flex;
-    background-color: white;
-    width: 1340px;
-    height: 80px;
+    justify-content: space-between;
+}
+.gallery{
+    display: flex;
+    gap:10px;
+}
+.gallery a{
+    display: flex;
+    flex-direction: column;
+}
+.content h3{
+    margin-bottom: 10px;
+}
+footer{
+    width:1340px;
+    height:120px;
+    margin:0 auto;
+    background-color: #000;
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sns{
+    display: flex;
 }
 
-.direct>li{
-    flex: 1;
-    border: 1px springgreen solid;
-}
-
-.direct>li>a{
-    border: 1px solid darkblue;
-    display: inline-table;
-    height: 100%;
-    gap: 10pc;
-}
-
-
-
-.banner{
-    border: 1px solid lawngreen;
-    width: 1340px;
-    height: auto;1
-}
+/* 다시공부필요 쌤꺼 복사함 */
