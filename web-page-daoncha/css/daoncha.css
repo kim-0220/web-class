@@ -169,8 +169,47 @@
 }
 
 @media (max-width:1440px){
-    
-}
-@media (max-width:768px){
+    .hero-slider{
+        width: 100%;
+        height: auto;
+    }
 
+    .story{
+        width: auto;
+        margin: var(--space-3x-large) var(--space-large);
+    }
+
+    .why{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: var(--space-normal);
+        grid-auto-rows: 1fr;
+    }
+
+    .why>li>p:last-of-type{
+        width: auto;
+    }
+}
+
+@media (max-width:768px){
+    .story h1{
+        text-align: center;
+    }
+
+    .story-frame{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-story{
+        width: 402px;
+        margin: 0 auto;
+        margin-top: var(--space-large);
+    }
+
+    .philo-list{
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-x-large);
+    }
 }
