@@ -121,7 +121,7 @@ header .sns svg:hover path{
         position: fixed;
         left: 0;
         top: 0;
-        z-index: 1000;
+        z-index: 2000;
     }
 
     .header-smart .common-frame{
@@ -177,7 +177,7 @@ header .sns svg:hover path{
     .menu-content{
         max-height: calc(100vh - 8rem);
         overflow: auto;
-        padding-top: 2rem;
+        padding-top: 1.5rem;
         box-sizing: border-box;
     }
 
@@ -188,6 +188,10 @@ header .sns svg:hover path{
         font-size: var(--fs-bd2);
     }
 
+    .gnb-smart a:hover{
+        color: var(--pt-color-700);
+    }
+
     .gnb-smart>li>a{
         font-weight: var(--fw-bold);
         display: block;
@@ -195,7 +199,7 @@ header .sns svg:hover path{
         padding-left: 0.5rem;
         margin-bottom: 1rem;
         color: var(--pm-color-800);
-    } 
+    }
 
     .gnb-smart ul{
         color: var(--pm-color-800);
@@ -210,6 +214,11 @@ header .sns svg:hover path{
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        padding-top: 2rem;
+    }
+
+    .menu-sns .sns svg:hover path{
+        stroke: var(--pt-color-700);
     }
 
     .btn-more{
@@ -217,7 +226,11 @@ header .sns svg:hover path{
     }
 
     .menu-login li{
-        padding-top: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    .menu-login a:hover{
+        color: var(--pt-color-700);
     }
 }
 
@@ -257,15 +270,16 @@ header .sns svg:hover path{
         align-items: center;
         border-left: none;
         padding-left: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
         color: var(--pm-color-800);
         border-bottom: 1px solid white;
         box-sizing: border-box;
-    } 
+    }
 
     .gnb-smart ul{
         gap: 0;
     }
+
     .gnb-smart ul a{
         height: 30px;
         display: flex;
@@ -276,7 +290,7 @@ header .sns svg:hover path{
         height: 2rem;
     }
 
-    .btn-menu{
+    .btn-more{
         height: 40px;
         padding-left: 20px;
         position: absolute;
@@ -286,5 +300,9 @@ header .sns svg:hover path{
         justify-content: center;
         align-items: center;
         cursor: pointer;
+    }
+
+    .menu-content{
+        padding-top: 1rem;
     }
 }
