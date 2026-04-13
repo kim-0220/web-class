@@ -32,7 +32,7 @@ html{
     transform: translate(-50%,-50%);
     z-index: 3000;
     background-color: azure;
-    border: 2px solid navy;
+    border: 10px solid crimson;
     display: none;
 }
 
