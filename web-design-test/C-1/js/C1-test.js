@@ -55,4 +55,5 @@ document.addEventListener("DOMContentLoaded",()=>{
         })
         // 위 구조의 전제조건은 탭 개수와 컨텐츠의 개수가 동일해야하며, 순서가 정확히 일치해야 한다는 것이다.
     })
+    
 })
