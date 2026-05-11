@@ -72,9 +72,9 @@ nav>ul>li:hover>a{
     background-color: darkblue;
 }
 
-/* .sub{
+.sub{
     display: none;
-} */
+}
 
 .sub li a{
     display: block;
@@ -91,21 +91,177 @@ nav>ul>li:hover>a{
 
 .slide{
     height: 300px;
-    background-color: aquamarine;
+    overflow: hidden;
+}
+
+.slide ul{
+    width: 3600px;
+    height: 300px;
+    display: flex;
+}
+
+.slide ul li{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+}
+
+.slide ul li a{
+    display: block;
+    height: 100%;
+}
+
+.slide ul li.s1{
+    background: url(../img/s1.jpg) no-repeat center / cover;
+}
+
+.slide ul li.s2{
+    background: url(../img/s2.jpg) no-repeat center / cover;
+}
+
+.slide ul li.s3{
+    background: url(../img/s3.jpg) no-repeat center / cover;
+}
+
+.slide ul li h2{
+    background-color: rgba(61, 21, 95, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 50px;
+    font-size: 28px;
+    color: #fff;
+}
+
+.slide ul li h2 span{
+    color: skyblue;
 }
 
 .contents{
     height: 200px;
     display: flex;
-    background-color: violet;
 }
 
 .contents article{
     width: 400px;
 }
 
+.contents .notice{
+    padding: 10px;
+}
+
+.notice h2{
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    width: 120px;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+.notice ul{
+    background-color: #333;
+    padding: 5px 15px;
+}
+
+.notice ul li{
+    border-bottom: 1px dashed #fff;
+}
+
+.notice ul li:last-child{
+    border-bottom: none;
+}
+
+.notice ul li a{
+    display: block;
+    padding: 5px 0;
+    color: #fff;
+    position: relative;
+}
+
+.notice ul li p{
+    width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.notice ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
 .contents .gall{
-    background-color: cornflowerblue;
+    padding: 10px;
+}
+
+.gall h2{
+    background-color: darkslategray;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    width: 120px;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 20px;
+}
+
+.gall ul{
+    display: flex;
+    background-color: darkslategray;
+    padding: 10px;
+    gap: 10px;
+}
+
+.gall ul li img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.gall ul li:hover{
+    opacity: 0.7;
+}
+
+.contents .go{
+    background-color: silver;
+    padding: 10px;
+}
+
+.go h2{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.go ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.go ul li{
+    text-align: center;
+}
+
+.go ul li a{
+    display: block;
+    height: 100%;
+}
+
+.go ul li p{
+    width: 80px;
+    height: 80px;
+    background-color: teal;
+    padding-top: 20px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.go ul li span{
+    font-weight: bold;
 }
 
 footer{
