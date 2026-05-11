@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* 기본 CSS 리셋 */
+*{
+    margin: 0;
+    /* 기본 상하좌우 여백값 0으로 설정 */
+    padding: 0;
+    /* 기본 상하좌우 패딩값 0으로 설정 */
+    box-sizing: border-box;
+    /* 패딩과 테두리를 포함하여 요소의 너비를 유지 */
+}
+li{
+    list-style: none;
+    /* 목록 항목의 불릿을 숨김 */
+}
+a{
+    text-decoration: none;
+    /* 링크의 밑줄을 제거 */
+    color: inherit;
+    /* 링크의 글자 색상을 부모 요소로부터 상속받음 */
+}
+img{
+    vertical-align: top;
+    /* 이미지의 아래쪽 여백을 제거하고, 상단 정렬 */
+    max-width: 100%;
+    /* 이미지를 부모 요소의 너비에 맞춤 (이미지가 깨지지 않도록) */
+}
+button{
+    cursor: pointer;
+    /* 버튼을 손가락 커서로 표시 */
+}
+body{
+    background: #fff;
+    color: #333;
+}
+
+
+.inner{
+    width: 1200px;
+    margin: auto;
+}
+
+header{
+    height: 100px;
+    background-color: #fff;
+    padding-top: 35px;
+    padding-left: 10px;
+    position: relative;
+}
+
+nav{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    z-index: 10;
+}
+
+nav>ul{
+    display: flex;
+}
+
+nav>ul>li>a{
+    display: block;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: cornflowerblue;
+    color: #fff;
+}
+
+nav>ul>li:hover>a{
+    background-color: darkblue;
+}
+
+/* .sub{
+    display: none;
+} */
+
+.sub li a{
+    display: block;
+    background-color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.sub li a:hover{
+    background-color: slateblue;
+    color: #fff;
+}
+
+.slide{
+    height: 300px;
+    background-color: aquamarine;
+}
+
+.contents{
+    height: 200px;
+    display: flex;
+    background-color: violet;
+}
+
+.contents article{
+    width: 400px;
+}
+
+.contents .gall{
+    background-color: cornflowerblue;
+}
+
+footer{
+    height: 100px;
+    background-color: black;
+}
